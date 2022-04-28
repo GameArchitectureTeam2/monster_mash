@@ -1,5 +1,9 @@
 # Monster Mash: New Sketch-Based Modeling and Animation Tool
 
+## Copied from
+
+https://github.com/google/monster-mash
+
 ## Introduction
 
 This is the open-source version of Monster Mash.
