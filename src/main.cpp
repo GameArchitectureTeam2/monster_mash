@@ -24,6 +24,12 @@ using namespace std;
 MainWindow mainWindow(
     1000, 800, "Monster Mash: New Sketch-Based Modeling and Animation Tool");
 
+int main(int argc, char *argv[]) {
+  std::cout << argc;
+  mainWindow.runLoop();
+  return 0;
+}
+
 #ifdef __EMSCRIPTEN__
 extern "C" {
 
@@ -249,7 +255,3 @@ EMSCRIPTEN_KEEPALIVE void disableKeyboardEvents() {
 }
 #endif
 
-int main(int argc, char *argv[]) {
-  mainWindow.runLoop();
-  return 0;
-}
