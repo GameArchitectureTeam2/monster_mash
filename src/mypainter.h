@@ -58,7 +58,7 @@ class MyPainter {
   void paint();
   void clearToColor();
   //Custom
-  void MyPainter::drawSkeletonLine(int x1, int y1, int x2, int y2);
+  void drawSkeletonLine(int x1, int y1, int x2, int y2);
   int getCurrentThickness();
 
  private:
