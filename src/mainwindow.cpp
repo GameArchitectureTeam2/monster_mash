@@ -495,6 +495,9 @@ void MainWindow::cpVisualize2D(MyPainter &screenPainter) {
   drawControlPoints(*defCurr, screenPainter, 7, proj3DView, 1, colorBlack,
                     colorRed);  // 3D view
 
+  // 0429
+  drawCustomLine(*defCurr,screenPainter,proj3DView);
+
   if (!displaySyncCPAnim && cpsAnimSyncId != -1) {
     try {
       const Vector3d p = defCurr->getCP(cpsAnimSyncId).pos;

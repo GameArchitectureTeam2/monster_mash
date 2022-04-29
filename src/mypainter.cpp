@@ -121,6 +121,13 @@ void MyPainter::drawLine(int x1, int y1, int x2, int y2) {
   drawLine(x1, y1, x2, y2, currThickness);
 }
 
+//Custom
+void MyPainter::drawSkeletonLine(int x1, int y1, int x2, int y2){
+    // draw lines
+    thickLineRGBA(renderer,x1,y1,x2,y2,5,currColor.r,currColor.g,currColor.b,currColor.a);
+};
+
+
 void MyPainter::drawRect(int x1, int y1, int x2, int y2) {
   rectangleRGBA(renderer, x1, y1, x2, y2, currColor.r, currColor.g, currColor.b,
                 currColor.a);

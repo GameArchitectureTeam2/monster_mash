@@ -44,3 +44,22 @@ void drawControlPoints(const Def3D &def, MyPainter &painter, int size,
                      colorFg);
   }
 }
+void drawCustomLine(const Def3D &Def, MyPainter &painter,const Eigen::Matrix4d &M){
+
+  auto &cps = Def.getCPs();
+  Eigen::VectorXd q;
+  Eigen::Vector3d p;
+  Eigen::Vector3d tmp[10];
+  int i = 0;
+  for(const auto &it : cps){
+    q = it.second->pos;
+    p = (M * q.homogeneous()).hnormalized();
+    tmp[i] = p;
+    i++;
+  }
+  i--;
+  for(;i>0;){
+    painter.drawSkeletonLine(tmp[i-1][0],tmp[i-1][1],tmp[i][0],tmp[i][1]);
+    i--;
+  }
+}
