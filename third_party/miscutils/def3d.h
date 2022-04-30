@@ -10,6 +10,7 @@
 #include <map>
 #include <Eigen/Dense>
 #include <miscutils/macros.h>
+#include <SDL2_gfxPrimitives.h>
 
 class Def3D
 {
@@ -21,7 +22,16 @@ public:
     bool fixed;
     double weight;
     int ptId = 0; // control point to mesh points correspondence
+    int length = -1;
 
+    std::shared_ptr<CP> pParent;
+    std::shared_ptr<CP> pChild[10];
+    int childNum= 0;
+    int getLength();
+    std::shared_ptr<CP> getParent();
+    std::shared_ptr<CP>* getChild();
+
+    Eigen::Vector3d getControlPointPosition();
     CP(const Eigen::Vector3d &pos, bool fixed, double weight) : pos(pos), prevPos(pos), fixed(fixed), weight(weight) {}
     CP() : CP(Eigen::Vector3d(0,0,0), false, 1) {}
   };

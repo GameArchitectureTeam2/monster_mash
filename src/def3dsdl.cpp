@@ -48,18 +48,29 @@ void drawCustomLine(const Def3D &Def, MyPainter &painter,const Eigen::Matrix4d &
 
   auto &cps = Def.getCPs();
   Eigen::VectorXd q;
+  Eigen::VectorXd qParent;
+
   Eigen::Vector3d p;
+  Eigen::Vector3d ppParent;
+
   Eigen::Vector3d tmp[10];
+  Eigen::Vector3d tmpParent[10];
   int i = 0;
   for(const auto &it : cps){
     q = it.second->pos;
     p = (M * q.homogeneous()).hnormalized();
-    tmp[i] = p;
+    if(it.second->pParent != nullptr){
+        qParent = it.second->pParent->pos;
+        ppParent = (M * qParent.homogeneous()).hnormalized();
+        tmp[i] = p;
+        tmpParent[i] = ppParent;
+    }
     i++;
   }
-  i--;
+
   for(;i>0;){
-    painter.drawSkeletonLine(tmp[i-1][0],tmp[i-1][1],tmp[i][0],tmp[i][1]);
     i--;
+    painter.drawSkeletonLine(tmp[i][0],tmp[i][1],tmpParent[i][0],tmpParent[i][1]);
+
   }
 }

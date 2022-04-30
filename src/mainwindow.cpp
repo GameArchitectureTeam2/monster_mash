@@ -498,6 +498,7 @@ void MainWindow::cpVisualize2D(MyPainter &screenPainter) {
   // 0429
   drawCustomLine(*defCurr,screenPainter,proj3DView);
 
+
   if (!displaySyncCPAnim && cpsAnimSyncId != -1) {
     try {
       const Vector3d p = defCurr->getCP(cpsAnimSyncId).pos;
@@ -509,6 +510,8 @@ void MainWindow::cpVisualize2D(MyPainter &screenPainter) {
   }
   for (int cpId : selectedPoints) {
     try {
+      //Custom Circle draw
+
       Cu colorFg = colorRed;
       if (!displaySyncCPAnim && cpId == cpsAnimSyncId) colorFg = colorGreen;
       const Eigen::VectorXd &p = defCurr->getCP(cpId).pos;
@@ -1240,14 +1243,25 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
 
   // compute translation vector (based on a single control point)
   try {
+    //
     auto &cpFirst = defCurr->getCP(*selectedPoints.begin());
     const Vector3d cpProj =
         (proj3DView * cpFirst.prevPos.homogeneous()).hnormalized();
     const Vector3d mouseCurrProj(mouseCurrPos(0), mouseCurrPos(1), cpProj(2));
     const Vector3d startPosProj(startPos(0), startPos(1), cpProj(2));
-    const Vector3d t =
+
+    Vector3d t =
         (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized() -
         (proj3DViewInv * startPosProj.homogeneous()).hnormalized();
+    //Force length
+    double deltaLength = sqrt(pow(t[0],2)+pow(t[1],2)+pow(t[2],2));
+    double cpLength = cpFirst.getParent()->getLength();
+    if(cpLength != 0){
+        double ratio = deltaLength / cpLength;
+        t[0] = t[0] / ratio;
+        t[1] = t[1] / ratio;
+        t[2] = t[2] / ratio;
+    }
 
     // apply the translation vector to all selected control points
     for (const int cpId : selectedPoints) {
@@ -1259,7 +1273,10 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
         cpAnim.setTransform(T.matrix());
         cp.pos = cpAnim.peek();
       } else {
+        //4.30
         cp.pos = cp.prevPos + t;
+
+
       }
     }
   } catch (out_of_range &e) {

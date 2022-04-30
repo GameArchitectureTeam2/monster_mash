@@ -32,4 +32,6 @@ void drawControlPoints(const Def3D &def, MyPainter &painter, int size,
                        const Cu &colorBg = Cu{0, 0, 0, 255},
                        const Cu &colorFg = Cu{255, 0, 0, 255});
 void drawCustomLine(const Def3D &Def, MyPainter &painter,const Eigen::Matrix4d &M);
+
+void drawRotationCircle(const Def3D &Def, MyPainter &painter,const Eigen::Matrix4d &M);
 #endif  // DEF3DSDL_H

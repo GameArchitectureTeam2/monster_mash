@@ -68,6 +68,9 @@ bool MyPainter::checkRenderingContext() {
   }
 }
 
+
+
+
 void MyPainter::setRenderer(SDL_Renderer *renderer) {
   this->renderer = renderer;
 }
@@ -127,6 +130,12 @@ void MyPainter::drawSkeletonLine(int x1, int y1, int x2, int y2){
     thickLineRGBA(renderer,x1,y1,x2,y2,5,currColor.r,currColor.g,currColor.b,currColor.a);
 };
 
+//Custom
+void MyPainter::drawSkeletonCircle(int x1, int y1,int length){
+
+    aacircleRGBA(renderer,x1,y1,length,
+                 currColor.r,currColor.g,currColor.b,currColor.a);
+};
 
 void MyPainter::drawRect(int x1, int y1, int x2, int y2) {
   rectangleRGBA(renderer, x1, y1, x2, y2, currColor.r, currColor.g, currColor.b,

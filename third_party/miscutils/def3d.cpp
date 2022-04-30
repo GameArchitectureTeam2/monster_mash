@@ -10,6 +10,24 @@
 using namespace Eigen;
 using namespace std;
 
+//GET ONE CP POSITION
+Eigen::Vector3d Def3D::CP::getControlPointPosition(){
+    return pos;
+}
+
+
+int Def3D::CP::getLength(){
+    return this->length;
+};
+
+std::shared_ptr<Def3D::CP> Def3D::CP::getParent(){
+    return this->pParent;
+};
+
+std::shared_ptr<Def3D::CP>* Def3D::CP::getChild(){
+    return this->pChild;
+};
+
 Def3D::Def3D()
 {
 }
@@ -27,6 +45,8 @@ void Def3D::updatePtsAccordingToCPs(Mesh3D &inMesh)
 //      p.fixed = cp.fixed;
   }
 }
+
+
 
 const Def3D::CP& Def3D::getCP(int index) const
 {
@@ -49,7 +69,28 @@ const std::map<int,std::shared_ptr<Def3D::CP>>& Def3D::getCPs() const
 
 int Def3D::addCP(CP &cp)
 {
+  //first cp?
   cps[nextId] = make_shared<CP>(cp);
+
+  //find cps nearest control points
+  double lengthm = 99999999;
+  for(auto &it :cps){
+      //out sqrt
+
+        double distance = sqrt(pow(cp.pos[0]-it.second->pos[0],2) +
+                pow(cp.pos[1]-it.second->pos[1],2) +
+                pow(cp.pos[2]-it.second->pos[2],2));
+        if((distance <= lengthm) && (distance != 0)){
+            //apply this cp's parent
+            cps[nextId]->pParent = it.second;
+            //apply child and length(frame length)
+            it.second->pChild[it.second->childNum] = cps[nextId];
+            it.second->length = distance;
+            //update lengthm
+            lengthm = distance;
+        }
+
+  }
   nextId++;
   cpChangedNum++;
   return nextId-1;
