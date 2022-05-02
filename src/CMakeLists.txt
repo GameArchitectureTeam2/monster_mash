@@ -25,6 +25,7 @@ set(SOURCES
     mainwindow.cpp
     mypainter.cpp
     mywindow.cpp
+    pointer.cpp
     def3dsdl.cpp
     exportgltf.cpp
     ../third_party/ir3d-utils/regionToMesh.cpp
@@ -53,6 +54,7 @@ set(HEADERS
     mainwindow.h
     mypainter.h
     mywindow.h
+    pointer.h
     def3dsdl.h
     macros.h
     exportgltf.h

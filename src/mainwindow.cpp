@@ -608,6 +608,13 @@ void MainWindow::mousePressEvent(const MyMouseEvent &event) {
       Vector2d(event.pos.x(), event.pos.y());
   mousePressed = true;
 
+  lazy_last_x = mousePrevPos(0);
+  lazy_last_y = mousePrevPos(1);
+  lazy_pointer.x = mousePrevPos(0);
+  lazy_pointer.y =  mousePrevPos(1);
+  lazy_brush.x = mousePrevPos(0);
+  lazy_brush.y = mousePrevPos(1);
+
   if (manipulationMode.isGeometryModeActive()) {
     defEng.solveForZ = false;  // pause z-deformation
     autoRotateDir = -1;
@@ -1404,9 +1411,32 @@ void MainWindow::drawLine(const MyMouseEvent &event, int x1, int y1, int x2,
   else if (eraseMode || outlineRecolorMode)
     c = Cu{ERASE_PIXEL_COLOR, ERASE_PIXEL_COLOR, ERASE_PIXEL_COLOR, 255};
 
+  //drawline by lazypoint
+  lazy_pointer.update(x2, y2);
+
+  float distance, angle;
+
+  distance = lazy_brush.getDistanceTo(lazy_pointer.x, lazy_pointer.y);
+  angle = lazy_brush.getAngleTo(lazy_pointer.x, lazy_pointer.y);
+
+  //cout << "distance : " << distance << endl;
+  //cout << "angle : " << angle << endl;
+
+  if(distance > lazy_radius)
+  {
+    lazy_brush.moveByAngle(angle, distance - lazy_radius);
+  }
+
   MyPainter painter(currOutlineImg);
   painter.setColor(c(0), c(1), c(2), c(3));
-  painter.drawLine(x1, y1, x2, y2, thickness);
+  //painter.drawLine(x1, y1, x2, y2, thickness);
+  painter.drawLine(lazy_last_x, lazy_last_y, lazy_brush.x, lazy_brush.y, thickness);
+
+  lazy_last_x = lazy_brush.x;
+  lazy_last_y = lazy_brush.y;
+
+  //cout << "brush x y : " << lazy_brush.x << " " << lazy_brush.y << endl;
+  //cout << "pointer x y : " << lazy_pointer.x << " " << lazy_pointer.y << endl;
 
   drawingUnderLayer = numeric_limits<int>::max();
   Imguc &I = currOutlineImg, &MI = mergedOutlinesImg;

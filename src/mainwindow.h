@@ -18,6 +18,7 @@
 #include "commonStructs.h"
 #include "exportgltf.h"
 #include "mywindow.h"
+#include "pointer.h"
 
 class MainWindow : public MyWindow {
  public:
@@ -74,6 +75,14 @@ class MainWindow : public MyWindow {
   void pauseAnimation();
   void resumeAnimation();
   int getNumberOfAnimationFrames();
+
+  //Lazy mouse
+  bool lazy_has_moved = true;
+  int lazy_radius = 20;
+  int lazy_last_x;
+  int lazy_last_y;
+  Pointer lazy_pointer;
+  Pointer lazy_brush;
 
  protected:
   bool paintEvent();
