@@ -39,10 +39,37 @@ void drawControlPoints(const Def3D &def, MyPainter &painter, int size,
                        const Eigen::Matrix4d &M, int thickness,
                        const Cu &colorBg, const Cu &colorFg) {
   auto &cps = def.getCPs();
+  Eigen::VectorXd tmp[10];
+  Eigen::VectorXd tmpa[10];
+
+  int i = 0;
   for (const auto &it : cps) {
     drawControlPoint(it.second->pos, painter, size, M, thickness, colorBg,
                      colorFg);
+    tmp[i] = it.second->pos;
+    tmpa[i] = (M * (it.second->pos).homogeneous()).hnormalized();
+    i++;
   }
+  i--;
+  for(;i>=0;){
+      Eigen::Vector3d a(50,0,0);
+      Eigen::Vector3d b(0,50,0);
+      Eigen::Vector3d c(0,0,50);
+
+      Eigen::Vector3d px = (M * (tmp[i]+a).homogeneous()).hnormalized();
+      Eigen::Vector3d py = (M * (tmp[i]+b).homogeneous()).hnormalized();
+      Eigen::Vector3d pz = (M * (tmp[i]+c).homogeneous()).hnormalized();
+      //draw Arraw
+      painter.setColor(255,0,0,255);
+      painter.drawLine(tmpa[i][0],tmpa[i][1],px[0],px[1],7);
+      painter.setColor(0,255,0,255);
+      painter.drawLine(tmpa[i][0],tmpa[i][1],py[0],py[1],7);
+      painter.setColor(0,0,255,255);
+      painter.drawLine(tmpa[i][0],tmpa[i][1],pz[0],pz[1],7);
+      painter.setColor(0,0,0,50);
+      i--;
+  }
+
 }
 void drawCustomLine(const Def3D &Def, MyPainter &painter,const Eigen::Matrix4d &M){
 

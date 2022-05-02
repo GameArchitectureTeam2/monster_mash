@@ -10,6 +10,25 @@
 using namespace Eigen;
 using namespace std;
 
+void Def3D::CP::setControlPointPosition(Eigen::Vector3d t){
+    this->pos = this->pos + t /100;
+    //set Child's position
+    for(int i=0; i<this->childNum; i++){
+        if(pChild[i] != nullptr){
+            pChild[i]->setControlPointPosition(t);
+        }
+    }
+}
+void Def3D::CP::setControlPointRotation(Eigen::Vector3d t){
+    this->Rotation = this->Rotation + t;
+    //set Child's Rotation
+    for(int i=0; i<this->childNum; i++){
+        if(pChild[i] != nullptr){
+            pChild[i]->setControlPointRotation(t);
+        }
+    }
+}
+
 //GET ONE CP POSITION
 Eigen::Vector3d Def3D::CP::getControlPointPosition(){
     return pos;
@@ -77,20 +96,26 @@ int Def3D::addCP(CP &cp)
   for(auto &it :cps){
       //out sqrt
 
-        double distance = sqrt(pow(cp.pos[0]-it.second->pos[0],2) +
+        double distance =
+                sqrt(pow(cp.pos[0]-it.second->pos[0],2) +
                 pow(cp.pos[1]-it.second->pos[1],2) +
                 pow(cp.pos[2]-it.second->pos[2],2));
         if((distance <= lengthm) && (distance != 0)){
             //apply this cp's parent
             cps[nextId]->pParent = it.second;
             //apply child and length(frame length)
-            it.second->pChild[it.second->childNum] = cps[nextId];
+
             it.second->length = distance;
             //update lengthm
             lengthm = distance;
         }
 
   }
+  if(nextId > 0){
+      cps[nextId]->pParent->pChild[cps[nextId]->pParent->childNum] = cps[nextId];
+      cps[nextId]->pParent->childNum++;
+  }
+
   nextId++;
   cpChangedNum++;
   return nextId-1;

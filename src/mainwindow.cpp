@@ -498,7 +498,7 @@ void MainWindow::cpVisualize2D(MyPainter &screenPainter) {
   // 0429
   drawCustomLine(*defCurr,screenPainter,proj3DView);
 
-
+  //drawRotationCircle();
   if (!displaySyncCPAnim && cpsAnimSyncId != -1) {
     try {
       const Vector3d p = defCurr->getCP(cpsAnimSyncId).pos;
@@ -1253,7 +1253,8 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
     Vector3d t =
         (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized() -
         (proj3DViewInv * startPosProj.homogeneous()).hnormalized();
-    //Force length
+    /*
+     *     //Force length
     double deltaLength = sqrt(pow(t[0],2)+pow(t[1],2)+pow(t[2],2));
     double cpLength = cpFirst.getParent()->getLength();
     if(cpLength != 0){
@@ -1262,6 +1263,7 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
         t[1] = t[1] / ratio;
         t[2] = t[2] / ratio;
     }
+     */
 
     // apply the translation vector to all selected control points
     for (const int cpId : selectedPoints) {
@@ -1273,9 +1275,8 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
         cpAnim.setTransform(T.matrix());
         cp.pos = cpAnim.peek();
       } else {
-        //4.30
-        cp.pos = cp.prevPos + t;
-
+        //0502
+        cp.setControlPointPosition(t);
 
       }
     }

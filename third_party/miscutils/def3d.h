@@ -23,6 +23,7 @@ public:
     double weight;
     int ptId = 0; // control point to mesh points correspondence
     int length = -1;
+    Eigen::Vector3d Rotation;
 
     std::shared_ptr<CP> pParent;
     std::shared_ptr<CP> pChild[10];
@@ -32,7 +33,11 @@ public:
     std::shared_ptr<CP>* getChild();
 
     Eigen::Vector3d getControlPointPosition();
-    CP(const Eigen::Vector3d &pos, bool fixed, double weight) : pos(pos), prevPos(pos), fixed(fixed), weight(weight) {}
+    Eigen::Vector3d getControlPointRotation();
+    void setControlPointPosition(Eigen::Vector3d);
+    void setControlPointRotation(Eigen::Vector3d);
+    CP(const Eigen::Vector3d &pos, bool fixed, double weight) :
+        pos(pos), prevPos(pos), fixed(fixed), weight(weight), Rotation(0,0,0) {}
     CP() : CP(Eigen::Vector3d(0,0,0), false, 1) {}
   };
 
