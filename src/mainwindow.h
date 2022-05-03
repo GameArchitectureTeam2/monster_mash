@@ -83,6 +83,7 @@ class MainWindow : public MyWindow {
   int lazy_last_y;
   Pointer lazy_pointer;
   Pointer lazy_brush;
+  bool isLazyMod = false;
 
  protected:
   bool paintEvent();

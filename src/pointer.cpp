@@ -3,7 +3,7 @@
 #include <iostream>
 
 Pointer::Pointer()
-: x(0), y(0)
+: x(0), y(0), real_x(0), real_y(0)
 {
 }
 
@@ -15,10 +15,13 @@ void Pointer::update(int x1, int y1)
 
 void Pointer::moveByAngle(float angle, float distance)
 {
+    //const float angleRotated = angle + 1.57079;
     const float angleRotated = angle + 1.57079;
 
-    x += -sin(angleRotated) * distance;
-    y += cos(angleRotated) * distance;
+    real_x += -sin(angleRotated) * distance;
+    real_y += cos(angleRotated) * distance;
+    x = int(real_x);
+    y = int(real_y);
     std::cout << "angle: " << angle << " anglerotate : " << angleRotated << std::endl;
     std::cout << "sin angle: " << sin(angleRotated) << " cos angle : " << cos(angleRotated) << std::endl;
 }
@@ -47,4 +50,10 @@ float Pointer::getAngleTo(int x1, int y1)
     dif_x = x - x1;
     dif_y = y - y1;
     return atan2(dif_y, dif_x);
+}
+
+void Pointer::realUpdate()
+{
+    real_x = float(x);
+    real_y = float(y);
 }

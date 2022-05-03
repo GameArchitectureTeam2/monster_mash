@@ -608,12 +608,16 @@ void MainWindow::mousePressEvent(const MyMouseEvent &event) {
       Vector2d(event.pos.x(), event.pos.y());
   mousePressed = true;
 
-  lazy_last_x = mousePrevPos(0);
-  lazy_last_y = mousePrevPos(1);
-  lazy_pointer.x = mousePrevPos(0);
-  lazy_pointer.y =  mousePrevPos(1);
-  lazy_brush.x = mousePrevPos(0);
-  lazy_brush.y = mousePrevPos(1);
+  if(isLazyMod)
+  {
+    lazy_last_x = mousePrevPos(0);
+    lazy_last_y = mousePrevPos(1);
+    lazy_pointer.x = mousePrevPos(0);
+    lazy_pointer.y =  mousePrevPos(1);
+    lazy_brush.x = mousePrevPos(0);
+    lazy_brush.y = mousePrevPos(1);
+    lazy_brush.realUpdate();
+  }
 
   if (manipulationMode.isGeometryModeActive()) {
     defEng.solveForZ = false;  // pause z-deformation
@@ -628,6 +632,12 @@ void MainWindow::mouseReleaseEvent(const MyMouseEvent &event) {
   mousePrevPos = mouseCurrPos;
   mouseReleaseEnd = mouseCurrPos = Vector2d(event.pos.x(), event.pos.y());
   mousePressed = false;
+
+  //lazypoint
+  if(isLazyMod)
+  {
+    mousePrevPos = Vector2d(lazy_brush.x, lazy_brush.y);
+  }
 
   if (manipulationMode.isGeometryModeActive()) {
     defEng.solveForZ = true;  // resume z-deformation
@@ -705,6 +715,10 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
     recData.armpitsStitching = !recData.armpitsStitching;
     DEBUG_CMD_MM(cout << "recData.armpitsStitching: "
                       << recData.armpitsStitching << endl;);
+  }
+  if(keyEvent.key == SDLK_y){
+    DEBUG_CMD_MM(cout << "Lazymod : " << (!isLazyMod) << endl;);
+    isLazyMod = (!isLazyMod);
   }
   if (keyEvent.key == SDLK_w) {
     //    exportAsOBJ("/tmp", "mm_frame", true);
@@ -1429,8 +1443,11 @@ void MainWindow::drawLine(const MyMouseEvent &event, int x1, int y1, int x2,
 
   MyPainter painter(currOutlineImg);
   painter.setColor(c(0), c(1), c(2), c(3));
-  //painter.drawLine(x1, y1, x2, y2, thickness);
-  painter.drawLine(lazy_last_x, lazy_last_y, lazy_brush.x, lazy_brush.y, thickness);
+  
+  if(isLazyMod)
+    painter.drawLine(lazy_last_x, lazy_last_y, lazy_brush.x, lazy_brush.y, thickness);
+  else
+    painter.drawLine(x1, y1, x2, y2, thickness);
 
   lazy_last_x = lazy_brush.x;
   lazy_last_y = lazy_brush.y;

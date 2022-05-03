@@ -20,8 +20,11 @@ public:
     bool equalsTo(int x1, int y1);
     float getDistanceTo(int x1, int y1);
     float getAngleTo(int x1, int y1);
+    void realUpdate();
 
 private:
+    float real_x;
+    float real_y;
 };
 
 #endif
