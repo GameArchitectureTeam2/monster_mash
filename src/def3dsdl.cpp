@@ -39,8 +39,8 @@ void drawControlPoints(const Def3D &def, MyPainter &painter, int size,
                        const Eigen::Matrix4d &M, int thickness,
                        const Cu &colorBg, const Cu &colorFg) {
   auto &cps = def.getCPs();
-  Eigen::VectorXd tmp[10];
-  Eigen::VectorXd tmpa[10];
+  Eigen::VectorXd tmp[50];
+  Eigen::VectorXd tmpa[50];
 
   int i = 0;
   for (const auto &it : cps) {

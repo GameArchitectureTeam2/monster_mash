@@ -1273,7 +1273,11 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
         auto &cpAnim = it->second;
         Affine3d T((Translation3d(t(0), t(1), t(2))));
         cpAnim.setTransform(T.matrix());
-        cp.pos = cpAnim.peek();
+
+        Eigen::Vector3d delta = cp.pos - cpAnim.peek();
+        cp.setControlPointPosition(delta);
+
+        //cp.pos = cpAnim.peek();
       } else {
         //0502
         cp.setControlPointPosition(t);
@@ -1285,6 +1289,7 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
   }
 }
 
+//RELEASE THE MOUSE!!!!!!!!!!!
 void MainWindow::handleMouseReleaseEventGeometryMode(
     const MyMouseEvent &event) {
   auto *cpData = &this->cpData;
@@ -2153,7 +2158,14 @@ void MainWindow::cpAnimationPlaybackAndRecord() {
         a.syncSetLength(cpAnimSync.getLength());
         try {
           auto &cp = def.getCP(cpId);
-          cp.pos = cp.prevPos = a.replay(cpAnimSync.lastT);
+
+          //cp.pos = cp.prevPos = a.replay(cpAnimSync.lastT);
+          cp.prevPos = a.replay(cpAnimSync.lastT);
+          Eigen::Vector3d delta = cp.prevPos - cp.pos;
+
+          cp.setControlPointPosition(delta*100);
+
+
         } catch (out_of_range &e) {
           cerr << e.what() << endl;
         }
