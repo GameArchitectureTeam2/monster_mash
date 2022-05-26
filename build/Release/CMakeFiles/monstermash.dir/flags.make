@@ -3,13 +3,13 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_DEFINES = -DAPP_VERSION=220522 -DEIGEN_MPL2_ONLY -DEIGEN_SPARSESOLVERBASE_H -DENABLE_DEBUG_CMD_MM -DIGL_PARALLEL_FOR_FORCE_SERIAL -DIMAGE_MINIZ_EXTERNAL -DIMAGE_READ_WRITE -DIMAGE_SCALE -DNO_TIMER -DTINYGLTF_NO_EXTERNAL_IMAGE -DTINYGLTF_NO_STB_IMAGE -DTINYGLTF_NO_STB_IMAGE_WRITE -DTINYGLTF_USE_CPP14 -DTRILIBRARY -DUSE_OPENGL_FOR_DRAWING_INSTEAD_OF_SDL -DUSE_SDL_GLES2 -D_SDL2_gfxPrimitives_h
+C_DEFINES = -DAPP_VERSION=220526 -DEIGEN_MPL2_ONLY -DEIGEN_SPARSESOLVERBASE_H -DENABLE_DEBUG_CMD_MM -DIGL_PARALLEL_FOR_FORCE_SERIAL -DIMAGE_MINIZ_EXTERNAL -DIMAGE_READ_WRITE -DIMAGE_SCALE -DNO_TIMER -DTINYGLTF_NO_EXTERNAL_IMAGE -DTINYGLTF_NO_STB_IMAGE -DTINYGLTF_NO_STB_IMAGE_WRITE -DTINYGLTF_USE_CPP14 -DTRILIBRARY -DUSE_OPENGL_FOR_DRAWING_INSTEAD_OF_SDL -DUSE_SDL_GLES2 -D_SDL2_gfxPrimitives_h
 
 C_INCLUDES = -I/home/kang/monster_mash/src/../third_party -I/home/kang/monster_mash/src/../third_party/eigen3-mod -I/home/kang/monster_mash/src/../third_party/eigen3 -I/home/kang/monster_mash/src/../third_party/libigl/include -I/home/kang/monster_mash/src/../third_party/stb -I/home/kang/monster_mash/src/../third_party/triangle -I/home/kang/monster_mash/src/../third_party/zip-mod -I/home/kang/monster_mash/src/../third_party/SDL2_gfx -I/home/kang/monster_mash/src/../third_party/SDL2_gfx-mod -I/home/kang/monster_mash/src/../third_party/tinygltf -I/home/kang/monster_mash/src/../third_party/ik -I/home/kang/monster_mash/src/../third_party/IK -I/usr/include/SDL2
 
 C_FLAGS = -O3 -DNDEBUG -Wno-sign-compare -Werror=return-type -Wno-narrowing
 
-CXX_DEFINES = -DAPP_VERSION=220522 -DEIGEN_MPL2_ONLY -DEIGEN_SPARSESOLVERBASE_H -DENABLE_DEBUG_CMD_MM -DIGL_PARALLEL_FOR_FORCE_SERIAL -DIMAGE_MINIZ_EXTERNAL -DIMAGE_READ_WRITE -DIMAGE_SCALE -DNO_TIMER -DTINYGLTF_NO_EXTERNAL_IMAGE -DTINYGLTF_NO_STB_IMAGE -DTINYGLTF_NO_STB_IMAGE_WRITE -DTINYGLTF_USE_CPP14 -DTRILIBRARY -DUSE_OPENGL_FOR_DRAWING_INSTEAD_OF_SDL -DUSE_SDL_GLES2 -D_SDL2_gfxPrimitives_h
+CXX_DEFINES = -DAPP_VERSION=220526 -DEIGEN_MPL2_ONLY -DEIGEN_SPARSESOLVERBASE_H -DENABLE_DEBUG_CMD_MM -DIGL_PARALLEL_FOR_FORCE_SERIAL -DIMAGE_MINIZ_EXTERNAL -DIMAGE_READ_WRITE -DIMAGE_SCALE -DNO_TIMER -DTINYGLTF_NO_EXTERNAL_IMAGE -DTINYGLTF_NO_STB_IMAGE -DTINYGLTF_NO_STB_IMAGE_WRITE -DTINYGLTF_USE_CPP14 -DTRILIBRARY -DUSE_OPENGL_FOR_DRAWING_INSTEAD_OF_SDL -DUSE_SDL_GLES2 -D_SDL2_gfxPrimitives_h
 
 CXX_INCLUDES = -I/home/kang/monster_mash/src/../third_party -I/home/kang/monster_mash/src/../third_party/eigen3-mod -I/home/kang/monster_mash/src/../third_party/eigen3 -I/home/kang/monster_mash/src/../third_party/libigl/include -I/home/kang/monster_mash/src/../third_party/stb -I/home/kang/monster_mash/src/../third_party/triangle -I/home/kang/monster_mash/src/../third_party/zip-mod -I/home/kang/monster_mash/src/../third_party/SDL2_gfx -I/home/kang/monster_mash/src/../third_party/SDL2_gfx-mod -I/home/kang/monster_mash/src/../third_party/tinygltf -I/home/kang/monster_mash/src/../third_party/ik -I/home/kang/monster_mash/src/../third_party/IK -I/usr/include/SDL2
 

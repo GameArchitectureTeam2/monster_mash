@@ -1253,17 +1253,6 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
     Vector3d t =
         (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized() -
         (proj3DViewInv * startPosProj.homogeneous()).hnormalized();
-    /*
-     *     //Force length
-    double deltaLength = sqrt(pow(t[0],2)+pow(t[1],2)+pow(t[2],2));
-    double cpLength = cpFirst.getParent()->getLength();
-    if(cpLength != 0){
-        double ratio = deltaLength / cpLength;
-        t[0] = t[0] / ratio;
-        t[1] = t[1] / ratio;
-        t[2] = t[2] / ratio;
-    }
-     */
 
     // apply the translation vector to all selected control points
     for (const int cpId : selectedPoints) {
@@ -1280,7 +1269,8 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
         //cp.pos = cpAnim.peek();
       } else {
         //0502
-        cp.setControlPointPosition(-t);
+        //cp.pos = cp.pos + t/100;
+        cp.setControlPointPosition(t);
 
       }
     }
