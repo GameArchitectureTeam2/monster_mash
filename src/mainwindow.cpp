@@ -1280,7 +1280,7 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
         //cp.pos = cpAnim.peek();
       } else {
         //0502
-        cp.setControlPointPosition(t);
+        cp.setControlPointPosition(-t);
 
       }
     }

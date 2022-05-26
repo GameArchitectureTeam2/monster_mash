@@ -11,14 +11,87 @@ using namespace Eigen;
 using namespace std;
 
 void Def3D::CP::setControlPointPosition(Eigen::Vector3d t){
-    this->pos = this->pos + t /100;
-    //set Child's position
-    for(int i=0; i<this->childNum; i++){
-        if(pChild[i] != nullptr){
-            pChild[i]->setControlPointPosition(t);
-        }
+  
+  this->pos;
+  /*
+  //set Child's position
+  for(int i=0; i<this->childNum; i++){
+      if(pChild[i] != nullptr){
+          pChild[i]->setControlPointPosition(t);
+      }
+  }
+  */
+  if (ik.init() != IK_OK)
+    std::cout <<("Failed to initialize IK");
+  struct ik_solver_t* solver =ik.solver.create(IK_FABRIK);
+
+  solver->max_iterations = 20;
+  solver->tolerance = 0.000001;
+
+  //Create 3-bone
+  struct ik_node_t* root = solver->node->create(0);
+  struct ik_node_t* child1 = solver->node->create_child(root,1);
+  struct ik_node_t* child2 = solver->node->create_child(child1,2);
+  //struct ik_node_t* child3 = solver->node->create_child(child2, 3); 
+  
+  //child2->position = ik.vec3.vec3(this->pos[0],this->pos[1],this->pos[2]);
+  child2->position = ik.vec3.vec3(0,2,0);
+  
+  if(pParent != nullptr){
+/*
+    child1->position = ik.vec3.vec3(
+      pParent->pos[0],
+      pParent->pos[1],
+      pParent->pos[2]); */
+          child1->position = ik.vec3.vec3(
+      0,
+      2,
+      0);
+      
+      if(pParent->pParent != nullptr){
+        /* root->position = ik.vec3.vec3(
+      pParent->pParent->pos[0],
+      pParent->pParent->pos[1],
+      pParent->pParent->pos[2]
+      );*/
+      root->position = ik.vec3.vec3(
+      0,
+      2,
+      0
+      );
+      //make effecter at the end(child3)
+      struct ik_effector_t* eff = solver->effector->create();
+      solver->effector->attach(eff, child2);
+
+      //set target position
+      //eff->target_position =  ik.vec3.vec3(t[0]/100 + this->pos[0], t[1]/100+this->pos[1], t[2]/100+this->pos[2]);
+      eff->target_position =  ik.vec3.vec3(t[0]/100 , t[1]/100, t[2]/100);
+      std::cout << eff->target_position.x << std::endl;
+      std::cout << eff->target_position.y<< std::endl;
+      std::cout << eff->target_position.z << std::endl;
+      solver->flags |= IK_ENABLE_TARGET_ROTATIONS;
+      //solver->flags |= IK_ENABLE_JOINT_ROTATIONS;
+      ik.solver.set_tree(solver,root);
+      //ik.solver.rebuild_data(solver);
+      ik.solver.rebuild(solver);
+      if(ik.solver.solve(solver) == true){
+        (float*)root->user_data;
+        pParent->pParent->pos += Eigen::Vector3d(root->position.x,root->position.y,root->position.z);
+        pParent->pos += Eigen::Vector3d(child1->position.x,child1->position.y,child1->position.z);
+        this->pos += Eigen::Vector3d(child2->position.x,child2->position.y,child2->position.z);
+      }
+      }
+    
+      
     }
+
 }
+
+static void apply_nodes_to_scene(struct ik_node_t* ikNode){
+  Def3D::CP* node = (Def3D::CP*)ikNode->user_data;
+  //node->pos = ikNode->position;
+}
+
 void Def3D::CP::setControlPointRotation(Eigen::Vector3d t){
     this->Rotation = this->Rotation + t;
     //set Child's Rotation
@@ -49,7 +122,10 @@ std::shared_ptr<Def3D::CP>* Def3D::CP::getChild(){
 
 Def3D::Def3D()
 {
+
 }
+
+
 
 Def3D::~Def3D()
 {

@@ -56,10 +56,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kang/Inverse/monster_mash/src
+CMAKE_SOURCE_DIR = /home/kang/monster_mash/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kang/Inverse/monster_mash/build/Release
+CMAKE_BINARY_DIR = /home/kang/monster_mash/build/Release
 
 # Include any dependencies generated for this target.
 include CMakeFiles/monstermash.dir/depend.make
@@ -73,354 +73,354 @@ include CMakeFiles/monstermash.dir/progress.make
 include CMakeFiles/monstermash.dir/flags.make
 
 CMakeFiles/monstermash.dir/main.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/main.cpp.o: /home/kang/Inverse/monster_mash/src/main.cpp
+CMakeFiles/monstermash.dir/main.cpp.o: /home/kang/monster_mash/src/main.cpp
 CMakeFiles/monstermash.dir/main.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/monstermash.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/main.cpp.o -MF CMakeFiles/monstermash.dir/main.cpp.o.d -o CMakeFiles/monstermash.dir/main.cpp.o -c /home/kang/Inverse/monster_mash/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/monstermash.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/main.cpp.o -MF CMakeFiles/monstermash.dir/main.cpp.o.d -o CMakeFiles/monstermash.dir/main.cpp.o -c /home/kang/monster_mash/src/main.cpp
 
 CMakeFiles/monstermash.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/main.cpp > CMakeFiles/monstermash.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/main.cpp > CMakeFiles/monstermash.dir/main.cpp.i
 
 CMakeFiles/monstermash.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/main.cpp -o CMakeFiles/monstermash.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/main.cpp -o CMakeFiles/monstermash.dir/main.cpp.s
 
 CMakeFiles/monstermash.dir/defengarapl.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/defengarapl.cpp.o: /home/kang/Inverse/monster_mash/src/defengarapl.cpp
+CMakeFiles/monstermash.dir/defengarapl.cpp.o: /home/kang/monster_mash/src/defengarapl.cpp
 CMakeFiles/monstermash.dir/defengarapl.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/monstermash.dir/defengarapl.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/defengarapl.cpp.o -MF CMakeFiles/monstermash.dir/defengarapl.cpp.o.d -o CMakeFiles/monstermash.dir/defengarapl.cpp.o -c /home/kang/Inverse/monster_mash/src/defengarapl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/monstermash.dir/defengarapl.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/defengarapl.cpp.o -MF CMakeFiles/monstermash.dir/defengarapl.cpp.o.d -o CMakeFiles/monstermash.dir/defengarapl.cpp.o -c /home/kang/monster_mash/src/defengarapl.cpp
 
 CMakeFiles/monstermash.dir/defengarapl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/defengarapl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/defengarapl.cpp > CMakeFiles/monstermash.dir/defengarapl.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/defengarapl.cpp > CMakeFiles/monstermash.dir/defengarapl.cpp.i
 
 CMakeFiles/monstermash.dir/defengarapl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/defengarapl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/defengarapl.cpp -o CMakeFiles/monstermash.dir/defengarapl.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/defengarapl.cpp -o CMakeFiles/monstermash.dir/defengarapl.cpp.s
 
 CMakeFiles/monstermash.dir/cpanim.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/cpanim.cpp.o: /home/kang/Inverse/monster_mash/src/cpanim.cpp
+CMakeFiles/monstermash.dir/cpanim.cpp.o: /home/kang/monster_mash/src/cpanim.cpp
 CMakeFiles/monstermash.dir/cpanim.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/monstermash.dir/cpanim.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/cpanim.cpp.o -MF CMakeFiles/monstermash.dir/cpanim.cpp.o.d -o CMakeFiles/monstermash.dir/cpanim.cpp.o -c /home/kang/Inverse/monster_mash/src/cpanim.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/monstermash.dir/cpanim.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/cpanim.cpp.o -MF CMakeFiles/monstermash.dir/cpanim.cpp.o.d -o CMakeFiles/monstermash.dir/cpanim.cpp.o -c /home/kang/monster_mash/src/cpanim.cpp
 
 CMakeFiles/monstermash.dir/cpanim.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/cpanim.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/cpanim.cpp > CMakeFiles/monstermash.dir/cpanim.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/cpanim.cpp > CMakeFiles/monstermash.dir/cpanim.cpp.i
 
 CMakeFiles/monstermash.dir/cpanim.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/cpanim.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/cpanim.cpp -o CMakeFiles/monstermash.dir/cpanim.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/cpanim.cpp -o CMakeFiles/monstermash.dir/cpanim.cpp.s
 
 CMakeFiles/monstermash.dir/loadsave.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/loadsave.cpp.o: /home/kang/Inverse/monster_mash/src/loadsave.cpp
+CMakeFiles/monstermash.dir/loadsave.cpp.o: /home/kang/monster_mash/src/loadsave.cpp
 CMakeFiles/monstermash.dir/loadsave.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/monstermash.dir/loadsave.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/loadsave.cpp.o -MF CMakeFiles/monstermash.dir/loadsave.cpp.o.d -o CMakeFiles/monstermash.dir/loadsave.cpp.o -c /home/kang/Inverse/monster_mash/src/loadsave.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/monstermash.dir/loadsave.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/loadsave.cpp.o -MF CMakeFiles/monstermash.dir/loadsave.cpp.o.d -o CMakeFiles/monstermash.dir/loadsave.cpp.o -c /home/kang/monster_mash/src/loadsave.cpp
 
 CMakeFiles/monstermash.dir/loadsave.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/loadsave.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/loadsave.cpp > CMakeFiles/monstermash.dir/loadsave.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/loadsave.cpp > CMakeFiles/monstermash.dir/loadsave.cpp.i
 
 CMakeFiles/monstermash.dir/loadsave.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/loadsave.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/loadsave.cpp -o CMakeFiles/monstermash.dir/loadsave.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/loadsave.cpp -o CMakeFiles/monstermash.dir/loadsave.cpp.s
 
 CMakeFiles/monstermash.dir/reconstruction.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/reconstruction.cpp.o: /home/kang/Inverse/monster_mash/src/reconstruction.cpp
+CMakeFiles/monstermash.dir/reconstruction.cpp.o: /home/kang/monster_mash/src/reconstruction.cpp
 CMakeFiles/monstermash.dir/reconstruction.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/monstermash.dir/reconstruction.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/reconstruction.cpp.o -MF CMakeFiles/monstermash.dir/reconstruction.cpp.o.d -o CMakeFiles/monstermash.dir/reconstruction.cpp.o -c /home/kang/Inverse/monster_mash/src/reconstruction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/monstermash.dir/reconstruction.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/reconstruction.cpp.o -MF CMakeFiles/monstermash.dir/reconstruction.cpp.o.d -o CMakeFiles/monstermash.dir/reconstruction.cpp.o -c /home/kang/monster_mash/src/reconstruction.cpp
 
 CMakeFiles/monstermash.dir/reconstruction.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/reconstruction.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/reconstruction.cpp > CMakeFiles/monstermash.dir/reconstruction.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/reconstruction.cpp > CMakeFiles/monstermash.dir/reconstruction.cpp.i
 
 CMakeFiles/monstermash.dir/reconstruction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/reconstruction.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/reconstruction.cpp -o CMakeFiles/monstermash.dir/reconstruction.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/reconstruction.cpp -o CMakeFiles/monstermash.dir/reconstruction.cpp.s
 
 CMakeFiles/monstermash.dir/mainwindow.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/mainwindow.cpp.o: /home/kang/Inverse/monster_mash/src/mainwindow.cpp
+CMakeFiles/monstermash.dir/mainwindow.cpp.o: /home/kang/monster_mash/src/mainwindow.cpp
 CMakeFiles/monstermash.dir/mainwindow.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/monstermash.dir/mainwindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/mainwindow.cpp.o -MF CMakeFiles/monstermash.dir/mainwindow.cpp.o.d -o CMakeFiles/monstermash.dir/mainwindow.cpp.o -c /home/kang/Inverse/monster_mash/src/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/monstermash.dir/mainwindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/mainwindow.cpp.o -MF CMakeFiles/monstermash.dir/mainwindow.cpp.o.d -o CMakeFiles/monstermash.dir/mainwindow.cpp.o -c /home/kang/monster_mash/src/mainwindow.cpp
 
 CMakeFiles/monstermash.dir/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/mainwindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/mainwindow.cpp > CMakeFiles/monstermash.dir/mainwindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/mainwindow.cpp > CMakeFiles/monstermash.dir/mainwindow.cpp.i
 
 CMakeFiles/monstermash.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/mainwindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/mainwindow.cpp -o CMakeFiles/monstermash.dir/mainwindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/mainwindow.cpp -o CMakeFiles/monstermash.dir/mainwindow.cpp.s
 
 CMakeFiles/monstermash.dir/mypainter.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/mypainter.cpp.o: /home/kang/Inverse/monster_mash/src/mypainter.cpp
+CMakeFiles/monstermash.dir/mypainter.cpp.o: /home/kang/monster_mash/src/mypainter.cpp
 CMakeFiles/monstermash.dir/mypainter.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/monstermash.dir/mypainter.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/mypainter.cpp.o -MF CMakeFiles/monstermash.dir/mypainter.cpp.o.d -o CMakeFiles/monstermash.dir/mypainter.cpp.o -c /home/kang/Inverse/monster_mash/src/mypainter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/monstermash.dir/mypainter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/mypainter.cpp.o -MF CMakeFiles/monstermash.dir/mypainter.cpp.o.d -o CMakeFiles/monstermash.dir/mypainter.cpp.o -c /home/kang/monster_mash/src/mypainter.cpp
 
 CMakeFiles/monstermash.dir/mypainter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/mypainter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/mypainter.cpp > CMakeFiles/monstermash.dir/mypainter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/mypainter.cpp > CMakeFiles/monstermash.dir/mypainter.cpp.i
 
 CMakeFiles/monstermash.dir/mypainter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/mypainter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/mypainter.cpp -o CMakeFiles/monstermash.dir/mypainter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/mypainter.cpp -o CMakeFiles/monstermash.dir/mypainter.cpp.s
 
 CMakeFiles/monstermash.dir/mywindow.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/mywindow.cpp.o: /home/kang/Inverse/monster_mash/src/mywindow.cpp
+CMakeFiles/monstermash.dir/mywindow.cpp.o: /home/kang/monster_mash/src/mywindow.cpp
 CMakeFiles/monstermash.dir/mywindow.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/monstermash.dir/mywindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/mywindow.cpp.o -MF CMakeFiles/monstermash.dir/mywindow.cpp.o.d -o CMakeFiles/monstermash.dir/mywindow.cpp.o -c /home/kang/Inverse/monster_mash/src/mywindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/monstermash.dir/mywindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/mywindow.cpp.o -MF CMakeFiles/monstermash.dir/mywindow.cpp.o.d -o CMakeFiles/monstermash.dir/mywindow.cpp.o -c /home/kang/monster_mash/src/mywindow.cpp
 
 CMakeFiles/monstermash.dir/mywindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/mywindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/mywindow.cpp > CMakeFiles/monstermash.dir/mywindow.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/mywindow.cpp > CMakeFiles/monstermash.dir/mywindow.cpp.i
 
 CMakeFiles/monstermash.dir/mywindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/mywindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/mywindow.cpp -o CMakeFiles/monstermash.dir/mywindow.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/mywindow.cpp -o CMakeFiles/monstermash.dir/mywindow.cpp.s
 
 CMakeFiles/monstermash.dir/def3dsdl.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/def3dsdl.cpp.o: /home/kang/Inverse/monster_mash/src/def3dsdl.cpp
+CMakeFiles/monstermash.dir/def3dsdl.cpp.o: /home/kang/monster_mash/src/def3dsdl.cpp
 CMakeFiles/monstermash.dir/def3dsdl.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/monstermash.dir/def3dsdl.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/def3dsdl.cpp.o -MF CMakeFiles/monstermash.dir/def3dsdl.cpp.o.d -o CMakeFiles/monstermash.dir/def3dsdl.cpp.o -c /home/kang/Inverse/monster_mash/src/def3dsdl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/monstermash.dir/def3dsdl.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/def3dsdl.cpp.o -MF CMakeFiles/monstermash.dir/def3dsdl.cpp.o.d -o CMakeFiles/monstermash.dir/def3dsdl.cpp.o -c /home/kang/monster_mash/src/def3dsdl.cpp
 
 CMakeFiles/monstermash.dir/def3dsdl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/def3dsdl.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/def3dsdl.cpp > CMakeFiles/monstermash.dir/def3dsdl.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/def3dsdl.cpp > CMakeFiles/monstermash.dir/def3dsdl.cpp.i
 
 CMakeFiles/monstermash.dir/def3dsdl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/def3dsdl.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/def3dsdl.cpp -o CMakeFiles/monstermash.dir/def3dsdl.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/def3dsdl.cpp -o CMakeFiles/monstermash.dir/def3dsdl.cpp.s
 
 CMakeFiles/monstermash.dir/exportgltf.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/exportgltf.cpp.o: /home/kang/Inverse/monster_mash/src/exportgltf.cpp
+CMakeFiles/monstermash.dir/exportgltf.cpp.o: /home/kang/monster_mash/src/exportgltf.cpp
 CMakeFiles/monstermash.dir/exportgltf.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/monstermash.dir/exportgltf.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/exportgltf.cpp.o -MF CMakeFiles/monstermash.dir/exportgltf.cpp.o.d -o CMakeFiles/monstermash.dir/exportgltf.cpp.o -c /home/kang/Inverse/monster_mash/src/exportgltf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/monstermash.dir/exportgltf.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/exportgltf.cpp.o -MF CMakeFiles/monstermash.dir/exportgltf.cpp.o.d -o CMakeFiles/monstermash.dir/exportgltf.cpp.o -c /home/kang/monster_mash/src/exportgltf.cpp
 
 CMakeFiles/monstermash.dir/exportgltf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/exportgltf.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/src/exportgltf.cpp > CMakeFiles/monstermash.dir/exportgltf.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/src/exportgltf.cpp > CMakeFiles/monstermash.dir/exportgltf.cpp.i
 
 CMakeFiles/monstermash.dir/exportgltf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/exportgltf.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/src/exportgltf.cpp -o CMakeFiles/monstermash.dir/exportgltf.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/src/exportgltf.cpp -o CMakeFiles/monstermash.dir/exportgltf.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o: /home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o -c /home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o: /home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o -c /home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o: /home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o -c /home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o: /home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o -c /home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o: /home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o -c /home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o: /home/kang/monster_mash/third_party/image/imageReadWrite.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o -c /home/kang/monster_mash/third_party/image/imageReadWrite.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/image/imageReadWrite.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/image/imageReadWrite.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o: /home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o -c /home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o: /home/kang/monster_mash/third_party/image/imageScale.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o -c /home/kang/monster_mash/third_party/image/imageScale.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/image/imageScale.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/image/imageScale.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o: /home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o -c /home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o: /home/kang/monster_mash/third_party/image/imageUtils.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o -c /home/kang/monster_mash/third_party/image/imageUtils.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/image/imageUtils.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/image/imageUtils.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o: /home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o -c /home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o: /home/kang/monster_mash/third_party/miscutils/def3d.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o -c /home/kang/monster_mash/third_party/miscutils/def3d.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/miscutils/def3d.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/miscutils/def3d.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o: /home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o -c /home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o: /home/kang/monster_mash/third_party/miscutils/mesh3d.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o -c /home/kang/monster_mash/third_party/miscutils/mesh3d.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/miscutils/mesh3d.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/miscutils/mesh3d.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o: /home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o -c /home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o: /home/kang/monster_mash/third_party/miscutils/fsutils.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o -c /home/kang/monster_mash/third_party/miscutils/fsutils.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/miscutils/fsutils.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/miscutils/fsutils.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o: /home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o -c /home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o: /home/kang/monster_mash/third_party/miscutils/opengltools.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o -c /home/kang/monster_mash/third_party/miscutils/opengltools.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/miscutils/opengltools.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/miscutils/opengltools.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o: /home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o -c /home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o: /home/kang/monster_mash/third_party/miscutils/camera.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o -c /home/kang/monster_mash/third_party/miscutils/camera.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/miscutils/camera.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/miscutils/camera.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o: /home/kang/Inverse/monster_mash/third_party/triangle/triangle.c
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o -c /home/kang/Inverse/monster_mash/third_party/triangle/triangle.c
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o: /home/kang/monster_mash/third_party/triangle/triangle.c
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o -c /home/kang/monster_mash/third_party/triangle/triangle.c
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/triangle/triangle.c > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kang/monster_mash/third_party/triangle/triangle.c > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/triangle/triangle.c -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kang/monster_mash/third_party/triangle/triangle.c -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o: /home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o -c /home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o: /home/kang/monster_mash/third_party/zip-mod/zip.c
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o -c /home/kang/monster_mash/third_party/zip-mod/zip.c
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kang/monster_mash/third_party/zip-mod/zip.c > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kang/monster_mash/third_party/zip-mod/zip.c -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o: /home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o -c /home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o: /home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o -c /home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o: /home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o -c /home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o: /home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o -c /home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o: CMakeFiles/monstermash.dir/flags.make
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o: /home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o -c /home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o: CMakeFiles/monstermash.dir/flags.make
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o: /home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o: CMakeFiles/monstermash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o -MF CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o.d -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o -c /home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp > CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.i
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp > CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.i
 
-CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp -o CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.s
+CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp -o CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.s
 
 # Object files for target monstermash
 monstermash_OBJECTS = \
@@ -434,21 +434,21 @@ monstermash_OBJECTS = \
 "CMakeFiles/monstermash.dir/mywindow.cpp.o" \
 "CMakeFiles/monstermash.dir/def3dsdl.cpp.o" \
 "CMakeFiles/monstermash.dir/exportgltf.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o" \
-"CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o"
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o" \
+"CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o"
 
 # External object files for target monstermash
 monstermash_EXTERNAL_OBJECTS =
@@ -463,26 +463,27 @@ monstermash: CMakeFiles/monstermash.dir/mypainter.cpp.o
 monstermash: CMakeFiles/monstermash.dir/mywindow.cpp.o
 monstermash: CMakeFiles/monstermash.dir/def3dsdl.cpp.o
 monstermash: CMakeFiles/monstermash.dir/exportgltf.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o
-monstermash: CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o
+monstermash: CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o
 monstermash: CMakeFiles/monstermash.dir/build.make
+monstermash: /usr/local/lib/ik.a
 monstermash: /usr/lib/x86_64-linux-gnu/libGL.so
 monstermash: /usr/lib/x86_64-linux-gnu/libGLU.so
 monstermash: CMakeFiles/monstermash.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kang/Inverse/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable monstermash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kang/monster_mash/build/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable monstermash"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/monstermash.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -494,6 +495,6 @@ CMakeFiles/monstermash.dir/clean:
 .PHONY : CMakeFiles/monstermash.dir/clean
 
 CMakeFiles/monstermash.dir/depend:
-	cd /home/kang/Inverse/monster_mash/build/Release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kang/Inverse/monster_mash/src /home/kang/Inverse/monster_mash/src /home/kang/Inverse/monster_mash/build/Release /home/kang/Inverse/monster_mash/build/Release /home/kang/Inverse/monster_mash/build/Release/CMakeFiles/monstermash.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kang/monster_mash/build/Release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kang/monster_mash/src /home/kang/monster_mash/src /home/kang/monster_mash/build/Release /home/kang/monster_mash/build/Release /home/kang/monster_mash/build/Release/CMakeFiles/monstermash.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/monstermash.dir/depend
 

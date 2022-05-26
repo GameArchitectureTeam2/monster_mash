@@ -12,6 +12,8 @@
 #include <miscutils/macros.h>
 #include <SDL2_gfxPrimitives.h>
 
+#include <ik/ik.h>
+
 class Def3D
 {
 public:
@@ -71,6 +73,7 @@ protected:
   std::map<int,std::shared_ptr<CP>> cps;
   long cpChangedNum = 0;
   int nextId = 0;
+
 };
 
 #endif // DEF3D_H

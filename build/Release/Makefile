@@ -60,10 +60,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kang/Inverse/monster_mash/src
+CMAKE_SOURCE_DIR = /home/kang/monster_mash/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kang/Inverse/monster_mash/build/Release
+CMAKE_BINARY_DIR = /home/kang/monster_mash/build/Release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -90,9 +90,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kang/Inverse/monster_mash/build/Release/CMakeFiles /home/kang/Inverse/monster_mash/build/Release//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kang/monster_mash/build/Release/CMakeFiles /home/kang/monster_mash/build/Release//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kang/Inverse/monster_mash/build/Release/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kang/monster_mash/build/Release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -228,365 +228,365 @@ exportgltf.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/exportgltf.cpp.s
 .PHONY : exportgltf.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.o: home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.o
+home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.o: home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o
+home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o
 
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.i: home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.i
+home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.i: home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i
+home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.i
 
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.s: home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.s
+home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.s: home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s
+home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.s
 
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.o: home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.o
+home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.o: home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o
+home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.o
 
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.i: home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.i
+home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.i: home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i
+home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.i
 
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.s: home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.s
+home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.s: home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s
+home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s
+.PHONY : home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.c.s
 
-home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.o: home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.o
+home/kang/monster_mash/third_party/image/imageReadWrite.o: home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o
+.PHONY : home/kang/monster_mash/third_party/image/imageReadWrite.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.o
+home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o
+.PHONY : home/kang/monster_mash/third_party/image/imageReadWrite.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.i: home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.i
+home/kang/monster_mash/third_party/image/imageReadWrite.i: home/kang/monster_mash/third_party/image/imageReadWrite.cpp.i
+.PHONY : home/kang/monster_mash/third_party/image/imageReadWrite.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.i
+home/kang/monster_mash/third_party/image/imageReadWrite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.i
+.PHONY : home/kang/monster_mash/third_party/image/imageReadWrite.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.s: home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.s
+home/kang/monster_mash/third_party/image/imageReadWrite.s: home/kang/monster_mash/third_party/image/imageReadWrite.cpp.s
+.PHONY : home/kang/monster_mash/third_party/image/imageReadWrite.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.cpp.s
+home/kang/monster_mash/third_party/image/imageReadWrite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageReadWrite.cpp.s
+.PHONY : home/kang/monster_mash/third_party/image/imageReadWrite.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/image/imageScale.o: home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageScale.o
+home/kang/monster_mash/third_party/image/imageScale.o: home/kang/monster_mash/third_party/image/imageScale.cpp.o
+.PHONY : home/kang/monster_mash/third_party/image/imageScale.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.o
+home/kang/monster_mash/third_party/image/imageScale.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.o
+.PHONY : home/kang/monster_mash/third_party/image/imageScale.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/image/imageScale.i: home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageScale.i
+home/kang/monster_mash/third_party/image/imageScale.i: home/kang/monster_mash/third_party/image/imageScale.cpp.i
+.PHONY : home/kang/monster_mash/third_party/image/imageScale.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.i
+home/kang/monster_mash/third_party/image/imageScale.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.i
+.PHONY : home/kang/monster_mash/third_party/image/imageScale.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/image/imageScale.s: home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageScale.s
+home/kang/monster_mash/third_party/image/imageScale.s: home/kang/monster_mash/third_party/image/imageScale.cpp.s
+.PHONY : home/kang/monster_mash/third_party/image/imageScale.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageScale.cpp.s
+home/kang/monster_mash/third_party/image/imageScale.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageScale.cpp.s
+.PHONY : home/kang/monster_mash/third_party/image/imageScale.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/image/imageUtils.o: home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageUtils.o
+home/kang/monster_mash/third_party/image/imageUtils.o: home/kang/monster_mash/third_party/image/imageUtils.cpp.o
+.PHONY : home/kang/monster_mash/third_party/image/imageUtils.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.o
+home/kang/monster_mash/third_party/image/imageUtils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.o
+.PHONY : home/kang/monster_mash/third_party/image/imageUtils.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/image/imageUtils.i: home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageUtils.i
+home/kang/monster_mash/third_party/image/imageUtils.i: home/kang/monster_mash/third_party/image/imageUtils.cpp.i
+.PHONY : home/kang/monster_mash/third_party/image/imageUtils.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.i
+home/kang/monster_mash/third_party/image/imageUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.i
+.PHONY : home/kang/monster_mash/third_party/image/imageUtils.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/image/imageUtils.s: home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageUtils.s
+home/kang/monster_mash/third_party/image/imageUtils.s: home/kang/monster_mash/third_party/image/imageUtils.cpp.s
+.PHONY : home/kang/monster_mash/third_party/image/imageUtils.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/image/imageUtils.cpp.s
+home/kang/monster_mash/third_party/image/imageUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/image/imageUtils.cpp.s
+.PHONY : home/kang/monster_mash/third_party/image/imageUtils.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.o: home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.o
+home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.o: home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o
+home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.i: home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.i
+home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.i: home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i
+home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.s: home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.s
+home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.s: home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s
+home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.o: home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.o
+home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.o: home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o
+home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.i: home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.i
+home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.i: home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i
+home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.s: home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.s
+home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.s: home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s
+home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s
+.PHONY : home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/miscutils/camera.o: home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/camera.o
+home/kang/monster_mash/third_party/miscutils/camera.o: home/kang/monster_mash/third_party/miscutils/camera.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/camera.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.o
+home/kang/monster_mash/third_party/miscutils/camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/camera.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/miscutils/camera.i: home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/camera.i
+home/kang/monster_mash/third_party/miscutils/camera.i: home/kang/monster_mash/third_party/miscutils/camera.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/camera.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.i
+home/kang/monster_mash/third_party/miscutils/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/camera.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/miscutils/camera.s: home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/camera.s
+home/kang/monster_mash/third_party/miscutils/camera.s: home/kang/monster_mash/third_party/miscutils/camera.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/camera.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/camera.cpp.s
+home/kang/monster_mash/third_party/miscutils/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/camera.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/camera.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/miscutils/def3d.o: home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/def3d.o
+home/kang/monster_mash/third_party/miscutils/def3d.o: home/kang/monster_mash/third_party/miscutils/def3d.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/def3d.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.o
+home/kang/monster_mash/third_party/miscutils/def3d.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/def3d.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/miscutils/def3d.i: home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/def3d.i
+home/kang/monster_mash/third_party/miscutils/def3d.i: home/kang/monster_mash/third_party/miscutils/def3d.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/def3d.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.i
+home/kang/monster_mash/third_party/miscutils/def3d.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/def3d.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/miscutils/def3d.s: home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/def3d.s
+home/kang/monster_mash/third_party/miscutils/def3d.s: home/kang/monster_mash/third_party/miscutils/def3d.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/def3d.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/def3d.cpp.s
+home/kang/monster_mash/third_party/miscutils/def3d.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/def3d.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.o: home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.o
+home/kang/monster_mash/third_party/miscutils/fsutils.o: home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/fsutils.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.o
+home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.i: home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.i
+home/kang/monster_mash/third_party/miscutils/fsutils.i: home/kang/monster_mash/third_party/miscutils/fsutils.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/fsutils.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.i
+home/kang/monster_mash/third_party/miscutils/fsutils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/fsutils.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.s: home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.s
+home/kang/monster_mash/third_party/miscutils/fsutils.s: home/kang/monster_mash/third_party/miscutils/fsutils.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/fsutils.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.cpp.s
+home/kang/monster_mash/third_party/miscutils/fsutils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/fsutils.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.o: home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.o
+home/kang/monster_mash/third_party/miscutils/mesh3d.o: home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/mesh3d.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.o
+home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.i: home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.i
+home/kang/monster_mash/third_party/miscutils/mesh3d.i: home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/mesh3d.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.i
+home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.s: home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.s
+home/kang/monster_mash/third_party/miscutils/mesh3d.s: home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/mesh3d.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.cpp.s
+home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/mesh3d.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.o: home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.o
+home/kang/monster_mash/third_party/miscutils/opengltools.o: home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/opengltools.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.o
+home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o
+.PHONY : home/kang/monster_mash/third_party/miscutils/opengltools.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.i: home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.i
+home/kang/monster_mash/third_party/miscutils/opengltools.i: home/kang/monster_mash/third_party/miscutils/opengltools.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/opengltools.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.i
+home/kang/monster_mash/third_party/miscutils/opengltools.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.i
+.PHONY : home/kang/monster_mash/third_party/miscutils/opengltools.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.s: home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.s
+home/kang/monster_mash/third_party/miscutils/opengltools.s: home/kang/monster_mash/third_party/miscutils/opengltools.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/opengltools.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.cpp.s
+home/kang/monster_mash/third_party/miscutils/opengltools.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/opengltools.cpp.s
+.PHONY : home/kang/monster_mash/third_party/miscutils/opengltools.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.o: home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.o
+home/kang/monster_mash/third_party/tinygltf/tinygltf.o: home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o
+.PHONY : home/kang/monster_mash/third_party/tinygltf/tinygltf.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.o
+home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o
+.PHONY : home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.o
 
-home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.i: home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.i
+home/kang/monster_mash/third_party/tinygltf/tinygltf.i: home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.i
+.PHONY : home/kang/monster_mash/third_party/tinygltf/tinygltf.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.i
+home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.i
+.PHONY : home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.i
 
-home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.s: home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.s
+home/kang/monster_mash/third_party/tinygltf/tinygltf.s: home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.s
+.PHONY : home/kang/monster_mash/third_party/tinygltf/tinygltf.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.cpp.s
+home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.s
+.PHONY : home/kang/monster_mash/third_party/tinygltf/tinygltf.cpp.s
 
-home/kang/Inverse/monster_mash/third_party/triangle/triangle.o: home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/triangle/triangle.o
+home/kang/monster_mash/third_party/triangle/triangle.o: home/kang/monster_mash/third_party/triangle/triangle.c.o
+.PHONY : home/kang/monster_mash/third_party/triangle/triangle.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.o
+home/kang/monster_mash/third_party/triangle/triangle.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.o
+.PHONY : home/kang/monster_mash/third_party/triangle/triangle.c.o
 
-home/kang/Inverse/monster_mash/third_party/triangle/triangle.i: home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/triangle/triangle.i
+home/kang/monster_mash/third_party/triangle/triangle.i: home/kang/monster_mash/third_party/triangle/triangle.c.i
+.PHONY : home/kang/monster_mash/third_party/triangle/triangle.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.i
+home/kang/monster_mash/third_party/triangle/triangle.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.i
+.PHONY : home/kang/monster_mash/third_party/triangle/triangle.c.i
 
-home/kang/Inverse/monster_mash/third_party/triangle/triangle.s: home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/triangle/triangle.s
+home/kang/monster_mash/third_party/triangle/triangle.s: home/kang/monster_mash/third_party/triangle/triangle.c.s
+.PHONY : home/kang/monster_mash/third_party/triangle/triangle.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/triangle/triangle.c.s
+home/kang/monster_mash/third_party/triangle/triangle.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/triangle/triangle.c.s
+.PHONY : home/kang/monster_mash/third_party/triangle/triangle.c.s
 
-home/kang/Inverse/monster_mash/third_party/zip-mod/zip.o: home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/zip-mod/zip.o
+home/kang/monster_mash/third_party/zip-mod/zip.o: home/kang/monster_mash/third_party/zip-mod/zip.c.o
+.PHONY : home/kang/monster_mash/third_party/zip-mod/zip.o
 
 # target to build an object file
-home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o
-.PHONY : home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.o
+home/kang/monster_mash/third_party/zip-mod/zip.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.o
+.PHONY : home/kang/monster_mash/third_party/zip-mod/zip.c.o
 
-home/kang/Inverse/monster_mash/third_party/zip-mod/zip.i: home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/zip-mod/zip.i
+home/kang/monster_mash/third_party/zip-mod/zip.i: home/kang/monster_mash/third_party/zip-mod/zip.c.i
+.PHONY : home/kang/monster_mash/third_party/zip-mod/zip.i
 
 # target to preprocess a source file
-home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.i
-.PHONY : home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.i
+home/kang/monster_mash/third_party/zip-mod/zip.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.i
+.PHONY : home/kang/monster_mash/third_party/zip-mod/zip.c.i
 
-home/kang/Inverse/monster_mash/third_party/zip-mod/zip.s: home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/zip-mod/zip.s
+home/kang/monster_mash/third_party/zip-mod/zip.s: home/kang/monster_mash/third_party/zip-mod/zip.c.s
+.PHONY : home/kang/monster_mash/third_party/zip-mod/zip.s
 
 # target to generate assembly for a file
-home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.s
-.PHONY : home/kang/Inverse/monster_mash/third_party/zip-mod/zip.c.s
+home/kang/monster_mash/third_party/zip-mod/zip.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/zip-mod/zip.c.s
+.PHONY : home/kang/monster_mash/third_party/zip-mod/zip.c.s
 
 loadsave.o: loadsave.cpp.o
 .PHONY : loadsave.o
@@ -753,51 +753,51 @@ help:
 	@echo "... exportgltf.o"
 	@echo "... exportgltf.i"
 	@echo "... exportgltf.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/image/imageReadWrite.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/image/imageScale.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/image/imageScale.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/image/imageScale.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/image/imageUtils.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/image/imageUtils.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/image/imageUtils.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/ir3d-utils/MeshBuilder.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/ir3d-utils/regionToMesh.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/camera.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/camera.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/camera.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/def3d.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/def3d.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/def3d.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/fsutils.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/mesh3d.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/miscutils/opengltools.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/tinygltf/tinygltf.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/triangle/triangle.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/triangle/triangle.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/triangle/triangle.s"
-	@echo "... home/kang/Inverse/monster_mash/third_party/zip-mod/zip.o"
-	@echo "... home/kang/Inverse/monster_mash/third_party/zip-mod/zip.i"
-	@echo "... home/kang/Inverse/monster_mash/third_party/zip-mod/zip.s"
+	@echo "... home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.o"
+	@echo "... home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.i"
+	@echo "... home/kang/monster_mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.s"
+	@echo "... home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.o"
+	@echo "... home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.i"
+	@echo "... home/kang/monster_mash/third_party/SDL2_gfx/SDL2_rotozoom.s"
+	@echo "... home/kang/monster_mash/third_party/image/imageReadWrite.o"
+	@echo "... home/kang/monster_mash/third_party/image/imageReadWrite.i"
+	@echo "... home/kang/monster_mash/third_party/image/imageReadWrite.s"
+	@echo "... home/kang/monster_mash/third_party/image/imageScale.o"
+	@echo "... home/kang/monster_mash/third_party/image/imageScale.i"
+	@echo "... home/kang/monster_mash/third_party/image/imageScale.s"
+	@echo "... home/kang/monster_mash/third_party/image/imageUtils.o"
+	@echo "... home/kang/monster_mash/third_party/image/imageUtils.i"
+	@echo "... home/kang/monster_mash/third_party/image/imageUtils.s"
+	@echo "... home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.o"
+	@echo "... home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.i"
+	@echo "... home/kang/monster_mash/third_party/ir3d-utils/MeshBuilder.s"
+	@echo "... home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.o"
+	@echo "... home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.i"
+	@echo "... home/kang/monster_mash/third_party/ir3d-utils/regionToMesh.s"
+	@echo "... home/kang/monster_mash/third_party/miscutils/camera.o"
+	@echo "... home/kang/monster_mash/third_party/miscutils/camera.i"
+	@echo "... home/kang/monster_mash/third_party/miscutils/camera.s"
+	@echo "... home/kang/monster_mash/third_party/miscutils/def3d.o"
+	@echo "... home/kang/monster_mash/third_party/miscutils/def3d.i"
+	@echo "... home/kang/monster_mash/third_party/miscutils/def3d.s"
+	@echo "... home/kang/monster_mash/third_party/miscutils/fsutils.o"
+	@echo "... home/kang/monster_mash/third_party/miscutils/fsutils.i"
+	@echo "... home/kang/monster_mash/third_party/miscutils/fsutils.s"
+	@echo "... home/kang/monster_mash/third_party/miscutils/mesh3d.o"
+	@echo "... home/kang/monster_mash/third_party/miscutils/mesh3d.i"
+	@echo "... home/kang/monster_mash/third_party/miscutils/mesh3d.s"
+	@echo "... home/kang/monster_mash/third_party/miscutils/opengltools.o"
+	@echo "... home/kang/monster_mash/third_party/miscutils/opengltools.i"
+	@echo "... home/kang/monster_mash/third_party/miscutils/opengltools.s"
+	@echo "... home/kang/monster_mash/third_party/tinygltf/tinygltf.o"
+	@echo "... home/kang/monster_mash/third_party/tinygltf/tinygltf.i"
+	@echo "... home/kang/monster_mash/third_party/tinygltf/tinygltf.s"
+	@echo "... home/kang/monster_mash/third_party/triangle/triangle.o"
+	@echo "... home/kang/monster_mash/third_party/triangle/triangle.i"
+	@echo "... home/kang/monster_mash/third_party/triangle/triangle.s"
+	@echo "... home/kang/monster_mash/third_party/zip-mod/zip.o"
+	@echo "... home/kang/monster_mash/third_party/zip-mod/zip.i"
+	@echo "... home/kang/monster_mash/third_party/zip-mod/zip.s"
 	@echo "... loadsave.o"
 	@echo "... loadsave.i"
 	@echo "... loadsave.s"
