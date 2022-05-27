@@ -10,89 +10,63 @@
 using namespace Eigen;
 using namespace std;
 
+
 void Def3D::CP::setControlPointPosition(Eigen::Vector3d t){
-  
-  this->pos;
-  /*
-  //set Child's position
-  for(int i=0; i<this->childNum; i++){
-      if(pChild[i] != nullptr){
-          pChild[i]->setControlPointPosition(t);
-      }
-  }
-  */
-  if (ik.init() != IK_OK)
-    std::cout <<("Failed to initialize IK");
-  struct ik_solver_t* solver =ik.solver.create(IK_TWO_BONE);
-
-  solver->max_iterations = 20;
-  solver->tolerance = 0.01;
-
-  //Create 3-bone
-  struct ik_node_t* root = solver->node->create(0);
-  struct ik_node_t* child1 = solver->node->create_child(root,1);
-  struct ik_node_t* child2 = solver->node->create_child(child1,2);
-  //struct ik_node_t* child3 = solver->node->create_child(child2, 3); 
-  std::cout << pParent->pParent->pos[0] << std::endl;
-  //child2->position = ik.vec3.vec3(this->pos[0],this->pos[1],this->pos[2]);
-  child2->position = ik.vec3.vec3(
-  0,
-  1,
-  1);
-  
-  if(pParent != nullptr){
-/*
-    child1->position = ik.vec3.vec3(
-      pParent->pos[0],
-      pParent->pos[1],
-      pParent->pos[2]); */
-          child1->position = ik.vec3.vec3(
-      0,
-      1,
-      -1);
-      
-      if(pParent->pParent != nullptr){
-        /* root->position = ik.vec3.vec3(
-      pParent->pParent->pos[0],
-      pParent->pParent->pos[1],
-      pParent->pParent->pos[2]
-      );*/
-      /*
-      root->position = ik.vec3.vec3(
-      0,
-      0,
-      0
-      );
-      */
-
-      //make effecter at the end(child3)
-      struct ik_effector_t* eff = solver->effector->create();
-      solver->effector->attach(eff, child2);
-
-      //set target position
-      //eff->target_position =  ik.vec3.vec3(t[0]/100 + this->pos[0], t[1]/100+this->pos[1], t[2]/100+this->pos[2]);
-      eff->target_position =  ik.vec3.vec3(t[0]/100 , t[1]/100, t[2]/100);
-      
-      solver->flags |= IK_ENABLE_TARGET_ROTATIONS;
-      //solver->flags |= IK_ENABLE_JOINT_ROTATIONS;
-      ik.solver.set_tree(solver,root);
-      //ik.solver.rebuild_data(solver);
-      ik.solver.rebuild(solver);
-      if(ik.solver.solve(solver) == true){
-        (float*)root->user_data;
-        pParent->pParent->pos += Eigen::Vector3d(root->position.x,root->position.y,root->position.z);
-        pParent->pos += Eigen::Vector3d(child1->position.x,child1->position.y,child1->position.z);
-        this->pos += Eigen::Vector3d(child2->position.x,child2->position.y,child2->position.z);
-      }
-      }
-      
-    }
+  forwardKinematics(t);
 
 }
 
-static void apply_nodes_to_scene(struct ik_node_t* ikNode){
-  Def3D::CP* node = (Def3D::CP*)ikNode->user_data;
-  //node->pos = ikNode->position;
+void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
+  //set target point
+  Eigen::Vector3d targetPosition = this->pos + delta;
+  if(pParent != nullptr && pParent->pParent != nullptr){
+    Eigen::Vector3d rootPosition = pParent->pParent->pos;
+    Eigen::Vector3d rootChildNodePosition = pParent->pos;
+    Eigen::Vector3d lastNodePosition = this->pos;
+    float EPS = 0.01f;
+    float steps = 0.1f;
+    while(abs(targetPosition - lastNodePosition) <= EPS){
+      Eigen::Vector3d dTheta = GetDeltaOrigentation(target);
+      this->pos += forwardKinematics(dTheta)* steps;
+    }
+  }
+}
+Eigen::Vector3d  Def3D::CP::GetDeltaOrigentation(Eigen::Vector3d target){
+  Eigen::MatrixXD Jt = GetJacobianTranspose(target);
+  Eigen::Vector3d V = target - this->pos;
+  Eigen::Vector3d dTheta = Jt * V;
+  return dTheta;
+}
+Eigen::MatrixXd Def3D::CP::GetJacobianTranspose(Eigen::Vector3d target){
+  MatrixXd J;
+  J.addTo(Eigen::Cross(pParent->Rotation,this->pos - pParent->pos));
+  J.addTo(Eigen::Cross(pParent->pParent->Rotation,this->pos - pParent->pParent->pos));
+  return J.transpose();
+}
+
+void Def3D::CP::forwardKinematics(Eigen::Vector3d deltaRotation){
+
+  
+  if(length != -1){
+    double theta = atan2(deltaRotation[1],deltaRotation[0]);
+    double anglePi = acos(deltaRotation[2]/this->length);
+    Eigen::Vector3d tmp = this->localPos;
+    this->localPos[0] = length * cos(theta) * sin(anglePi);
+    this->localPos[1] = length * sin(theta) * sin(anglePi);
+    this->localPos[2] = length * cos(anglePi);
+    Eigen::Vector3d delta = this->localPos-tmp;
+    this->pos[0] = this->pParent->pos[0] + this->localPos[0];
+    this->pos[1] = this->pParent->pos[1] + this->localPos[1];
+    this->pos[2] = this->pParent->pos[2] + this->localPos[2] ;
+  //this->pos = this->pos * M;
+    this->Rotation += deltaRotation;
+    
+    for(auto &it :pChild){
+      if(it != nullptr){
+        it->pos += delta;
+      }
+    }
+  }
 }
 
 void Def3D::CP::setControlPointRotation(Eigen::Vector3d t){
@@ -184,9 +158,10 @@ int Def3D::addCP(CP &cp)
             cps[nextId]->pParent = it.second;
             //apply child and length(frame length)
 
-            it.second->length = distance;
+            cps[nextId]->length = distance;
             //update lengthm
             lengthm = distance;
+            cps[nextId]->localPos = cp.pos - it.second->pos;
         }
 
   }
@@ -194,7 +169,11 @@ int Def3D::addCP(CP &cp)
       cps[nextId]->pParent->pChild[cps[nextId]->pParent->childNum] = cps[nextId];
       cps[nextId]->pParent->childNum++;
   }
-
+  std::cout 
+  << cp.localPos[0] << " "
+  << cp.localPos[1] << " "
+  << cp.localPos[2] << " "
+  << std::endl;
   nextId++;
   cpChangedNum++;
   return nextId-1;
