@@ -5618,7 +5618,8 @@ CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/def3d.cp
   /usr/local/include/ik/tests.h \
   /usr/include/c++/11/unordered_set \
   /usr/include/c++/11/bits/unordered_set.h \
-  /usr/include/c++/11/iostream
+  /usr/include/c++/11/iostream \
+  /home/kang/monster_mash/third_party/eigen3/Eigen/Geometry
 
 CMakeFiles/monstermash.dir/home/kang/monster_mash/third_party/miscutils/fsutils.cpp.o: /home/kang/monster_mash/third_party/miscutils/fsutils.cpp \
   /usr/include/stdc-predef.h \

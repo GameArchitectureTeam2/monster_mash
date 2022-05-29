@@ -6,14 +6,37 @@
 #include <unordered_set>
 #include <iostream>
 #include <vector>
-
+#include <Eigen/Geometry>
 using namespace Eigen;
 using namespace std;
 
 
 void Def3D::CP::setControlPointPosition(Eigen::Vector3d t){
-  forwardKinematics(t);
-
+  //forwardKinematics(t);
+  jacobianInverse(t);
+  
+  int i = 0;
+      std::cout << i << std::endl;
+    std::cout << " x:" << this->pos[0] << " y:" << this->pos[1] << " z:" << this->pos[2] << std::endl;
+    std::cout << " lx:" << this->localPos[0] << " ly:" << this->localPos[1] << " lz:" << this->localPos[2] << std::endl;
+    std::cout << " rx:" << this->Rotation[0] << " ry:" << this->Rotation[1] << " rz:" << this->Rotation[2] << std::endl;
+    std::cout << this->length << std::endl;
+    std::cout << "----------------------------------------------------------" << std::endl;
+    i++;
+  
+  std::shared_ptr<Def3D::CP> tmp = this->pParent;
+  
+  while(tmp != nullptr){
+    std::cout << i << std::endl;
+    std::cout << " x:" << tmp->pos[0] << " y:" << tmp->pos[1] << " z:" << tmp->pos[2] << std::endl;
+    std::cout << " lx:" << tmp->localPos[0] << " ly:" << tmp->localPos[1] << " lz:" << tmp->localPos[2] << std::endl;
+    std::cout << " rx:" << tmp->Rotation[0] << " ry:" << tmp->Rotation[1] << " rz:" << tmp->Rotation[2] << std::endl;
+    std::cout << tmp->length << std::endl;
+    std::cout << "----------------------------------------------------------" << std::endl;
+    i++;
+    tmp = tmp->pParent;
+  }
+  
 }
 
 void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
@@ -23,24 +46,43 @@ void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
     Eigen::Vector3d rootPosition = pParent->pParent->pos;
     Eigen::Vector3d rootChildNodePosition = pParent->pos;
     Eigen::Vector3d lastNodePosition = this->pos;
-    float EPS = 0.01f;
-    float steps = 0.1f;
-    while(abs(targetPosition - lastNodePosition) <= EPS){
-      Eigen::Vector3d dTheta = GetDeltaOrigentation(target);
-      this->pos += forwardKinematics(dTheta)* steps;
+    float EPS = 0.000001f;
+    float steps = 1;
+    while(std::sqrt(pow(targetPosition[0] - this->pos[0],2)
+    + pow(targetPosition[1] - this->pos[1],2)
+    + pow(targetPosition[2] - this->pos[2],2)) >= EPS){
+
+      Eigen::Vector3d dTheta = GetDeltaOrigentation(targetPosition);
+      std::cout << dTheta[0] << dTheta[1] << dTheta[2];
+      forwardKinematics(dTheta);
     }
   }
 }
 Eigen::Vector3d  Def3D::CP::GetDeltaOrigentation(Eigen::Vector3d target){
-  Eigen::MatrixXD Jt = GetJacobianTranspose(target);
+  Eigen::MatrixXd Jt = GetJacobianTranspose(target);
   Eigen::Vector3d V = target - this->pos;
+  //std::cout << Jt;
   Eigen::Vector3d dTheta = Jt * V;
   return dTheta;
 }
 Eigen::MatrixXd Def3D::CP::GetJacobianTranspose(Eigen::Vector3d target){
-  MatrixXd J;
-  J.addTo(Eigen::Cross(pParent->Rotation,this->pos - pParent->pos));
-  J.addTo(Eigen::Cross(pParent->pParent->Rotation,this->pos - pParent->pParent->pos));
+  MatrixXd J(3,6);
+  //std::cout << this->pos - pParent->pos;
+  Eigen::Vector3d v1 = (Eigen::Vector3d(1,0,0).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v2 = (Eigen::Vector3d(0,1,0).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v3 = (Eigen::Vector3d(0,0,1).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v4 = (Eigen::Vector3d(1,0,0).cross(this->pos - pParent->pParent->pos));
+  Eigen::Vector3d v5 = (Eigen::Vector3d(0,1,0).cross(this->pos - pParent->pParent->pos));
+  Eigen::Vector3d v6 = (Eigen::Vector3d(0,0,1).cross(this->pos - pParent->pParent->pos));
+  //std::cout << v1 ;
+  cout.precision(10);
+  std::cout << Eigen::Vector3d(pParent->Rotation.normalized()[0],0,0).cross(this->pos - pParent->pos) << std::endl;
+  std::cout << Eigen::Vector3d(pParent->Rotation.normalized()[0],0,0) << std::endl;
+  std::cout << (this->pos - pParent->pos) << std::endl;
+  J << v1[0] ,v2[0] ,v3[0] ,v4[0] ,v5[0] ,v6[0] 
+  ,v1[1] ,v2[1] ,v3[1],v4[1] ,v5[1] ,v6[1] 
+  ,v1[2] ,v2[2] ,v3[2],v4[2] ,v5[2] ,v6[2] ;
+  //std::cout << v1[0];
   return J.transpose();
 }
 
@@ -57,10 +99,13 @@ void Def3D::CP::forwardKinematics(Eigen::Vector3d deltaRotation){
     Eigen::Vector3d delta = this->localPos-tmp;
     this->pos[0] = this->pParent->pos[0] + this->localPos[0];
     this->pos[1] = this->pParent->pos[1] + this->localPos[1];
-    this->pos[2] = this->pParent->pos[2] + this->localPos[2] ;
+    this->pos[2] = this->pParent->pos[2] + this->localPos[2];
   //this->pos = this->pos * M;
-    this->Rotation += deltaRotation;
-    
+    pParent->Rotation += deltaRotation;
+    pParent->Rotation[0] = static_cast<int>(pParent->Rotation[0]) % 360;
+    pParent->Rotation[1] = static_cast<int>(pParent->Rotation[1]) % 360;
+    pParent->Rotation[2] = static_cast<int>(pParent->Rotation[2]) % 360;
+    //std::cout << pParent->Rotation[0];
     for(auto &it :pChild){
       if(it != nullptr){
         it->pos += delta;
@@ -84,14 +129,6 @@ Eigen::Vector3d Def3D::CP::getControlPointPosition(){
     return pos;
 }
 
-
-int Def3D::CP::getLength(){
-    return this->length;
-};
-
-std::shared_ptr<Def3D::CP> Def3D::CP::getParent(){
-    return this->pParent;
-};
 
 std::shared_ptr<Def3D::CP>* Def3D::CP::getChild(){
     return this->pChild;
