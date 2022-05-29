@@ -52,9 +52,10 @@ void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
     + pow(targetPosition[1] - this->pos[1],2)
     + pow(targetPosition[2] - this->pos[2],2)) >= EPS){
 
-      Eigen::Vector3d dTheta = GetDeltaOrigentation(targetPosition);
-      std::cout << dTheta[0] << dTheta[1] << dTheta[2];
-      forwardKinematics(dTheta);
+      Eigen::MatrixXd dTheta = GetDeltaOrigentation(targetPosition);
+      //std::cout << dTheta.row(0)<< std::endl;
+      forwardKinematics(dTheta.row(0));
+      this->pParent->forwardKinematics(dTheta.row(1));
     }
   }
 }
@@ -62,7 +63,7 @@ Eigen::Vector3d  Def3D::CP::GetDeltaOrigentation(Eigen::Vector3d target){
   Eigen::MatrixXd Jt = GetJacobianTranspose(target);
   Eigen::Vector3d V = target - this->pos;
   //std::cout << Jt;
-  Eigen::Vector3d dTheta = Jt * V;
+  Eigen::MatrixXd dTheta = Jt * V;
   return dTheta;
 }
 Eigen::MatrixXd Def3D::CP::GetJacobianTranspose(Eigen::Vector3d target){
@@ -76,9 +77,9 @@ Eigen::MatrixXd Def3D::CP::GetJacobianTranspose(Eigen::Vector3d target){
   Eigen::Vector3d v6 = (Eigen::Vector3d(0,0,1).cross(this->pos - pParent->pParent->pos));
   //std::cout << v1 ;
   cout.precision(10);
-  std::cout << Eigen::Vector3d(pParent->Rotation.normalized()[0],0,0).cross(this->pos - pParent->pos) << std::endl;
-  std::cout << Eigen::Vector3d(pParent->Rotation.normalized()[0],0,0) << std::endl;
-  std::cout << (this->pos - pParent->pos) << std::endl;
+  //std::cout << Eigen::Vector3d(pParent->Rotation.normalized()[0],0,0).cross(this->pos - pParent->pos) << std::endl;
+  //std::cout << Eigen::Vector3d(pParent->Rotation.normalized()[0],0,0) << std::endl;
+  //std::cout << (this->pos - pParent->pos) << std::endl;
   J << v1[0] ,v2[0] ,v3[0] ,v4[0] ,v5[0] ,v6[0] 
   ,v1[1] ,v2[1] ,v3[1],v4[1] ,v5[1] ,v6[1] 
   ,v1[2] ,v2[2] ,v3[2],v4[2] ,v5[2] ,v6[2] ;
@@ -102,9 +103,16 @@ void Def3D::CP::forwardKinematics(Eigen::Vector3d deltaRotation){
     this->pos[2] = this->pParent->pos[2] + this->localPos[2];
   //this->pos = this->pos * M;
     pParent->Rotation += deltaRotation;
+    double tmp0 = pParent->Rotation[0] - static_cast<int>(pParent->Rotation[0]);
     pParent->Rotation[0] = static_cast<int>(pParent->Rotation[0]) % 360;
+    pParent->Rotation[0] += tmp0;
+
+    double tmp1 = pParent->Rotation[1] - static_cast<int>(pParent->Rotation[01]);
     pParent->Rotation[1] = static_cast<int>(pParent->Rotation[1]) % 360;
+    pParent->Rotation[1] += tmp1;
+    double tmp2 = pParent->Rotation[2] - static_cast<int>(pParent->Rotation[2]);
     pParent->Rotation[2] = static_cast<int>(pParent->Rotation[2]) % 360;
+    pParent->Rotation[2] += tmp2;
     //std::cout << pParent->Rotation[0];
     for(auto &it :pChild){
       if(it != nullptr){
