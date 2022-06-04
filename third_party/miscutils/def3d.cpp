@@ -12,8 +12,9 @@ using namespace std;
 #include <glm/ext/matrix_transform.hpp>
 
 void Def3D::CP::setControlPointPosition(Eigen::Vector3d t){
-  //forwardKinematics(t);
-  jacobianInverse(t);
+  //Forward Kinematics by delta t vector or IK!
+  forwardKinematics(t);
+  //jacobianInverse(t);
   
   
 }
@@ -21,30 +22,33 @@ void Def3D::CP::setControlPointPosition(Eigen::Vector3d t){
 void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
   //set target point
   Eigen::Vector3d targetPosition = delta;
-  if(pParent != nullptr && pParent->pParent != nullptr){
+
+  //2 Bone IK...
+  if(pParent != nullptr ){
+    //Error squares
     float EPS = 0.1f;
-    float steps = 0.000001;
+    //Learning rate
+    float steps = 0.001;
+    //Maximum iterate
     int iteridx = 0;
 
+    //while  we not close to target to enough
     while(std::sqrt(pow(targetPosition[0] - this->pos[0],2)
     + pow(targetPosition[1] - this->pos[1],2)
     + pow(targetPosition[2] - this->pos[2],2)) >= EPS){
+      
+      //Take Delta
+      // (root)------(child1)--------(child2)
+      //We call child2 node and child1 node's FK function
+      //by Jacobian * V(target - this.pos) Matrix
 
       Eigen::MatrixXd dTheta = GetDeltaOrigentation(targetPosition);
-
+      //dTheta Matrix's row have Node's delta Rotation
+      // (0.001, 0.1223, 0.3445)- for Child2 Node Rotation delta
+      // (0.1122, 0.3145, 1.2314) - for Child1 Node Rotation delta
       forwardKinematics(dTheta.row(0)*steps);
-      this->pParent->forwardKinematics(dTheta.row(1)*steps);
-      
-      
-      //std::cout << "---------------" << std::endl;
-      //std::cout << dTheta.row(0) << std::endl;
-      //std::cout << dTheta.row(1) << std::endl;
-      //std::cout << delta[2] << std::endl;
-      //std::cout << "---------------" << std::endl;
-      //std::cout << std::sqrt(pow(targetPosition[0] - this->pos[0],2)
-    //+ pow(targetPosition[1] - this->pos[1],2)
-    //+ pow(targetPosition[2] - this->pos[2],2)) << std::endl;
-      
+      //this->pParent->forwardKinematics(dTheta.row(1)*steps);
+      //if iteridx greater than 1000, break loop;
       if(iteridx >= 1000){
         break;
       }
@@ -55,9 +59,12 @@ void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
   }
 }
 Eigen::Vector3d  Def3D::CP::GetDeltaOrigentation(Eigen::Vector3d target){
+
+  //Take Jacabian Transpose Matrix its maybe 6x3 Matrix
   Eigen::MatrixXd Jt = GetJacobianTranspose(target);
+  // target and this->pos 's direction and scalar
   Eigen::Vector3d V = target - this->pos;
-  
+  // multiply them
   Eigen::MatrixXd dTheta = Jt * V;
   std::cout << "---------------" << std::endl;
   std::cout << dTheta << std::endl;
@@ -65,34 +72,34 @@ Eigen::Vector3d  Def3D::CP::GetDeltaOrigentation(Eigen::Vector3d target){
   return dTheta;
 }
 Eigen::MatrixXd Def3D::CP::GetJacobianTranspose(Eigen::Vector3d target){
-  MatrixXd J(3,6);
-  //std::cout << this->pos - pParent->pos;
-
+  //Make Empty matrix(3x6)
+  MatrixXd J(3,3);
   //Make identity matrix
   glm::mat4 rot_m = glm::mat4(1.0f);
   //Make rotation Matrix by Axis
-  //Rotate (Matrix, Angle , Axis)
-  rot_m = glm::rotate(rot_m,float(pParent->pParent->Rotation[2]),glm::vec3(0,0,1));
-  rot_m = glm::rotate(rot_m,float(pParent->pParent->Rotation[1]),glm::vec3(0,1,0));
-  rot_m = glm::rotate(rot_m,float(pParent->pParent->Rotation[0]),glm::vec3(1,0,0));
+  //Yaw - Pitch - Roll by root Node's Rotation. 
+  rot_m = glm::rotate(rot_m,float(pParent->Rotation[2]),glm::vec3(0,0,1));
+  rot_m = glm::rotate(rot_m,float(pParent->Rotation[1]),glm::vec3(0,1,0));
+  rot_m = glm::rotate(rot_m,float(pParent->Rotation[0]),glm::vec3(1,0,0));
   
-  
+  //We make child1's Axis!!!! orderly x , y , z
   glm::vec4 tmp =  rot_m * glm::vec4(1,0,0,0);
   glm::vec4 tmp1 =  rot_m * glm::vec4(0,1,0,0);
   glm::vec4 tmp2 =  rot_m * glm::vec4(0,0,1,0);
-  //std::cout << tmp[0] <<std::endl;
-  //std::cout << tmp1[0] <<std::endl;
-  //std::cout << tmp2[0]<<std::endl;
-  Eigen::Vector3d v1 = ((Eigen::Vector3d(tmp[0],tmp[1],tmp[2]).normalized()).cross(this->pos - pParent->pos));
-  Eigen::Vector3d v2 = ((Eigen::Vector3d(tmp1[0],tmp1[1],tmp1[2]).normalized()).cross(this->pos - pParent->pos));
-  Eigen::Vector3d v3 = ((Eigen::Vector3d(tmp2[0],tmp2[1],tmp2[2]).normalized()).cross(this->pos - pParent->pos));
-  Eigen::Vector3d v4 = ((Eigen::Vector3d(1,0,0)).cross(this->pos - pParent->pParent->pos));
-  Eigen::Vector3d v5 = ((Eigen::Vector3d(0,1,0)).cross(this->pos - pParent->pParent->pos));
-  Eigen::Vector3d v6 = ((Eigen::Vector3d(0,0,1)).cross(this->pos - pParent->pParent->pos));
-  
-  J << v1[0] ,v2[0] ,v3[0] ,v4[0] ,v5[0] ,v6[0] 
-  ,v1[1] ,v2[1] ,v3[1],v4[1] ,v5[1] ,v6[1] 
-  ,v1[2] ,v2[2] ,v3[2],v4[2] ,v5[2] ,v6[2] ;
+  //So we now calculate Jacobian by (Axis) Cross (Effector Position and Node's Position)
+  //Eigen::Vector3d v1 = ((Eigen::Vector3d(tmp[0],tmp[1],tmp[2]).normalized()).cross(this->pos - pParent->pos));
+  //Eigen::Vector3d v2 = ((Eigen::Vector3d(tmp1[0],tmp1[1],tmp1[2]).normalized()).cross(this->pos - pParent->pos));
+  //Eigen::Vector3d v3 = ((Eigen::Vector3d(tmp2[0],tmp2[1],tmp2[2]).normalized()).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v4 = ((Eigen::Vector3d(tmp[0],tmp[1],tmp[2]).normalized()).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v5 = ((Eigen::Vector3d(tmp1[0],tmp1[1],tmp1[2]).normalized()).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v6 = ((Eigen::Vector3d(tmp2[0],tmp2[1],tmp2[2]).normalized()).cross(this->pos - pParent->pos));
+  //put on it
+  //J << v1[0] ,v2[0] ,v3[0] ,v4[0] ,v5[0] ,v6[0] 
+  //,v1[1] ,v2[1] ,v3[1],v4[1] ,v5[1] ,v6[1] 
+  //,v1[2] ,v2[2] ,v3[2],v4[2] ,v5[2] ,v6[2] ;
+    J << v4[0] ,v5[0] ,v6[0] 
+  ,v4[1] ,v5[1] ,v6[1], 
+  v4[2] ,v5[2] ,v6[2] ;
   return J.transpose();
 }
 
@@ -111,23 +118,35 @@ void Def3D::CP::forwardKinematics(Eigen::Vector3d deltaRotation){
     this->pos[0] = this->pParent->pos[0] + this->localPos[0];
     this->pos[1] = this->pParent->pos[1] + this->localPos[1];
     this->pos[2] = this->pParent->pos[2] + this->localPos[2];
-    //Rotation b   
-            //apply rotation
-            glm::vec3 directionVector(this->localPos[0], this->localPos[1],this->localPos[2]);
-            //directionVector = -directionVector;
-            //X-Axis
+  
+    //apply rotation
+    glm::vec3 directionVector(this->localPos[0], this->localPos[1],this->localPos[2]);
+            
+    //Child1 Node(Axis goes Ex,Ey,Ez)
     if(pParent->pParent == nullptr){
-                  this->pParent->Rotation[1] = 
-            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(0,1,0))/
-            sqrt(pow(directionVector[1],2)+pow(directionVector[2],2))) / M_PI * 180;
-            //y-Axis
+      
+      //Y-axis
+      //Y-axis's Rotation Can Caculate Inner Product between X axis and (x,0,z)
+      this->pParent->Rotation[1] = 
+      glm::acos(
+        glm::dot(
+          glm::vec3(directionVector[0],0,directionVector[2]),glm::vec3(0,0,1))
+          /sqrt(pow(directionVector[0],2)+pow(directionVector[2],2))) / M_PI * 180;
+
+      //Z-Axis
+      //z-axis can get by Inner product between Y axis and Vector(x,y,0)
             this->pParent->Rotation[2] = 
-            glm::acos(glm::dot(glm::vec3(directionVector[0],0,directionVector[2]),glm::vec3(0,0,1))/
-            sqrt(pow(directionVector[0],2)+pow(directionVector[2],2)))/ M_PI * 180;
+            glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(0,1,0))/
+            sqrt(pow(directionVector[0],2)+pow(directionVector[1],2)))/ M_PI * 180;
              //z-Axis
             this->pParent->Rotation[0] = 
-            glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(1,0,0))/
-            sqrt(pow(directionVector[0],2)+pow(directionVector[1],2)))/ M_PI * 180;
+            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(1,0,0))/
+            sqrt(pow(directionVector[2],2)+pow(directionVector[1],2)))/ M_PI * 180;
+            std::cout << "---------------------------" << std::endl;
+            std::cout << "x: " << this->pParent->Rotation[0] << std::endl;
+            std::cout << "y: " << this->pParent->Rotation[1] << std::endl;
+            std::cout << "z: " << this->pParent->Rotation[2] << std::endl;
+            std::cout << "---------------------------" << std::endl;
     }else{
         glm::mat4 rot_m = glm::mat4(1.0f);
       //Make rotation Matrix by Axis
@@ -141,26 +160,18 @@ void Def3D::CP::forwardKinematics(Eigen::Vector3d deltaRotation){
       glm::vec4 tmp1 =  rot_m * glm::vec4(0,1,0,0);
       glm::vec4 tmp2 =  rot_m * glm::vec4(0,0,1,0);
       this->pParent->Rotation[1] = 
-            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(tmp1[0],tmp1[1],tmp1[2]))/
-            sqrt(pow(directionVector[1],2)+pow(directionVector[2],2))) / M_PI * 180;
+            glm::acos(glm::dot(glm::vec3(directionVector[0],0,directionVector[2]),glm::vec3(tmp2[0],tmp2[1],tmp2[2]))/
+            sqrt(pow(directionVector[0],2)+pow(directionVector[2],2))) / M_PI * 180;
             //y-Axis
       this->pParent->Rotation[2] = 
-            glm::acos(glm::dot(glm::vec3(directionVector[0],0,directionVector[2]),glm::vec3(tmp2[0],tmp2[1],tmp2[2]))/
-            sqrt(pow(directionVector[0],2)+pow(directionVector[2],2)))/ M_PI * 180;
+            glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(tmp1[0],tmp1[1],tmp1[2]))/
+            sqrt(pow(directionVector[0],2)+pow(directionVector[1],2)))/ M_PI * 180;
              //z-Axis
       this->pParent->Rotation[0] = 
-            glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(tmp[0],tmp[1],tmp[2]))/
-            sqrt(pow(directionVector[0],2)+pow(directionVector[1],2)))/ M_PI * 180;
+            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(tmp[0],tmp[1],tmp[2]))/
+            sqrt(pow(directionVector[2],2)+pow(directionVector[1],2)))/ M_PI * 180;
     }
     
-    //std::cout << deltaRotation << std::endl;
-    //pParent->Rotation += deltaRotation;
-    
-   //std::cout << "---------------------------------------------" << std::endl; 
-   //std::cout << pParent->Rotation[0] << std::endl;
-   //std::cout << pParent->Rotation[1]<< std::endl;
-   //std::cout << pParent->Rotation[2]<< std::endl;
-   //std::cout << "---------------------------------------------" << std::endl; 
        for(auto &it :pChild){
       if(it != nullptr){
         it->pos += delta;
@@ -265,19 +276,21 @@ int Def3D::addCP(CP &cp)
 
             //apply rotation
             glm::vec3 directionVector(cp.pos[0]- cps[nextId]->pParent->pos[0],cp.pos[1]-cps[nextId]->pParent->pos[1],cp.pos[0]-cps[nextId]->pParent->pos[2]);
-            //directionVector = -directionVector;
-            //X-Axis
-            cps[nextId]->pParent->Rotation[0] = 
-            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(0,0,1))/
-            sqrt(pow(directionVector[1],2)+pow(directionVector[2],2))) / M_PI * 180;
-            //y-Axis
-            cps[nextId]->pParent->Rotation[1] = 
-            glm::acos(glm::dot(glm::vec3(directionVector[0],0,directionVector[2]),glm::vec3(1,0,0))/
-            sqrt(pow(directionVector[0],2)+pow(directionVector[2],2)))/ M_PI * 180;
-             //z-Axis
+                  cps[nextId]->pParent->Rotation[1] = 
+      glm::acos(
+        glm::dot(
+          glm::vec3(directionVector[0],0,directionVector[2]),glm::vec3(0,0,1))
+          /sqrt(pow(directionVector[0],2)+pow(directionVector[2],2))) / M_PI * 180;
+
+      //Z-Axis
+      //z-axis can get by Inner product between Y axis and Vector(x,y,0)
             cps[nextId]->pParent->Rotation[2] = 
             glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(0,1,0))/
             sqrt(pow(directionVector[0],2)+pow(directionVector[1],2)))/ M_PI * 180;
+             //z-Axis
+            cps[nextId]->pParent->Rotation[0] = 
+            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(1,0,0))/
+            sqrt(pow(directionVector[2],2)+pow(directionVector[1],2)))/ M_PI * 180;
 
   
   }

@@ -55,9 +55,9 @@ void drawControlPoints(const Def3D &def, MyPainter &painter, int size,
   for(;i>=0;){
 
       glm::mat4 m(1.0f);
-      m = glm::rotate(m,float(tmpRotation[i][2]/180 *M_PI),glm::vec3(0,0,1)); 
+      m = glm::rotate(m,float(tmpRotation[i][0]/180 *M_PI),glm::vec3(0,0,1)); 
       m = glm::rotate(m,float(tmpRotation[i][1]/180 *M_PI),glm::vec3(0,1,0));
-      m = glm::rotate(m,float(tmpRotation[i][0]/180 *M_PI),glm::vec3(1,0,0));
+      m = glm::rotate(m,float(tmpRotation[i][2]/180 *M_PI),glm::vec3(1,0,0));
       Eigen::Matrix4d tmpM;
       tmpM <<
       m[0][0],m[0][1],m[0][2],m[0][3],

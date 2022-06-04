@@ -1270,7 +1270,7 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
       } else {
         //0502
         //cp.pos = cp.pos + t/100;
-        //cp.setControlPointPosition(t/100);
+        cp.setControlPointPosition(t/100);
         //std::cout << t[0] << " " << t[1] << " " << t[2] << " " << std::endl;
       }
     }
@@ -1339,17 +1339,17 @@ void MainWindow::handleMouseReleaseEventGeometryMode(
     if (event.leftButton)
       transformApply();
     else
-      transformDiscard();
+      transformApply();
     return;
   }
-  double x2 = mouseReleaseEnd(0);
-  double y2 = mouseReleaseEnd(1);
-  auto *defCurr = &def;
-  const Vector3d mouseCurrProj(mouseReleaseEnd(0), mouseReleaseEnd(1), 0);
-  Vector3d deltaa = (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized();
-  auto &cp = defCurr->getCP(selectedPoint);
+  //double x2 = mouseReleaseEnd(0);
+  //double y2 = mouseReleaseEnd(1);
+  //auto *defCurr = &def;
+  //const Vector3d mouseCurrProj(mouseReleaseEnd(0), mouseReleaseEnd(1), 0);
+  //Vector3d deltaa = (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized();
+  //auto &cp = defCurr->getCP(selectedPoint);
   
-  cp.setControlPointPosition(deltaa);
+  //cp.setControlPointPosition(deltaa);
   transformApply();
   
   if (rubberBandActive) {
