@@ -1253,7 +1253,7 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
     Vector3d t =
         (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized() -
         (proj3DViewInv * startPosProj.homogeneous()).hnormalized();
-
+    Vector3d deltaa = (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized();
     // apply the translation vector to all selected control points
     for (const int cpId : selectedPoints) {
       auto &cp = defCurr->getCP(cpId);
@@ -1270,8 +1270,8 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
       } else {
         //0502
         //cp.pos = cp.pos + t/100;
-        cp.setControlPointPosition(t/10);
-
+        //cp.setControlPointPosition(t/100);
+        //std::cout << t[0] << " " << t[1] << " " << t[2] << " " << std::endl;
       }
     }
   } catch (out_of_range &e) {
@@ -1342,9 +1342,16 @@ void MainWindow::handleMouseReleaseEventGeometryMode(
       transformDiscard();
     return;
   }
-
+  double x2 = mouseReleaseEnd(0);
+  double y2 = mouseReleaseEnd(1);
+  auto *defCurr = &def;
+  const Vector3d mouseCurrProj(mouseReleaseEnd(0), mouseReleaseEnd(1), 0);
+  Vector3d deltaa = (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized();
+  auto &cp = defCurr->getCP(selectedPoint);
+  
+  cp.setControlPointPosition(deltaa);
   transformApply();
-
+  
   if (rubberBandActive) {
     // select points inside the rubber band
     double x1 = mousePressStart(0);

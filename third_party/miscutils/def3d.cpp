@@ -9,119 +9,166 @@
 #include <Eigen/Geometry>
 using namespace Eigen;
 using namespace std;
-
+#include <glm/ext/matrix_transform.hpp>
 
 void Def3D::CP::setControlPointPosition(Eigen::Vector3d t){
   //forwardKinematics(t);
   jacobianInverse(t);
   
-  int i = 0;
-      std::cout << i << std::endl;
-    std::cout << " x:" << this->pos[0] << " y:" << this->pos[1] << " z:" << this->pos[2] << std::endl;
-    std::cout << " lx:" << this->localPos[0] << " ly:" << this->localPos[1] << " lz:" << this->localPos[2] << std::endl;
-    std::cout << " rx:" << this->Rotation[0] << " ry:" << this->Rotation[1] << " rz:" << this->Rotation[2] << std::endl;
-    std::cout << this->length << std::endl;
-    std::cout << "----------------------------------------------------------" << std::endl;
-    i++;
-  
-  std::shared_ptr<Def3D::CP> tmp = this->pParent;
-  
-  while(tmp != nullptr){
-    std::cout << i << std::endl;
-    std::cout << " x:" << tmp->pos[0] << " y:" << tmp->pos[1] << " z:" << tmp->pos[2] << std::endl;
-    std::cout << " lx:" << tmp->localPos[0] << " ly:" << tmp->localPos[1] << " lz:" << tmp->localPos[2] << std::endl;
-    std::cout << " rx:" << tmp->Rotation[0] << " ry:" << tmp->Rotation[1] << " rz:" << tmp->Rotation[2] << std::endl;
-    std::cout << tmp->length << std::endl;
-    std::cout << "----------------------------------------------------------" << std::endl;
-    i++;
-    tmp = tmp->pParent;
-  }
   
 }
 
 void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
   //set target point
-  Eigen::Vector3d targetPosition = this->pos + delta;
+  Eigen::Vector3d targetPosition = delta;
   if(pParent != nullptr && pParent->pParent != nullptr){
-    Eigen::Vector3d rootPosition = pParent->pParent->pos;
-    Eigen::Vector3d rootChildNodePosition = pParent->pos;
-    Eigen::Vector3d lastNodePosition = this->pos;
-    float EPS = 0.000001f;
-    float steps = 1;
+    float EPS = 0.1f;
+    float steps = 0.000001;
+    int iteridx = 0;
+
     while(std::sqrt(pow(targetPosition[0] - this->pos[0],2)
     + pow(targetPosition[1] - this->pos[1],2)
     + pow(targetPosition[2] - this->pos[2],2)) >= EPS){
 
       Eigen::MatrixXd dTheta = GetDeltaOrigentation(targetPosition);
-      //std::cout << dTheta.row(0)<< std::endl;
-      forwardKinematics(dTheta.row(0));
-      this->pParent->forwardKinematics(dTheta.row(1));
+
+      forwardKinematics(dTheta.row(0)*steps);
+      this->pParent->forwardKinematics(dTheta.row(1)*steps);
+      
+      
+      //std::cout << "---------------" << std::endl;
+      //std::cout << dTheta.row(0) << std::endl;
+      //std::cout << dTheta.row(1) << std::endl;
+      //std::cout << delta[2] << std::endl;
+      //std::cout << "---------------" << std::endl;
+      //std::cout << std::sqrt(pow(targetPosition[0] - this->pos[0],2)
+    //+ pow(targetPosition[1] - this->pos[1],2)
+    //+ pow(targetPosition[2] - this->pos[2],2)) << std::endl;
+      
+      if(iteridx >= 1000){
+        break;
+      }
+      iteridx++;
+
+
     }
   }
 }
 Eigen::Vector3d  Def3D::CP::GetDeltaOrigentation(Eigen::Vector3d target){
   Eigen::MatrixXd Jt = GetJacobianTranspose(target);
   Eigen::Vector3d V = target - this->pos;
-  //std::cout << Jt;
+  
   Eigen::MatrixXd dTheta = Jt * V;
+  std::cout << "---------------" << std::endl;
+  std::cout << dTheta << std::endl;
+  std::cout << "---------------" << std::endl;
   return dTheta;
 }
 Eigen::MatrixXd Def3D::CP::GetJacobianTranspose(Eigen::Vector3d target){
   MatrixXd J(3,6);
   //std::cout << this->pos - pParent->pos;
-  Eigen::Vector3d v1 = (Eigen::Vector3d(1,0,0).cross(this->pos - pParent->pos));
-  Eigen::Vector3d v2 = (Eigen::Vector3d(0,1,0).cross(this->pos - pParent->pos));
-  Eigen::Vector3d v3 = (Eigen::Vector3d(0,0,1).cross(this->pos - pParent->pos));
-  Eigen::Vector3d v4 = (Eigen::Vector3d(1,0,0).cross(this->pos - pParent->pParent->pos));
-  Eigen::Vector3d v5 = (Eigen::Vector3d(0,1,0).cross(this->pos - pParent->pParent->pos));
-  Eigen::Vector3d v6 = (Eigen::Vector3d(0,0,1).cross(this->pos - pParent->pParent->pos));
-  //std::cout << v1 ;
-  cout.precision(10);
-  //std::cout << Eigen::Vector3d(pParent->Rotation.normalized()[0],0,0).cross(this->pos - pParent->pos) << std::endl;
-  //std::cout << Eigen::Vector3d(pParent->Rotation.normalized()[0],0,0) << std::endl;
-  //std::cout << (this->pos - pParent->pos) << std::endl;
+
+  //Make identity matrix
+  glm::mat4 rot_m = glm::mat4(1.0f);
+  //Make rotation Matrix by Axis
+  //Rotate (Matrix, Angle , Axis)
+  rot_m = glm::rotate(rot_m,float(pParent->pParent->Rotation[2]),glm::vec3(0,0,1));
+  rot_m = glm::rotate(rot_m,float(pParent->pParent->Rotation[1]),glm::vec3(0,1,0));
+  rot_m = glm::rotate(rot_m,float(pParent->pParent->Rotation[0]),glm::vec3(1,0,0));
+  
+  
+  glm::vec4 tmp =  rot_m * glm::vec4(1,0,0,0);
+  glm::vec4 tmp1 =  rot_m * glm::vec4(0,1,0,0);
+  glm::vec4 tmp2 =  rot_m * glm::vec4(0,0,1,0);
+  //std::cout << tmp[0] <<std::endl;
+  //std::cout << tmp1[0] <<std::endl;
+  //std::cout << tmp2[0]<<std::endl;
+  Eigen::Vector3d v1 = ((Eigen::Vector3d(tmp[0],tmp[1],tmp[2]).normalized()).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v2 = ((Eigen::Vector3d(tmp1[0],tmp1[1],tmp1[2]).normalized()).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v3 = ((Eigen::Vector3d(tmp2[0],tmp2[1],tmp2[2]).normalized()).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v4 = ((Eigen::Vector3d(1,0,0)).cross(this->pos - pParent->pParent->pos));
+  Eigen::Vector3d v5 = ((Eigen::Vector3d(0,1,0)).cross(this->pos - pParent->pParent->pos));
+  Eigen::Vector3d v6 = ((Eigen::Vector3d(0,0,1)).cross(this->pos - pParent->pParent->pos));
+  
   J << v1[0] ,v2[0] ,v3[0] ,v4[0] ,v5[0] ,v6[0] 
   ,v1[1] ,v2[1] ,v3[1],v4[1] ,v5[1] ,v6[1] 
   ,v1[2] ,v2[2] ,v3[2],v4[2] ,v5[2] ,v6[2] ;
-  //std::cout << v1[0];
   return J.transpose();
 }
 
 void Def3D::CP::forwardKinematics(Eigen::Vector3d deltaRotation){
+    
 
-  
-  if(length != -1){
+  // Angle to Cartesian
+  if(this->length != -1){
     double theta = atan2(deltaRotation[1],deltaRotation[0]);
     double anglePi = acos(deltaRotation[2]/this->length);
     Eigen::Vector3d tmp = this->localPos;
-    this->localPos[0] = length * cos(theta) * sin(anglePi);
-    this->localPos[1] = length * sin(theta) * sin(anglePi);
-    this->localPos[2] = length * cos(anglePi);
+    this->localPos[0] = this->length * cos(theta) * sin(anglePi);
+    this->localPos[1] = this->length * sin(theta) * sin(anglePi);
+    this->localPos[2] = this->length * cos(anglePi);
     Eigen::Vector3d delta = this->localPos-tmp;
     this->pos[0] = this->pParent->pos[0] + this->localPos[0];
     this->pos[1] = this->pParent->pos[1] + this->localPos[1];
     this->pos[2] = this->pParent->pos[2] + this->localPos[2];
-  //this->pos = this->pos * M;
-    pParent->Rotation += deltaRotation;
-    double tmp0 = pParent->Rotation[0] - static_cast<int>(pParent->Rotation[0]);
-    pParent->Rotation[0] = static_cast<int>(pParent->Rotation[0]) % 360;
-    pParent->Rotation[0] += tmp0;
-
-    double tmp1 = pParent->Rotation[1] - static_cast<int>(pParent->Rotation[01]);
-    pParent->Rotation[1] = static_cast<int>(pParent->Rotation[1]) % 360;
-    pParent->Rotation[1] += tmp1;
-    double tmp2 = pParent->Rotation[2] - static_cast<int>(pParent->Rotation[2]);
-    pParent->Rotation[2] = static_cast<int>(pParent->Rotation[2]) % 360;
-    pParent->Rotation[2] += tmp2;
-    //std::cout << pParent->Rotation[0];
-    for(auto &it :pChild){
+    //Rotation b   
+            //apply rotation
+            glm::vec3 directionVector(this->localPos[0], this->localPos[1],this->localPos[2]);
+            //directionVector = -directionVector;
+            //X-Axis
+    if(pParent->pParent == nullptr){
+                  this->pParent->Rotation[1] = 
+            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(0,1,0))/
+            sqrt(pow(directionVector[1],2)+pow(directionVector[2],2))) / M_PI * 180;
+            //y-Axis
+            this->pParent->Rotation[2] = 
+            glm::acos(glm::dot(glm::vec3(directionVector[0],0,directionVector[2]),glm::vec3(0,0,1))/
+            sqrt(pow(directionVector[0],2)+pow(directionVector[2],2)))/ M_PI * 180;
+             //z-Axis
+            this->pParent->Rotation[0] = 
+            glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(1,0,0))/
+            sqrt(pow(directionVector[0],2)+pow(directionVector[1],2)))/ M_PI * 180;
+    }else{
+        glm::mat4 rot_m = glm::mat4(1.0f);
+      //Make rotation Matrix by Axis
+      //Rotate (Matrix, Angle , Axis)
+      rot_m = glm::rotate(rot_m,float(pParent->pParent->Rotation[2]),glm::vec3(0,0,1));
+      rot_m = glm::rotate(rot_m,float(pParent->pParent->Rotation[1]),glm::vec3(0,1,0));
+      rot_m = glm::rotate(rot_m,float(pParent->pParent->Rotation[0]),glm::vec3(1,0,0));
+  
+  
+      glm::vec4 tmp =  rot_m * glm::vec4(1,0,0,0);
+      glm::vec4 tmp1 =  rot_m * glm::vec4(0,1,0,0);
+      glm::vec4 tmp2 =  rot_m * glm::vec4(0,0,1,0);
+      this->pParent->Rotation[1] = 
+            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(tmp1[0],tmp1[1],tmp1[2]))/
+            sqrt(pow(directionVector[1],2)+pow(directionVector[2],2))) / M_PI * 180;
+            //y-Axis
+      this->pParent->Rotation[2] = 
+            glm::acos(glm::dot(glm::vec3(directionVector[0],0,directionVector[2]),glm::vec3(tmp2[0],tmp2[1],tmp2[2]))/
+            sqrt(pow(directionVector[0],2)+pow(directionVector[2],2)))/ M_PI * 180;
+             //z-Axis
+      this->pParent->Rotation[0] = 
+            glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(tmp[0],tmp[1],tmp[2]))/
+            sqrt(pow(directionVector[0],2)+pow(directionVector[1],2)))/ M_PI * 180;
+    }
+    
+    //std::cout << deltaRotation << std::endl;
+    //pParent->Rotation += deltaRotation;
+    
+   //std::cout << "---------------------------------------------" << std::endl; 
+   //std::cout << pParent->Rotation[0] << std::endl;
+   //std::cout << pParent->Rotation[1]<< std::endl;
+   //std::cout << pParent->Rotation[2]<< std::endl;
+   //std::cout << "---------------------------------------------" << std::endl; 
+       for(auto &it :pChild){
       if(it != nullptr){
         it->pos += delta;
+        
       }
-    }
   }
 }
-
+}
 void Def3D::CP::setControlPointRotation(Eigen::Vector3d t){
     this->Rotation = this->Rotation + t;
     //set Child's Rotation
@@ -142,12 +189,9 @@ std::shared_ptr<Def3D::CP>* Def3D::CP::getChild(){
     return this->pChild;
 };
 
-Def3D::Def3D()
-{
+Def3D::Def3D(){
 
 }
-
-
 
 Def3D::~Def3D()
 {
@@ -202,23 +246,42 @@ int Def3D::addCP(CP &cp)
             //apply this cp's parent
             cps[nextId]->pParent = it.second;
             //apply child and length(frame length)
-
+            
             cps[nextId]->length = distance;
             //update lengthm
             lengthm = distance;
-            cps[nextId]->localPos = cp.pos - it.second->pos;
+ 
+            
+            
         }
-
+  
   }
+  
   if(nextId > 0){
       cps[nextId]->pParent->pChild[cps[nextId]->pParent->childNum] = cps[nextId];
       cps[nextId]->pParent->childNum++;
+
+           cps[nextId]->localPos = cp.pos - cps[nextId]->pParent->pos;
+
+            //apply rotation
+            glm::vec3 directionVector(cp.pos[0]- cps[nextId]->pParent->pos[0],cp.pos[1]-cps[nextId]->pParent->pos[1],cp.pos[0]-cps[nextId]->pParent->pos[2]);
+            //directionVector = -directionVector;
+            //X-Axis
+            cps[nextId]->pParent->Rotation[0] = 
+            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(0,0,1))/
+            sqrt(pow(directionVector[1],2)+pow(directionVector[2],2))) / M_PI * 180;
+            //y-Axis
+            cps[nextId]->pParent->Rotation[1] = 
+            glm::acos(glm::dot(glm::vec3(directionVector[0],0,directionVector[2]),glm::vec3(1,0,0))/
+            sqrt(pow(directionVector[0],2)+pow(directionVector[2],2)))/ M_PI * 180;
+             //z-Axis
+            cps[nextId]->pParent->Rotation[2] = 
+            glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(0,1,0))/
+            sqrt(pow(directionVector[0],2)+pow(directionVector[1],2)))/ M_PI * 180;
+
+  
   }
-  std::cout 
-  << cp.localPos[0] << " "
-  << cp.localPos[1] << " "
-  << cp.localPos[2] << " "
-  << std::endl;
+  
   nextId++;
   cpChangedNum++;
   return nextId-1;
