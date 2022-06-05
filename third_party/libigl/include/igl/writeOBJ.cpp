@@ -31,6 +31,9 @@ IGL_INLINE bool igl::writeOBJ(
   const Eigen::MatrixBase<DerivedFTC>& FTC)
 {
   FILE * obj_file = fopen(str.c_str(),"w");
+
+  std::cout << "writeOBH " << obj_file << std::endl;
+
   if(NULL==obj_file)
   {
     printf("IOError: %s could not be opened for writing...",str.c_str());

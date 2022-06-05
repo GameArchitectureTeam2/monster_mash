@@ -706,11 +706,15 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
                       << recData.armpitsStitching << endl;);
   }
   if (keyEvent.key == SDLK_w) {
-    //    exportAsOBJ("/tmp", "mm_frame", true);
+        exportAsOBJ("/tmp", "mm_frame", true);
 
-    //    writeOBJ("/tmp/mm_frame.obj", defData.VCurr, defData.Faces,
-    //    defData.normals,
-    //             defData.Faces, MatrixXd(), defData.Faces);
+        writeOBJ("/tmp/mm_frame.obj", defData.VCurr, defData.Faces,
+        defData.normals,
+                 defData.Faces, MatrixXd(), defData.Faces);
+
+        writeOBJ("mm_frame.obj", defData.VCurr, defData.Faces,
+        defData.normals,
+                 defData.Faces, MatrixXd(), defData.Faces);
 
     if (!exportAnimationRunning())
       exportAnimationStart(0, false, false);

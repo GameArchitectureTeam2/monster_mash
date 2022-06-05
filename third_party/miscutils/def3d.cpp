@@ -88,6 +88,8 @@ const std::map<int,std::shared_ptr<Def3D::CP>>& Def3D::getCPs() const
 
 int Def3D::addCP(CP &cp)
 {
+  std::cout << "addCP" << std::endl;
+  std::cout << cp.pos[0] << " " << cp.pos[1] << " " << cp.pos[2] << std::endl;
   //first cp?
   cps[nextId] = make_shared<CP>(cp);
 
@@ -123,6 +125,7 @@ int Def3D::addCP(CP &cp)
 
 std::vector<int> Def3D::getControlPointsInsideRect(double x1, double y1, double x2, double y2, const Eigen::Matrix4d &M)
 {
+  std::cout << "getControlPointsInsideRect" << std::endl;
   vector<int> ids;
   for(const auto &it : cps) {
     const CP &cp = *it.second;
@@ -135,6 +138,7 @@ std::vector<int> Def3D::getControlPointsInsideRect(double x1, double y1, double 
 
 int Def3D::getControlPoint(double x, double y, double radius, double depth, bool considerDepth, bool highestDepth, const Eigen::Matrix4d &M)
 {
+  std::cout << "getControlPoint" << std::endl;
   int ind = -1;
   double extDepth = highestDepth ? -numeric_limits<double>::infinity() : numeric_limits<double>::infinity();
   double minDist = numeric_limits<double>::infinity();
@@ -164,6 +168,7 @@ bool Def3D::addControlPointOnFace(const MatrixXd &V, const MatrixXi &F, double x
 
 bool Def3D::addControlPointOnFace(const MatrixXd &V, const MatrixXi &F, double x, double y, double planarRadius, bool highest, bool reverseDirection, int &index, const Eigen::Matrix4d &M)
 {
+  std::cout << "addControlPointOnFace" << std::endl;
   int ind = getControlPoint(x, y, planarRadius, 0, false, highest, M);
   if (ind != -1) {
     index = ind;
