@@ -11,10 +11,71 @@ using namespace Eigen;
 using namespace std;
 #include <glm/ext/matrix_transform.hpp>
 
+void Def3D::CP::FARBIK(Eigen::Vector3d delta){
+ 
+  if(this->pParent != nullptr && this->pParent->pParent != nullptr){
+     //save current end effector's current position
+  Eigen::Vector3d tmpPosition = this->pos;
+  //End effector to Target Position
+  this->pos = this->pos + delta;
+  //Load bone length;
+  double distance = this->length;
+  //make new joint using end effector and end effector's parent node(joint)
+  Eigen::Vector3d tmpDistanceVector;
+  tmpDistanceVector[0] =  this->pParent->pos[0] - this->pos[0];
+  tmpDistanceVector[1] =  this->pParent->pos[1] - this->pos[1];
+  tmpDistanceVector[2] =  this->pParent->pos[2] - this->pos[2];
+  //O -------- X ----------- D
+  double longDistance = std::sqrt(pow(tmpDistanceVector[0],2) + pow(tmpDistanceVector[1],2) + pow(tmpDistanceVector[2],2));
+  tmpDistanceVector[0] = tmpDistanceVector[0] * (distance / longDistance);
+  tmpDistanceVector[1] = tmpDistanceVector[1] * (distance / longDistance); 
+  tmpDistanceVector[2] = tmpDistanceVector[2] * (distance / longDistance); 
+  this->pParent->pos = this->pos + tmpDistanceVector;
+  std::cout << distance << " " << longDistance<< std::endl;
+  distance = this->pParent->length;
+  tmpDistanceVector = this->pParent->pParent->pos    -   this->pParent->pos;
+  //O -------- X ----------- D
+  longDistance = std::sqrt(pow(tmpDistanceVector[0],2) + pow(tmpDistanceVector[1],2) + pow(tmpDistanceVector[2],2));
+  tmpDistanceVector[0] = tmpDistanceVector[0] * (distance / longDistance);
+  tmpDistanceVector[1] = tmpDistanceVector[1] * (distance / longDistance); 
+  tmpDistanceVector[2] = tmpDistanceVector[2] * (distance / longDistance); 
+  //Save root position for second 
+  Eigen::Vector3d tmpRootPos = this->pParent->pParent->pos;
+
+  this->pParent->pParent->pos = this->pParent->pos + tmpDistanceVector;
+
+
+  this->pParent->pParent->pos = tmpRootPos;
+  //Only first child;
+  distance = this->pParent->length;
+  tmpDistanceVector = this->pParent->pos - this->pParent->pParent->pos;
+  longDistance = std::sqrt(pow(tmpDistanceVector[0],2) + pow(tmpDistanceVector[1],2) + pow(tmpDistanceVector[2],2));
+  tmpDistanceVector[0] = tmpDistanceVector[0] * (distance / longDistance);
+  tmpDistanceVector[1] = tmpDistanceVector[1] * (distance / longDistance); 
+  tmpDistanceVector[2] = tmpDistanceVector[2] * (distance / longDistance); 
+
+  this->pParent->pos = this->pParent->pParent->pos + tmpDistanceVector;
+
+  distance = this->length;
+  tmpDistanceVector = this->pos - this->pParent->pos;
+  longDistance = std::sqrt(pow(tmpDistanceVector[0],2) + pow(tmpDistanceVector[1],2) + pow(tmpDistanceVector[2],2));
+  tmpDistanceVector[0] = tmpDistanceVector[0] * (distance / longDistance);
+  tmpDistanceVector[1] = tmpDistanceVector[1] * (distance / longDistance); 
+  tmpDistanceVector[2] = tmpDistanceVector[2] * (distance / longDistance); 
+
+  this->pos = this->pParent->pos + tmpDistanceVector;
+
+
+  }
+
+
+}
+
 void Def3D::CP::setControlPointPosition(Eigen::Vector3d t){
   //Forward Kinematics by delta t vector or IK!
-  forwardKinematics(t);
+  //forwardKinematics(t);
   //jacobianInverse(t);
+  FARBIK(t);
   
   
 }
@@ -28,7 +89,7 @@ void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
     //Error squares
     float EPS = 0.1f;
     //Learning rate
-    float steps = 0.001;
+    float steps = 0.00001;
     //Maximum iterate
     int iteridx = 0;
 
@@ -46,6 +107,11 @@ void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
       //dTheta Matrix's row have Node's delta Rotation
       // (0.001, 0.1223, 0.3445)- for Child2 Node Rotation delta
       // (0.1122, 0.3145, 1.2314) - for Child1 Node Rotation delta
+        //std::cout << "---------------" << std::endl;
+        //std::cout << std::sqrt(pow(targetPosition[0] - this->pos[0],2)
+    //+ pow(targetPosition[1] - this->pos[1],2)
+    //+ pow(targetPosition[2] - this->pos[2],2))<< std::endl;
+      //std::cout << "---------------" << std::endl;
       forwardKinematics(dTheta.row(0)*steps);
       //this->pParent->forwardKinematics(dTheta.row(1)*steps);
       //if iteridx greater than 1000, break loop;
@@ -59,16 +125,16 @@ void Def3D::CP::jacobianInverse(Eigen::Vector3d delta){
   }
 }
 Eigen::Vector3d  Def3D::CP::GetDeltaOrigentation(Eigen::Vector3d target){
-
+  std::cout << target <<std::endl;
   //Take Jacabian Transpose Matrix its maybe 6x3 Matrix
   Eigen::MatrixXd Jt = GetJacobianTranspose(target);
   // target and this->pos 's direction and scalar
   Eigen::Vector3d V = target - this->pos;
   // multiply them
   Eigen::MatrixXd dTheta = Jt * V;
-  std::cout << "---------------" << std::endl;
-  std::cout << dTheta << std::endl;
-  std::cout << "---------------" << std::endl;
+  //std::cout << "---------------" << std::endl;
+  //std::cout << dTheta << std::endl;
+  //std::cout << "---------------" << std::endl;
   return dTheta;
 }
 Eigen::MatrixXd Def3D::CP::GetJacobianTranspose(Eigen::Vector3d target){
@@ -90,9 +156,9 @@ Eigen::MatrixXd Def3D::CP::GetJacobianTranspose(Eigen::Vector3d target){
   //Eigen::Vector3d v1 = ((Eigen::Vector3d(tmp[0],tmp[1],tmp[2]).normalized()).cross(this->pos - pParent->pos));
   //Eigen::Vector3d v2 = ((Eigen::Vector3d(tmp1[0],tmp1[1],tmp1[2]).normalized()).cross(this->pos - pParent->pos));
   //Eigen::Vector3d v3 = ((Eigen::Vector3d(tmp2[0],tmp2[1],tmp2[2]).normalized()).cross(this->pos - pParent->pos));
-  Eigen::Vector3d v4 = ((Eigen::Vector3d(tmp[0],tmp[1],tmp[2]).normalized()).cross(this->pos - pParent->pos));
-  Eigen::Vector3d v5 = ((Eigen::Vector3d(tmp1[0],tmp1[1],tmp1[2]).normalized()).cross(this->pos - pParent->pos));
-  Eigen::Vector3d v6 = ((Eigen::Vector3d(tmp2[0],tmp2[1],tmp2[2]).normalized()).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v4 = ((Eigen::Vector3d(1,0,0).normalized()).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v5 = ((Eigen::Vector3d(0,1,0).normalized()).cross(this->pos - pParent->pos));
+  Eigen::Vector3d v6 = ((Eigen::Vector3d(0,0,1).normalized()).cross(this->pos - pParent->pos));
   //put on it
   //J << v1[0] ,v2[0] ,v3[0] ,v4[0] ,v5[0] ,v6[0] 
   //,v1[1] ,v2[1] ,v3[1],v4[1] ,v5[1] ,v6[1] 
@@ -135,18 +201,20 @@ void Def3D::CP::forwardKinematics(Eigen::Vector3d deltaRotation){
 
       //Z-Axis
       //z-axis can get by Inner product between Y axis and Vector(x,y,0)
+
             this->pParent->Rotation[2] = 
-            glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(0,1,0))/
+            glm::acos(glm::dot(glm::vec3(directionVector[0],directionVector[1],0),glm::vec3(1,0,0))/
             sqrt(pow(directionVector[0],2)+pow(directionVector[1],2)))/ M_PI * 180;
+
              //z-Axis
             this->pParent->Rotation[0] = 
-            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(1,0,0))/
+            glm::acos(glm::dot(glm::vec3(0,directionVector[1],directionVector[2]),glm::vec3(0,1,0))/
             sqrt(pow(directionVector[2],2)+pow(directionVector[1],2)))/ M_PI * 180;
-            std::cout << "---------------------------" << std::endl;
-            std::cout << "x: " << this->pParent->Rotation[0] << std::endl;
-            std::cout << "y: " << this->pParent->Rotation[1] << std::endl;
-            std::cout << "z: " << this->pParent->Rotation[2] << std::endl;
-            std::cout << "---------------------------" << std::endl;
+            //std::cout << "---------------------------" << std::endl;
+            //std::cout << "x: " << this->pParent->Rotation[0] << std::endl;
+            //std::cout << "y: " << this->pParent->Rotation[1] << std::endl;
+            //std::cout << "z: " << this->pParent->Rotation[2] << std::endl;
+            //std::cout << "---------------------------" << std::endl;
     }else{
         glm::mat4 rot_m = glm::mat4(1.0f);
       //Make rotation Matrix by Axis
@@ -294,7 +362,7 @@ int Def3D::addCP(CP &cp)
 
   
   }
-  
+
   nextId++;
   cpChangedNum++;
   return nextId-1;

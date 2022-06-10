@@ -26,7 +26,7 @@ public:
     bool fixed;
     double weight;
     int ptId = 0; // control point to mesh points correspondence
-    int length = -1;
+    double length = -1;
     //Eigen::Vector3d Rotation;
 
     std::shared_ptr<CP> pParent;
@@ -48,6 +48,7 @@ public:
     void jacobianInverse(Eigen::Vector3d delta);
     Eigen::MatrixXd GetJacobianTranspose(Eigen::Vector3d target);
     Eigen::Vector3d GetDeltaOrigentation(Eigen::Vector3d target);
+    void FARBIK(Eigen::Vector3d delta);
   };
 
   Def3D();

@@ -1270,7 +1270,8 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
       } else {
         //0502
         //cp.pos = cp.pos + t/100;
-        cp.setControlPointPosition(t/100);
+        //t[2] = 0;
+        cp.setControlPointPosition(t/10);
         //std::cout << t[0] << " " << t[1] << " " << t[2] << " " << std::endl;
       }
     }
