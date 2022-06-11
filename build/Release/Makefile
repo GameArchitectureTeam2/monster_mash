@@ -132,6 +132,30 @@ monstermash/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/build
 .PHONY : monstermash/fast
 
+attachment.o: attachment.cpp.o
+.PHONY : attachment.o
+
+# target to build an object file
+attachment.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/attachment.cpp.o
+.PHONY : attachment.cpp.o
+
+attachment.i: attachment.cpp.i
+.PHONY : attachment.i
+
+# target to preprocess a source file
+attachment.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/attachment.cpp.i
+.PHONY : attachment.cpp.i
+
+attachment.s: attachment.cpp.s
+.PHONY : attachment.s
+
+# target to generate assembly for a file
+attachment.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/attachment.cpp.s
+.PHONY : attachment.cpp.s
+
 cpanim.o: cpanim.cpp.o
 .PHONY : cpanim.o
 
@@ -204,6 +228,78 @@ defengarapl.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/defengarapl.cpp.s
 .PHONY : defengarapl.cpp.s
 
+defmesh.o: defmesh.cpp.o
+.PHONY : defmesh.o
+
+# target to build an object file
+defmesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/defmesh.cpp.o
+.PHONY : defmesh.cpp.o
+
+defmesh.i: defmesh.cpp.i
+.PHONY : defmesh.i
+
+# target to preprocess a source file
+defmesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/defmesh.cpp.i
+.PHONY : defmesh.cpp.i
+
+defmesh.s: defmesh.cpp.s
+.PHONY : defmesh.s
+
+# target to generate assembly for a file
+defmesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/defmesh.cpp.s
+.PHONY : defmesh.cpp.s
+
+discretization.o: discretization.cpp.o
+.PHONY : discretization.o
+
+# target to build an object file
+discretization.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/discretization.cpp.o
+.PHONY : discretization.cpp.o
+
+discretization.i: discretization.cpp.i
+.PHONY : discretization.i
+
+# target to preprocess a source file
+discretization.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/discretization.cpp.i
+.PHONY : discretization.cpp.i
+
+discretization.s: discretization.cpp.s
+.PHONY : discretization.s
+
+# target to generate assembly for a file
+discretization.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/discretization.cpp.s
+.PHONY : discretization.cpp.s
+
+embedding.o: embedding.cpp.o
+.PHONY : embedding.o
+
+# target to build an object file
+embedding.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/embedding.cpp.o
+.PHONY : embedding.cpp.o
+
+embedding.i: embedding.cpp.i
+.PHONY : embedding.i
+
+# target to preprocess a source file
+embedding.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/embedding.cpp.i
+.PHONY : embedding.cpp.i
+
+embedding.s: embedding.cpp.s
+.PHONY : embedding.s
+
+# target to generate assembly for a file
+embedding.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/embedding.cpp.s
+.PHONY : embedding.cpp.s
+
 exportgltf.o: exportgltf.cpp.o
 .PHONY : exportgltf.o
 
@@ -227,6 +323,54 @@ exportgltf.s: exportgltf.cpp.s
 exportgltf.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/exportgltf.cpp.s
 .PHONY : exportgltf.cpp.s
+
+filter.o: filter.cpp.o
+.PHONY : filter.o
+
+# target to build an object file
+filter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/filter.cpp.o
+.PHONY : filter.cpp.o
+
+filter.i: filter.cpp.i
+.PHONY : filter.i
+
+# target to preprocess a source file
+filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/filter.cpp.i
+.PHONY : filter.cpp.i
+
+filter.s: filter.cpp.s
+.PHONY : filter.s
+
+# target to generate assembly for a file
+filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/filter.cpp.s
+.PHONY : filter.cpp.s
+
+graphutils.o: graphutils.cpp.o
+.PHONY : graphutils.o
+
+# target to build an object file
+graphutils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/graphutils.cpp.o
+.PHONY : graphutils.cpp.o
+
+graphutils.i: graphutils.cpp.i
+.PHONY : graphutils.i
+
+# target to preprocess a source file
+graphutils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/graphutils.cpp.i
+.PHONY : graphutils.cpp.i
+
+graphutils.s: graphutils.cpp.s
+.PHONY : graphutils.s
+
+# target to generate assembly for a file
+graphutils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/graphutils.cpp.s
+.PHONY : graphutils.cpp.s
 
 home/ahn/monster-mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.o: home/ahn/monster-mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c.o
 .PHONY : home/ahn/monster-mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.o
@@ -588,6 +732,54 @@ home/ahn/monster-mash/third_party/zip-mod/zip.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/home/ahn/monster-mash/third_party/zip-mod/zip.c.s
 .PHONY : home/ahn/monster-mash/third_party/zip-mod/zip.c.s
 
+indexer.o: indexer.cpp.o
+.PHONY : indexer.o
+
+# target to build an object file
+indexer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/indexer.cpp.o
+.PHONY : indexer.cpp.o
+
+indexer.i: indexer.cpp.i
+.PHONY : indexer.i
+
+# target to preprocess a source file
+indexer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/indexer.cpp.i
+.PHONY : indexer.cpp.i
+
+indexer.s: indexer.cpp.s
+.PHONY : indexer.s
+
+# target to generate assembly for a file
+indexer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/indexer.cpp.s
+.PHONY : indexer.cpp.s
+
+intersector.o: intersector.cpp.o
+.PHONY : intersector.o
+
+# target to build an object file
+intersector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/intersector.cpp.o
+.PHONY : intersector.cpp.o
+
+intersector.i: intersector.cpp.i
+.PHONY : intersector.i
+
+# target to preprocess a source file
+intersector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/intersector.cpp.i
+.PHONY : intersector.cpp.i
+
+intersector.s: intersector.cpp.s
+.PHONY : intersector.s
+
+# target to generate assembly for a file
+intersector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/intersector.cpp.s
+.PHONY : intersector.cpp.s
+
 loadsave.o: loadsave.cpp.o
 .PHONY : loadsave.o
 
@@ -611,6 +803,30 @@ loadsave.s: loadsave.cpp.s
 loadsave.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/loadsave.cpp.s
 .PHONY : loadsave.cpp.s
+
+lsqSolver.o: lsqSolver.cpp.o
+.PHONY : lsqSolver.o
+
+# target to build an object file
+lsqSolver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/lsqSolver.cpp.o
+.PHONY : lsqSolver.cpp.o
+
+lsqSolver.i: lsqSolver.cpp.i
+.PHONY : lsqSolver.i
+
+# target to preprocess a source file
+lsqSolver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/lsqSolver.cpp.i
+.PHONY : lsqSolver.cpp.i
+
+lsqSolver.s: lsqSolver.cpp.s
+.PHONY : lsqSolver.s
+
+# target to generate assembly for a file
+lsqSolver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/lsqSolver.cpp.s
+.PHONY : lsqSolver.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -660,6 +876,78 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+matrix.o: matrix.cpp.o
+.PHONY : matrix.o
+
+# target to build an object file
+matrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/matrix.cpp.o
+.PHONY : matrix.cpp.o
+
+matrix.i: matrix.cpp.i
+.PHONY : matrix.i
+
+# target to preprocess a source file
+matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/matrix.cpp.i
+.PHONY : matrix.cpp.i
+
+matrix.s: matrix.cpp.s
+.PHONY : matrix.s
+
+# target to generate assembly for a file
+matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/matrix.cpp.s
+.PHONY : matrix.cpp.s
+
+mesh.o: mesh.cpp.o
+.PHONY : mesh.o
+
+# target to build an object file
+mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/mesh.cpp.o
+.PHONY : mesh.cpp.o
+
+mesh.i: mesh.cpp.i
+.PHONY : mesh.i
+
+# target to preprocess a source file
+mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/mesh.cpp.i
+.PHONY : mesh.cpp.i
+
+mesh.s: mesh.cpp.s
+.PHONY : mesh.s
+
+# target to generate assembly for a file
+mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/mesh.cpp.s
+.PHONY : mesh.cpp.s
+
+motion.o: motion.cpp.o
+.PHONY : motion.o
+
+# target to build an object file
+motion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/motion.cpp.o
+.PHONY : motion.cpp.o
+
+motion.i: motion.cpp.i
+.PHONY : motion.i
+
+# target to preprocess a source file
+motion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/motion.cpp.i
+.PHONY : motion.cpp.i
+
+motion.s: motion.cpp.s
+.PHONY : motion.s
+
+# target to generate assembly for a file
+motion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/motion.cpp.s
+.PHONY : motion.cpp.s
+
 mypainter.o: mypainter.cpp.o
 .PHONY : mypainter.o
 
@@ -708,6 +996,54 @@ mywindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/mywindow.cpp.s
 .PHONY : mywindow.cpp.s
 
+pinocchioApi.o: pinocchioApi.cpp.o
+.PHONY : pinocchioApi.o
+
+# target to build an object file
+pinocchioApi.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/pinocchioApi.cpp.o
+.PHONY : pinocchioApi.cpp.o
+
+pinocchioApi.i: pinocchioApi.cpp.i
+.PHONY : pinocchioApi.i
+
+# target to preprocess a source file
+pinocchioApi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/pinocchioApi.cpp.i
+.PHONY : pinocchioApi.cpp.i
+
+pinocchioApi.s: pinocchioApi.cpp.s
+.PHONY : pinocchioApi.s
+
+# target to generate assembly for a file
+pinocchioApi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/pinocchioApi.cpp.s
+.PHONY : pinocchioApi.cpp.s
+
+processor.o: processor.cpp.o
+.PHONY : processor.o
+
+# target to build an object file
+processor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/processor.cpp.o
+.PHONY : processor.cpp.o
+
+processor.i: processor.cpp.i
+.PHONY : processor.i
+
+# target to preprocess a source file
+processor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/processor.cpp.i
+.PHONY : processor.cpp.i
+
+processor.s: processor.cpp.s
+.PHONY : processor.s
+
+# target to generate assembly for a file
+processor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/processor.cpp.s
+.PHONY : processor.cpp.s
+
 reconstruction.o: reconstruction.cpp.o
 .PHONY : reconstruction.o
 
@@ -732,6 +1068,54 @@ reconstruction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/reconstruction.cpp.s
 .PHONY : reconstruction.cpp.s
 
+refinement.o: refinement.cpp.o
+.PHONY : refinement.o
+
+# target to build an object file
+refinement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/refinement.cpp.o
+.PHONY : refinement.cpp.o
+
+refinement.i: refinement.cpp.i
+.PHONY : refinement.i
+
+# target to preprocess a source file
+refinement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/refinement.cpp.i
+.PHONY : refinement.cpp.i
+
+refinement.s: refinement.cpp.s
+.PHONY : refinement.s
+
+# target to generate assembly for a file
+refinement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/refinement.cpp.s
+.PHONY : refinement.cpp.s
+
+skeleton.o: skeleton.cpp.o
+.PHONY : skeleton.o
+
+# target to build an object file
+skeleton.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/skeleton.cpp.o
+.PHONY : skeleton.cpp.o
+
+skeleton.i: skeleton.cpp.i
+.PHONY : skeleton.i
+
+# target to preprocess a source file
+skeleton.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/skeleton.cpp.i
+.PHONY : skeleton.cpp.i
+
+skeleton.s: skeleton.cpp.s
+.PHONY : skeleton.s
+
+# target to generate assembly for a file
+skeleton.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monstermash.dir/build.make CMakeFiles/monstermash.dir/skeleton.cpp.s
+.PHONY : skeleton.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -741,6 +1125,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... monstermash"
+	@echo "... attachment.o"
+	@echo "... attachment.i"
+	@echo "... attachment.s"
 	@echo "... cpanim.o"
 	@echo "... cpanim.i"
 	@echo "... cpanim.s"
@@ -750,9 +1137,24 @@ help:
 	@echo "... defengarapl.o"
 	@echo "... defengarapl.i"
 	@echo "... defengarapl.s"
+	@echo "... defmesh.o"
+	@echo "... defmesh.i"
+	@echo "... defmesh.s"
+	@echo "... discretization.o"
+	@echo "... discretization.i"
+	@echo "... discretization.s"
+	@echo "... embedding.o"
+	@echo "... embedding.i"
+	@echo "... embedding.s"
 	@echo "... exportgltf.o"
 	@echo "... exportgltf.i"
 	@echo "... exportgltf.s"
+	@echo "... filter.o"
+	@echo "... filter.i"
+	@echo "... filter.s"
+	@echo "... graphutils.o"
+	@echo "... graphutils.i"
+	@echo "... graphutils.s"
 	@echo "... home/ahn/monster-mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.o"
 	@echo "... home/ahn/monster-mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.i"
 	@echo "... home/ahn/monster-mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.s"
@@ -798,24 +1200,54 @@ help:
 	@echo "... home/ahn/monster-mash/third_party/zip-mod/zip.o"
 	@echo "... home/ahn/monster-mash/third_party/zip-mod/zip.i"
 	@echo "... home/ahn/monster-mash/third_party/zip-mod/zip.s"
+	@echo "... indexer.o"
+	@echo "... indexer.i"
+	@echo "... indexer.s"
+	@echo "... intersector.o"
+	@echo "... intersector.i"
+	@echo "... intersector.s"
 	@echo "... loadsave.o"
 	@echo "... loadsave.i"
 	@echo "... loadsave.s"
+	@echo "... lsqSolver.o"
+	@echo "... lsqSolver.i"
+	@echo "... lsqSolver.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... matrix.o"
+	@echo "... matrix.i"
+	@echo "... matrix.s"
+	@echo "... mesh.o"
+	@echo "... mesh.i"
+	@echo "... mesh.s"
+	@echo "... motion.o"
+	@echo "... motion.i"
+	@echo "... motion.s"
 	@echo "... mypainter.o"
 	@echo "... mypainter.i"
 	@echo "... mypainter.s"
 	@echo "... mywindow.o"
 	@echo "... mywindow.i"
 	@echo "... mywindow.s"
+	@echo "... pinocchioApi.o"
+	@echo "... pinocchioApi.i"
+	@echo "... pinocchioApi.s"
+	@echo "... processor.o"
+	@echo "... processor.i"
+	@echo "... processor.s"
 	@echo "... reconstruction.o"
 	@echo "... reconstruction.i"
 	@echo "... reconstruction.s"
+	@echo "... refinement.o"
+	@echo "... refinement.i"
+	@echo "... refinement.s"
+	@echo "... skeleton.o"
+	@echo "... skeleton.i"
+	@echo "... skeleton.s"
 .PHONY : help
 
 

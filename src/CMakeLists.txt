@@ -27,6 +27,23 @@ set(SOURCES
     mywindow.cpp
     def3dsdl.cpp
     exportgltf.cpp
+    defmesh.cpp
+    filter.cpp
+    motion.cpp
+    processor.cpp
+    attachment.cpp
+    discretization.cpp
+    embedding.cpp
+    graphutils.cpp
+    indexer.cpp
+    intersector.cpp
+    lsqSolver.cpp
+    matrix.cpp
+    mesh.cpp
+#    Pinocchio.cpp
+    pinocchioApi.cpp
+    refinement.cpp
+    skeleton.cpp
     ../third_party/ir3d-utils/regionToMesh.cpp
     ../third_party/ir3d-utils/MeshBuilder.cpp
     ../third_party/image/imageReadWrite.cpp
@@ -43,7 +60,7 @@ set(SOURCES
     ../third_party/SDL2_gfx/SDL2_rotozoom.c
     ../third_party/tinygltf/tinygltf.cpp
 )
-
+message("HIHIHIHIHIHIHIHI")
 set(HEADERS
     commonStructs.h
     defengarapl.h
@@ -56,6 +73,30 @@ set(HEADERS
     def3dsdl.h
     macros.h
     exportgltf.h
+    defmesh.h
+    DisplayMesh.h
+    filter.h
+    motion.h
+    processor.h
+    attachment.h
+    debugging.h
+    deriv.h
+    dtree.h
+    graphutils.h
+    hashutils.h
+    indexer.h
+    intersector.h
+    lsqSolver.h
+    mathutils.h
+    matrix.h
+    mesh.h
+    multilinear.h
+    Pinocchio.h
+    pinocchioApi.h
+    pointprojector.h
+    quaddisttree.h
+    rect.h
+    skeleton.h
     ../third_party/ir3d-utils/regionToMesh.h
     ../third_party/image/image.h
     ../third_party/image/imageReadWrite.hpp
@@ -158,7 +199,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 add_executable(monstermash ${SOURCES} ${HEADERS})
-target_compile_definitions(monstermash PRIVATE ${DEFINES} ${DEFINES_OPENGL} ${DEFINES_EMSCRIPTEN})
-target_include_directories(monstermash PRIVATE ${INCLUDEPATH})
+target_compile_definitions(monstermash PUBLIC ${DEFINES} ${DEFINES_OPENGL} ${DEFINES_EMSCRIPTEN})
+target_include_directories(monstermash PUBLIC ${INCLUDEPATH})
 target_link_libraries(monstermash ${LINKER_FLAGS} ${LINKER_FLAGS_OPENGL} ${OPENGL_LIBRARIES})
-target_compile_options(monstermash PRIVATE ${COMPILER_FLAGS} ${COMPILER_FLAGS_OPENGL})
+target_compile_options(monstermash PUBLIC ${COMPILER_FLAGS} ${COMPILER_FLAGS_OPENGL})

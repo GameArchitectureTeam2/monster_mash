@@ -25,6 +25,8 @@
 #include "reconstruction.h"
 #include "shaderTextureVertexCoords.h"
 
+#include "processor.h"
+
 using namespace std;
 using namespace igl;
 using namespace Eigen;
@@ -706,6 +708,9 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
                       << recData.armpitsStitching << endl;);
   }
   if (keyEvent.key == SDLK_w) {
+
+        process_pino();
+
         exportAsOBJ("/tmp", "mm_frame", true);
 
         writeOBJ("/tmp/mm_frame.obj", defData.VCurr, defData.Faces,
