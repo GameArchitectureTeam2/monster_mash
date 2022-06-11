@@ -1,3 +1,0 @@
-/home/kang/gameEngineering/monster_mash/CMakeFiles/rebuild_cache.dir
-/home/kang/gameEngineering/monster_mash/CMakeFiles/edit_cache.dir
-/home/kang/gameEngineering/monster_mash/CMakeFiles/monstermash.dir

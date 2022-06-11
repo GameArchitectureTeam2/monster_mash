@@ -68,6 +68,8 @@ set(HEADERS
     ../third_party/miscutils/opengltools.h
 )
 
+
+
 if (CMAKE_CXX_COMPILER MATCHES "em\\+\\+$")
     message("Compiling for WebAssembly/Emscripten")
     set(COMPILER_FLAGS -sWASM=1 -sUSE_SDL=2 -sUSE_SDL_TTF=2)
@@ -150,14 +152,28 @@ set(INCLUDEPATH
     ../third_party/SDL2_gfx
     ../third_party/SDL2_gfx-mod
     ../third_party/tinygltf
+    ../third_party/ik
+    ../third_party/IK
     ${SDL2_INCLUDE_DIRS}
 )
+
+
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
+find_package (IK REQUIRED)
+
+
+
 add_executable(monstermash ${SOURCES} ${HEADERS})
+find_library(
+    ik 
+    NAMES ik.a
+    REQUIRED
+)
+target_link_libraries(monstermash ${ik})
 target_compile_definitions(monstermash PRIVATE ${DEFINES} ${DEFINES_OPENGL} ${DEFINES_EMSCRIPTEN})
 target_include_directories(monstermash PRIVATE ${INCLUDEPATH})
 target_link_libraries(monstermash ${LINKER_FLAGS} ${LINKER_FLAGS_OPENGL} ${OPENGL_LIBRARIES})

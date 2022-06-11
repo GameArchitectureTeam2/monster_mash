@@ -1,0 +1,3 @@
+/home/kang/monster_mash/build/Release/CMakeFiles/monstermash.dir
+/home/kang/monster_mash/build/Release/CMakeFiles/edit_cache.dir
+/home/kang/monster_mash/build/Release/CMakeFiles/rebuild_cache.dir
