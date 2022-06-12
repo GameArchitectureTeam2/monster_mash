@@ -60,7 +60,6 @@ set(SOURCES
     ../third_party/SDL2_gfx/SDL2_rotozoom.c
     ../third_party/tinygltf/tinygltf.cpp
 )
-message("HIHIHIHIHIHIHIHI")
 set(HEADERS
     commonStructs.h
     defengarapl.h

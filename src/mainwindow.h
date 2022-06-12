@@ -75,6 +75,8 @@ class MainWindow : public MyWindow {
   void resumeAnimation();
   int getNumberOfAnimationFrames();
 
+  int joints[15];
+
  protected:
   bool paintEvent();
   virtual void fingerEvent(const MyFingerEvent &event);

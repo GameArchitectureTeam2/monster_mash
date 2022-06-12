@@ -48,8 +48,9 @@ TreeType *constructDistanceField(const Mesh &m, double tol)
         
         triobjvec.push_back(Tri3Object(v1, v2, v3));
     }
-    
+
     ObjectProjector<3, Tri3Object> proj(triobjvec);
+    Debugging::out() << "OctTreeMaker problem make" << endl;   
 
     TreeType *out = OctTreeMaker<TreeType>().make(proj, m, tol);
 

@@ -177,8 +177,11 @@ void process_pino()
     }
 
     PinocchioOutput o;
+    Debugging::out() << "Make PinocchioOutput" << endl;    
     if(!a.noFit) { //do everything
+    Debugging::out() << "nofit" << endl;    
         o = autorig(given, m);
+    Debugging::out() << "autorig" << endl;    
     }
     else { //skip the fitting step--assume the skeleton is already correct for the mesh
         TreeType *distanceField = constructDistanceField(m);

@@ -22,9 +22,9 @@
 #include "mathutils.h"
 
 #ifndef _WIN32
-//#include <unordered_map>
+#include <unordered_map>
 #include <ext/hash_map>
-//#include <undorderd_set>
+#include <unordered_set>
 #include <ext/hash_set>
 
 #define _HASH_NAMESPACE __gnu_cxx
@@ -51,8 +51,10 @@ namespace _HASH_NAMESPACE {
         }; \
     }
 #else //MICROSOFT VC 2005
-#include <hash_map>
-#include <hash_set>
+//#include <hash_map>
+#include <unordered_map>
+//#include <hash_set>
+#include <unordered_set>
 
 #define _HASH_NAMESPACE stdext
 

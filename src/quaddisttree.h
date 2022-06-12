@@ -27,23 +27,24 @@
 #include <numeric>
 #include <map>
 
+
 template<int Dim>
 class DistFunction : public Multilinear<double, Dim>
 {
     typedef Multilinear<double, Dim> super;
     typedef Rect<double, Dim> MyRect;
 public:
-    void setValue(int idx, const double &value) { values[idx] = value; }
+    //void setValue(int idx, const double &value) { values[idx] = value; }
     template<class Eval> void initFunc(const Eval &eval, const MyRect &rect)
     {
         for(int i = 0; i < (1 << Dim); ++i) {
-            setValue(i, eval(rect.getCorner(i)));
+            this->setValue(i, eval(rect.getCorner(i)));
         }
         return;
     }
-    
-    static const int num = (1 << Dim);
-    double values[num];
+
+    //static const int num = (1 << Dim);
+    //double values[num];
     
 private:
 };
@@ -162,10 +163,14 @@ template<class RootNode = OctTreeRoot> class OctTreeMaker
 public:
     static RootNode *make(const ObjectProjector<3, Tri3Object> &proj, const Mesh &m, double tol)
     {
+        Debugging::out() << "OctTreeMaker Get In" << endl; 
+        Debugging::out() << tol << endl; 
         DistObjEval eval(proj, m);
         RootNode *out = new RootNode();
 
+        Debugging::out() << "Make new Roothnode" << endl; 
         out->fullSplit(eval, tol, out, 0, true);
+        Debugging::out() << "Doing Fullsplit" << endl; 
         out->preprocessIndex();
 
         return out;
@@ -264,7 +269,7 @@ private:
         void setRect(const Rect3 &r) const { }
 
     private:
-        mutable hash_map<unsigned int, double> cache;
+        mutable unordered_map<unsigned int, double> cache;
         const ObjectProjector<3, Vec3Object> &proj;
         const RootNode *dTree;
     };

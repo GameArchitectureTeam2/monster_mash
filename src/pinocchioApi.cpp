@@ -24,15 +24,20 @@ ostream *Debugging::outStream = new ofstream();
 
 PinocchioOutput autorig(const Skeleton &given, const Mesh &m)
 {
+    Debugging::out() << "Get in autorig" << endl;    
     int i;
     PinocchioOutput out;
 
     Mesh newMesh = prepareMesh(m);
 
+    Debugging::out() << "PrepareMesh" << endl;    
+
     if(newMesh.vertices.size() == 0)
         return out;
 
     TreeType *distanceField = constructDistanceField(newMesh);
+
+    Debugging::out() << "constructDistanceField" << endl;    
 
     //discretization
     vector<Sphere> medialSurface = sampleMedialSurface(distanceField);

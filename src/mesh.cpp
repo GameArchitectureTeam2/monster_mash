@@ -530,7 +530,7 @@ void Mesh::readStl(istream &strm)
     int i;
     int lineNum = 0;
     
-    hash_map<StlVtx, int> vertexIdx;
+    map<StlVtx, int> vertexIdx;
     
     vector<int> lastIdxs;
     
