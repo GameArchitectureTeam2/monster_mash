@@ -20,6 +20,8 @@
 #include "exportgltf.h"
 #include "mywindow.h"
 
+#include "ik/ik.h"
+
 class MainWindow : public MyWindow {
  public:
   MainWindow(int w, int h, const std::string &windowTitle);

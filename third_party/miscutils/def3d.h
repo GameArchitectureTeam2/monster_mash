@@ -12,6 +12,8 @@
 #include <miscutils/macros.h>
 #include <SDL2_gfxPrimitives.h>
 
+#include <ik/ik.h>
+
 class Def3D
 {
 public:
@@ -19,11 +21,13 @@ public:
   {
   public:
     Eigen::Vector3d pos, prevPos;
+    Eigen::Vector3d localPos;
+    Eigen::Vector3d Rotation;
     bool fixed;
     double weight;
     int ptId = 0; // control point to mesh points correspondence
-    int length = -1;
-    Eigen::Vector3d Rotation;
+    double length = -1;
+    //Eigen::Vector3d Rotation;
 
     std::shared_ptr<CP> pParent;
     std::shared_ptr<CP> pChild[10];
@@ -37,14 +41,22 @@ public:
     void setControlPointPosition(Eigen::Vector3d);
     void setControlPointRotation(Eigen::Vector3d);
     CP(const Eigen::Vector3d &pos, bool fixed, double weight) :
-        pos(pos), prevPos(pos), fixed(fixed), weight(weight), Rotation(0,0,0) {}
+        pos(pos), prevPos(pos), fixed(fixed), weight(weight), Rotation(Eigen::Vector3d(0,0,0)),
+        localPos(0,0,0) {}
     CP() : CP(Eigen::Vector3d(0,0,0), false, 1) {}
+    void forwardKinematics(Eigen::Vector3d delta);
+    void jacobianInverse(Eigen::Vector3d delta);
+    Eigen::MatrixXd GetJacobianTranspose(Eigen::Vector3d target);
+    Eigen::Vector3d GetDeltaOrigentation(Eigen::Vector3d target);
+    void FARBIK(Eigen::Vector3d delta);
   };
 
   Def3D();
   virtual ~Def3D();
 
   void updatePtsAccordingToCPs(Mesh3D &inMesh);
+  
+  
 
   const CP& getCP(int index) const;
   CP& getCP(int index);
@@ -63,14 +75,15 @@ public:
   bool removeLastControlPoint();
   void removeControlPoints();
   long getCp2ptChangedNum() const;
-
   double cpDefaultWeight = 1.0; // default weight of control points for control points created by addControlPoint... functions
   bool cpDefaultFixed = true; // default behavior of control points for control points created by addControlPoint... functions
-
+  
+  
 protected:
   std::map<int,std::shared_ptr<CP>> cps;
   long cpChangedNum = 0;
   int nextId = 0;
+
 };
 
 #endif // DEF3D_H

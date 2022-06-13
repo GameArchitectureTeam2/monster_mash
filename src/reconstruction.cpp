@@ -13,7 +13,6 @@
 // limitations under the License.
 
 #include "reconstruction.h"
-
 #include <Eigen/src/SparseCore/SparseSolverBase-mod.h>
 #include <igl/cotmatrix.h>
 #include <igl/invert_diag.h>

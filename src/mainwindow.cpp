@@ -1308,18 +1308,7 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
     Vector3d t =
         (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized() -
         (proj3DViewInv * startPosProj.homogeneous()).hnormalized();
-    /*
-     *     //Force length
-    double deltaLength = sqrt(pow(t[0],2)+pow(t[1],2)+pow(t[2],2));
-    double cpLength = cpFirst.getParent()->getLength();
-    if(cpLength != 0){
-        double ratio = deltaLength / cpLength;
-        t[0] = t[0] / ratio;
-        t[1] = t[1] / ratio;
-        t[2] = t[2] / ratio;
-    }
-     */
-
+    Vector3d deltaa = (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized();
     // apply the translation vector to all selected control points
     for (const int cpId : selectedPoints) {
       auto &cp = defCurr->getCP(cpId);
@@ -1328,11 +1317,17 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
         auto &cpAnim = it->second;
         Affine3d T((Translation3d(t(0), t(1), t(2))));
         cpAnim.setTransform(T.matrix());
-        cp.pos = cpAnim.peek();
+
+        Eigen::Vector3d delta = cp.pos - cpAnim.peek();
+        cp.setControlPointPosition(delta);
+
+        //cp.pos = cpAnim.peek();
       } else {
         //0502
-        cp.setControlPointPosition(t);
-
+        //cp.pos = cp.pos + t/100;
+        //t[2] = 0;
+        cp.setControlPointPosition(t/10);
+        //std::cout << t[0] << " " << t[1] << " " << t[2] << " " << std::endl;
       }
     }
   } catch (out_of_range &e) {
@@ -1340,6 +1335,7 @@ void MainWindow::handleMouseMoveEventGeometryMode(const MyMouseEvent &event) {
   }
 }
 
+//RELEASE THE MOUSE!!!!!!!!!!!
 void MainWindow::handleMouseReleaseEventGeometryMode(
     const MyMouseEvent &event) {
   auto *cpData = &this->cpData;
@@ -1399,12 +1395,19 @@ void MainWindow::handleMouseReleaseEventGeometryMode(
     if (event.leftButton)
       transformApply();
     else
-      transformDiscard();
+      transformApply();
     return;
   }
-
+  //double x2 = mouseReleaseEnd(0);
+  //double y2 = mouseReleaseEnd(1);
+  //auto *defCurr = &def;
+  //const Vector3d mouseCurrProj(mouseReleaseEnd(0), mouseReleaseEnd(1), 0);
+  //Vector3d deltaa = (proj3DViewInv * mouseCurrProj.homogeneous()).hnormalized();
+  //auto &cp = defCurr->getCP(selectedPoint);
+  
+  //cp.setControlPointPosition(deltaa);
   transformApply();
-
+  
   if (rubberBandActive) {
     // select points inside the rubber band
     double x1 = mousePressStart(0);
@@ -2241,7 +2244,14 @@ void MainWindow::cpAnimationPlaybackAndRecord() {
         a.syncSetLength(cpAnimSync.getLength());
         try {
           auto &cp = def.getCP(cpId);
-          cp.pos = cp.prevPos = a.replay(cpAnimSync.lastT);
+
+          //cp.pos = cp.prevPos = a.replay(cpAnimSync.lastT);
+          cp.prevPos = a.replay(cpAnimSync.lastT);
+          Eigen::Vector3d delta = cp.prevPos - cp.pos;
+
+          cp.setControlPointPosition(delta*100);
+
+
         } catch (out_of_range &e) {
           cerr << e.what() << endl;
         }
