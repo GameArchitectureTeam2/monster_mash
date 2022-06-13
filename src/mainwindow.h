@@ -124,7 +124,7 @@ class MainWindow : public MyWindow {
   void handleMousePressEventImageMode(const MyMouseEvent &event);
   void handleMouseMoveEventImageMode(const MyMouseEvent &event);
   void handleMouseReleaseEventImageMode(const MyMouseEvent &event);
-  void handleMousePressEventGeometryMode(const MyMouseEvent &event);
+  void handleMousePressEventGeometryMode(const MyMouseEvent &event, int auto_pino_rig_count, int given_x, int given_y);
   void handleMouseMoveEventGeometryMode(const MyMouseEvent &event);
   void handleMouseReleaseEventGeometryMode(const MyMouseEvent &event);
   void drawLine(const MyMouseEvent &event, int x1, int y1, int x2, int y2,

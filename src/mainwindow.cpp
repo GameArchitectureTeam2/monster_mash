@@ -619,7 +619,7 @@ void MainWindow::mousePressEvent(const MyMouseEvent &event) {
   if (manipulationMode.isGeometryModeActive()) {
     defEng.solveForZ = false;  // pause z-deformation
     autoRotateDir = -1;
-    handleMousePressEventGeometryMode(event);
+    handleMousePressEventGeometryMode(event, 0, 0, 0);
   } else {
     handleMousePressEventImageMode(event);
   }
@@ -731,8 +731,8 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
     for (int i = 0 ; i < pinocchio_size[0] ; i++)
     {
       std::cout << i << " : " << pinocchio_joints[i * 3] << " " << pinocchio_joints[i * 3 + 1] << std::endl;
-      pinocchio_joints[i * 3] = (int)(pinocchio_joints[i * 3] * 650);
-      pinocchio_joints[i * 3 + 1] = (int)(800 - pinocchio_joints[i * 3 + 1] * 650);
+      pinocchio_joints[i * 3] = (int)(pinocchio_joints[i * 3] * 300);
+      pinocchio_joints[i * 3 + 1] = (int)(800 - pinocchio_joints[i * 3 + 1] * 300);
     }
     Pinocchio_jointsfinding = true;
     std::cout << "Complete Pinocchio" << std::endl;
@@ -1119,7 +1119,7 @@ void MainWindow::handleMouseReleaseEventImageMode(const MyMouseEvent &event) {
   currOutlineImg.fill(255);
 }
 
-void MainWindow::handleMousePressEventGeometryMode(const MyMouseEvent &event) {
+void MainWindow::handleMousePressEventGeometryMode(const MyMouseEvent &event,int auto_pino_rig_count, int given_x, int given_y) {
   auto *cpData = &this->cpData;
   auto *defData = &this->defData;
   auto &selectedPoint = cpData->selectedPoint;
@@ -1171,9 +1171,19 @@ void MainWindow::handleMousePressEventGeometryMode(const MyMouseEvent &event) {
     bool reverse = true;
     if (leftMouseButtonActive) reverse = false;
     
-    bool added = def.addControlPointOnFace(VCurr, Faces, mouseCurrPos(0),
+    bool added = true;
+    if(auto_pino_rig_count == 0)
+    {
+      added = def.addControlPointOnFace(VCurr, Faces, mouseCurrPos(0),
                                            mouseCurrPos(1), radius, reverse,
                                            reverse, selectedPoint, proj3DView);
+    }
+    else
+    {
+      added = def.addControlPointOnFace(VCurr, Faces, given_x,
+                                           given_y, radius, reverse,
+                                           reverse, selectedPoint, proj3DView);
+    }
     
 
     
@@ -1188,10 +1198,11 @@ void MainWindow::handleMousePressEventGeometryMode(const MyMouseEvent &event) {
       {
         int x_cor = field_Distance_X + pinocchio_joints[i * 3];
         int y_cor = field_Distance_Y + pinocchio_joints[i * 3 + 1];
-        std::cout << x_cor << " " << y_cor << std::endl;
-        def.addControlPointOnFace(VCurr, Faces, x_cor,
-                                            y_cor, radius, reverse,
-                                            reverse, selectedPoint, proj3DView);
+        std::cout << i << " " << x_cor << " " << y_cor << std::endl;
+        if(i != 3 || i != 7 || i != 11 || i != 14 || i != 17)
+        {
+          handleMousePressEventGeometryMode(event, 1, x_cor, y_cor);
+        }
       }
     }
 
