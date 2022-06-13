@@ -305,7 +305,7 @@ bool MyWindow::mainTick() {
     ImGui::NewFrame();
 
     ImGui::Begin("Setting UI", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-    ImGui::Text("Use Custom Functoin?");
+
     ImGui::Checkbox("", &key1);
     ImGui::SameLine();
     if (ImGui::Button("DRAW_OUTLINE"))
@@ -332,6 +332,21 @@ bool MyWindow::mainTick() {
     if (ImGui::Button("REGION_SWAP_MODE"))
     {
         changekey4value();
+    }
+
+    ImGui::Text("Use Custom Functoin?");
+    ImGui::Checkbox("", &smline);
+    ImGui::SameLine();
+    if (ImGui::Button("Smoothing Line(Beta)"))
+    {
+        changemkvalue();
+    }
+
+    ImGui::Checkbox("", &mksk);
+    ImGui::SameLine();
+    if (ImGui::Button("Make Skeleton(Beta"))
+    {
+        changesmvalue();
     }
 
     if (ImGui::Button("End Setting"))
@@ -460,5 +475,35 @@ void MyWindow::ChangeUI()
     {
         show_another_window = true;
         SDL_ShowWindow(window_ui);
+    }
+}
+
+bool MyWindow::mkvalue()
+{
+    return mksk;
+}
+
+void MyWindow::changemkvalue()
+{
+    if (mkvalue() == true)
+        mksk = false;
+    else
+    {
+        mksk = true;
+    }
+}
+
+bool MyWindow::smvalue()
+{
+    return smline;
+}
+
+void MyWindow::changesmvalue()
+{
+    if (smvalue() == true)
+        smline = false;
+    else
+    {
+        smline = true;
     }
 }

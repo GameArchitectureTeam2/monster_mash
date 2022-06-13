@@ -99,13 +99,21 @@ class MyWindow {
   void changekey2value();
   void changekey3value();
   void changekey4value();
+  void changesmvalue();
+  void changemkvalue();
+
   void ChangeUI();
   bool key1value();
   bool key2value();
   bool key3value();
   bool key4value();
+
+  bool smvalue();
+  bool mkvalue();
   bool ShowUI();
+
   bool smline = false;
+  bool mksk = false;
   bool key1 = false;
   bool key2 = false;
   bool key3 = false;
