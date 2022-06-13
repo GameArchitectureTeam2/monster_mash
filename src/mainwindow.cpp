@@ -727,6 +727,16 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
   if (keyEvent.key == SDLK_i) {
     //pinocchio joints num and xyz coordinates
         process_pino(&pinocchio_size[0], &pinocchio_joints[0]);
+        make_symmetric();
+    for (int i = 0 ; i < pinocchio_size[0] ; i++)
+    {
+      std::cout << i << " : " << pinocchio_joints[i * 3] << " " << pinocchio_joints[i * 3 + 1] << std::endl;
+      pinocchio_joints[i * 3] = (int)(pinocchio_joints[i * 3] * 300);
+      pinocchio_joints[i * 3 + 1] = (int)(800 - pinocchio_joints[i * 3 + 1] * 300);
+    }
+  }
+  if (keyEvent.key == SDLK_F2) {
+
   }
   if (keyEvent.ctrlModifier) {
     if (keyEvent.key == SDLK_c) {
@@ -1439,6 +1449,39 @@ void MainWindow::drawLine(const MyMouseEvent &event, int x1, int y1, int x2,
   MyPainter painter(currOutlineImg);
   painter.setColor(c(0), c(1), c(2), c(3));
   painter.drawLine(x1, y1, x2, y2, thickness);
+  if(testing_bool && joints_sym.size())
+  {
+    testing_bool = false;
+    std::cout << "Joint Symetrics" << std::endl;
+    for(int i = 0 ; i < joints_sym.size() ; i++)
+    {
+      std::cout << joints_sym[i].first << " " << joints_sym[i].second << std::endl;
+    }
+
+    std::cout << "Pinocchio joints coordinate" << std::endl;
+    for(int i = 0 ; i < joints_sym.size() ; i++)
+    {
+      std::cout << pinocchio_joints[joints_sym[i].first * 3] << " ";
+      std::cout << pinocchio_joints[joints_sym[i].first * 3 + 1] << " ";
+      std::cout << pinocchio_joints[joints_sym[i].second * 3] << " ";
+      std::cout << pinocchio_joints[joints_sym[i].second * 3 + 1] << " ";
+      std::cout << std::endl;
+    }
+
+    if(joints_sym.size())
+    {
+      for(int i = 0 ; i < joints_sym.size() ; i ++)
+      {
+        painter.drawLine(
+          pinocchio_joints[joints_sym[i].first * 3],
+          pinocchio_joints[joints_sym[i].first * 3 + 1],
+          pinocchio_joints[joints_sym[i].second * 3],
+          pinocchio_joints[joints_sym[i].second * 3 + 1],
+          thickness
+        );
+      }
+    }
+  }
 
   drawingUnderLayer = numeric_limits<int>::max();
   Imguc &I = currOutlineImg, &MI = mergedOutlinesImg;
@@ -2601,6 +2644,54 @@ void MainWindow::exportAnimationFrame() {
   }
 
   repaint = true;
+}
+
+void MainWindow::make_symmetric() {
+  joints_sym.push_back(make_pair(0, 1));
+  joints_sym.push_back(make_pair(1, 2));
+
+  joints_sym.push_back(make_pair(2, 4));
+  joints_sym.push_back(make_pair(4, 5));
+  joints_sym.push_back(make_pair(5, 6));
+  joints_sym.push_back(make_pair(6, 7));
+
+  joints_sym.push_back(make_pair(2, 8));
+  joints_sym.push_back(make_pair(8, 9));
+  joints_sym.push_back(make_pair(9, 10));
+  joints_sym.push_back(make_pair(10, 11));
+
+  joints_sym.push_back(make_pair(0, 12));
+  joints_sym.push_back(make_pair(12, 13));
+  joints_sym.push_back(make_pair(13, 14));
+
+  joints_sym.push_back(make_pair(0, 15));
+  joints_sym.push_back(make_pair(15, 16));
+  joints_sym.push_back(make_pair(16, 17));
+
+  joints_sym.push_back(make_pair(0, 3));
+}
+
+void MainWindow::symmetric_line_draw() {
+    std::cout << pinocchio_joints[0 * 3] << " " << pinocchio_joints[0 * 3 + 1] << " " << pinocchio_size[0] << std::endl; 
+    auto imgData = &this->imgData;
+      auto &currOutlineImg = imgData->currOutlineImg;
+
+    MyPainter painter(currOutlineImg);
+    painter.setColor(NEUMANN_OUTLINE_PIXEL_COLOR,
+                           NEUMANN_OUTLINE_PIXEL_COLOR,
+                           NEUMANN_OUTLINE_PIXEL_COLOR, 255);
+    for (int i = 0 ; i < pinocchio_size[0] ; i++)
+    {
+      std::cout << i << std::endl;
+      pinocchio_joints[i * 3] = (int)(pinocchio_joints[i * 3] * 200);
+      pinocchio_joints[i * 3 + 1] = (int)(pinocchio_joints[i * 3 + 1] * 200);
+    }
+    for (int i = 0 ; i < pinocchio_size[0] ; i++)
+    {
+      std::cout << pinocchio_joints[i * 3] << " " << pinocchio_joints[i * 3 + 1] << std::endl; 
+      painter.drawLine(pinocchio_joints[i * 3], pinocchio_joints[i * 3 + 1], pinocchio_joints[i * 3] + 1,
+                       pinocchio_joints[i * 3 + 1] + 1, defaultThickness);
+    }
 }
 
 bool MainWindow::exportAnimationRunning() { return gltfExporter != nullptr; }

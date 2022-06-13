@@ -15,6 +15,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <vector>
 #include "commonStructs.h"
 #include "exportgltf.h"
 #include "mywindow.h"
@@ -75,8 +76,13 @@ class MainWindow : public MyWindow {
   void resumeAnimation();
   int getNumberOfAnimationFrames();
 
+  void symmetric_line_draw();
+  void make_symmetric();
+
   double pinocchio_joints[70];
   int pinocchio_size[1];
+  std::vector<std::pair<int, int>> joints_sym;
+  bool testing_bool = true;
 
  protected:
   bool paintEvent();

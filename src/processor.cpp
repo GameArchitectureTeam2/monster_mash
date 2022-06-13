@@ -222,6 +222,7 @@ void process_pino(int *size, double *ret_joints)
         ret_joints[i * 3 + 1] = o.embedding[i][1];
         ret_joints[i * 3 + 2] = o.embedding[i][2];
     }
+    size[0] = embeddingsize;
 
     //output skeleton embedding
     for(i = 0; i < (int)o.embedding.size(); ++i)
