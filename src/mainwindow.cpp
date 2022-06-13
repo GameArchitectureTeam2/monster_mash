@@ -726,8 +726,8 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
   }
   if (keyEvent.key == SDLK_i) {
     //pinocchio joints num and xyz coordinates
-        process_pino(&pinocchio_size[0], &pinocchio_joints[0]);
-        make_symmetric();
+    process_pino(&pinocchio_size[0], &pinocchio_joints[0]);
+    make_symmetric();
     for (int i = 0 ; i < pinocchio_size[0] ; i++)
     {
       std::cout << i << " : " << pinocchio_joints[i * 3] << " " << pinocchio_joints[i * 3 + 1] << std::endl;

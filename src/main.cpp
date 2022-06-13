@@ -22,7 +22,7 @@
 using namespace std;
 
 MainWindow mainWindow(
-    800, 600, "Monster Mash");
+    1000, 800, "Monster Mash");
 
 int main(int argc, char *argv[]) {
   std::cout << argc;
