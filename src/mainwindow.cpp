@@ -708,23 +708,25 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
                       << recData.armpitsStitching << endl;);
   }
   if (keyEvent.key == SDLK_w) {
-
-        process_pino();
-
-        exportAsOBJ("/tmp", "mm_frame", true);
-
-        writeOBJ("/tmp/mm_frame.obj", defData.VCurr, defData.Faces,
-        defData.normals,
-                 defData.Faces, MatrixXd(), defData.Faces);
+        //xportAsOBJ("/tmp", "mm_frame", true);
 
         writeOBJ("mm_frame.obj", defData.VCurr, defData.Faces,
         defData.normals,
                  defData.Faces, MatrixXd(), defData.Faces);
+        /*
+        writeOBJ("mm_frame.obj", defData.VCurr, defData.Faces,
+        defData.normals,
+                 defData.Faces, MatrixXd(), defData.Faces);
+                 */
 
     if (!exportAnimationRunning())
       exportAnimationStart(0, false, false);
     else
       exportAnimationStop();
+  }
+  if (keyEvent.key == SDLK_i) {
+    //pinocchio joints num and xyz coordinates
+        process_pino(&pinocchio_size[0], &pinocchio_joints[0]);
   }
   if (keyEvent.ctrlModifier) {
     if (keyEvent.key == SDLK_c) {

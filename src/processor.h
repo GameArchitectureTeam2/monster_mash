@@ -23,6 +23,6 @@ THE SOFTWARE.
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
 
-void process_pino();
+void process_pino(int *size, double *ret_joints);
 
 #endif //PROCESSOR_H

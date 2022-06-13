@@ -75,7 +75,8 @@ class MainWindow : public MyWindow {
   void resumeAnimation();
   int getNumberOfAnimationFrames();
 
-  int joints[15];
+  double pinocchio_joints[70];
+  int pinocchio_size[1];
 
  protected:
   bool paintEvent();

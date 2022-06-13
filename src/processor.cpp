@@ -149,7 +149,7 @@ ArgData processArgs()
     return out;
 }
 
-void process_pino()
+void process_pino(int *size, double *ret_joints)
 {
     int i;
     ArgData a = processArgs();
@@ -214,8 +214,15 @@ void process_pino()
         }
     }
     */
-    for(i = 0; i < (int)o.embedding.size(); ++i)
-        std::cout << o.embedding[i] << " embedding" << std::endl;
+    //int *size, double *ret_joints
+    int embeddingsize = (int)o.embedding.size();
+    for(i = 0; i < embeddingsize; ++i)
+    {
+        ret_joints[i * 3] = o.embedding[i][0];
+        ret_joints[i * 3 + 1] = o.embedding[i][1];
+        ret_joints[i * 3 + 2] = o.embedding[i][2];
+    }
+
     //output skeleton embedding
     for(i = 0; i < (int)o.embedding.size(); ++i)
         o.embedding[i] = (o.embedding[i] - m.toAdd) / m.scale;
