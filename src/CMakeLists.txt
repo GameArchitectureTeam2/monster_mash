@@ -27,6 +27,15 @@ set(SOURCES
     mywindow.cpp
     def3dsdl.cpp
     exportgltf.cpp
+    imgui/imgui.cpp
+    imgui/imgui_demo.cpp
+    imgui/imgui_draw.cpp
+    imgui/imgui_widgets.cpp
+    imgui/imgui_tables.cpp
+    imgui/imgui_tables.cpp
+    imgui/imgui_impl_opengl2.cpp
+    imgui/imgui_impl_sdl.cpp
+    imgui/imgui_sdl.cpp
     ../third_party/ir3d-utils/regionToMesh.cpp
     ../third_party/ir3d-utils/MeshBuilder.cpp
     ../third_party/image/imageReadWrite.cpp
@@ -56,6 +65,15 @@ set(HEADERS
     def3dsdl.h
     macros.h
     exportgltf.h
+    imgui/imconfig.h
+    imgui/imgui.h
+    imgui/imgui_internal.h
+    imgui/imstb_rectpack.h
+    imgui/imstb_textedit.h
+    imgui/imstb_truetype.h
+    imgui/imgui_impl_opengl2.h
+    imgui/imgui_impl_sdl.h
+    imgui/imgui_sdl.h
     ../third_party/ir3d-utils/regionToMesh.h
     ../third_party/image/image.h
     ../third_party/image/imageReadWrite.hpp
@@ -67,8 +85,6 @@ set(HEADERS
     ../third_party/miscutils/mesh3d.h
     ../third_party/miscutils/opengltools.h
 )
-
-
 
 if (CMAKE_CXX_COMPILER MATCHES "em\\+\\+$")
     message("Compiling for WebAssembly/Emscripten")
@@ -152,28 +168,16 @@ set(INCLUDEPATH
     ../third_party/SDL2_gfx
     ../third_party/SDL2_gfx-mod
     ../third_party/tinygltf
-    ../third_party/ik
-    ../third_party/IK
+    imgui
+    imgui/backends
     ${SDL2_INCLUDE_DIRS}
 )
-
-
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
-find_package (IK REQUIRED)
-
-
-
 add_executable(monstermash ${SOURCES} ${HEADERS})
-find_library(
-    ik 
-    NAMES ik.a
-    REQUIRED
-)
-target_link_libraries(monstermash ${ik})
 target_compile_definitions(monstermash PRIVATE ${DEFINES} ${DEFINES_OPENGL} ${DEFINES_EMSCRIPTEN})
 target_include_directories(monstermash PRIVATE ${INCLUDEPATH})
 target_link_libraries(monstermash ${LINKER_FLAGS} ${LINKER_FLAGS_OPENGL} ${OPENGL_LIBRARIES})

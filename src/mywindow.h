@@ -15,12 +15,17 @@
 #ifndef MYWINDOW_H
 #define MYWINDOW_H
 
-#include <SDL.h>
 #include <image/image.h>
-
+#include <SDL_opengl.h>
+#include <stdio.h>
 #include <Eigen/Dense>
 #include <iostream>
 #include <set>
+#include "imgui/imgui_impl_sdl.h"
+#include "imgui/imgui_impl_opengl2.h"
+//#include "imgui/imgui_sdl.cpp"
+#include "imgui/imgui_sdl.h"
+#include "SDL.h"
 
 #ifdef __EMSCRIPTEN__
 #include <emscripten.h>
@@ -72,11 +77,16 @@ struct MyWindowGLData {
 class MyWindow {
  public:
   MyWindow(int w, int h, const std::string &windowTitle);
-  virtual ~MyWindow();
 
+  virtual ~MyWindow();
+  ///////////////////
+  
+  void gui(SDL_Window* window);
+  //////////////
   void runLoop();
   SDL_Renderer *getRenderer() const;
   SDL_Window *getWindow() const;
+  SDL_GLContext getContext() const;
   const MyWindowGLData &getGLData() const;
   void setMouseEventsSimulationByTouch(bool enable = true);
   int getWidth() const;
@@ -84,6 +94,23 @@ class MyWindow {
   void setKeyboardEventState(bool enabled);
   void enableKeyboardEvents();
   void disableKeyboardEvents();
+
+  void changekey1value();
+  void changekey2value();
+  void changekey3value();
+  void changekey4value();
+  void ChangeUI();
+  bool key1value();
+  bool key2value();
+  bool key3value();
+  bool key4value();
+  bool ShowUI();
+  bool smline = false;
+  bool key1 = false;
+  bool key2 = false;
+  bool key3 = false;
+  bool key4 = false;
+
 
  protected:
   virtual bool paintEvent() = 0;
@@ -100,7 +127,7 @@ class MyWindow {
   virtual void fingerReleaseEvent(const MyFingerEvent &event){};
 
  protected:
-  int init(const std::string &windowTitle);
+  int init(const std::string& windowTitle);
   void initOpenGLBuffers();
   void destroyOpenGLBuffers();
   void openGLDrawScreen(const Imguc &screenImg);
@@ -111,8 +138,11 @@ class MyWindow {
 #endif
 
   SDL_Window *window = nullptr;
+  SDL_Window* window_ui = nullptr;
   SDL_Renderer *renderer = nullptr;
-  SDL_GLContext context;
+  SDL_Renderer* renderer_ui = nullptr;
+  SDL_GLContext context = nullptr;
+  SDL_GLContext context_ui;
   const int windowWidth, windowHeight;
   MyKeyEvent lastKeyEvent;
   int lastPressTimestamp = 0;
@@ -120,6 +150,14 @@ class MyWindow {
   std::set<int> currFingerIds;
   MyWindowGLData glData;
   bool repaint = true;
+  /////
+  bool show_another_window = true;
+
+  
+
+
+  
+  
 };
 
 #endif  // MYWINDOW_H

@@ -19,13 +19,21 @@
 #include "exportgltf.h"
 #include "mywindow.h"
 
-#include "ik/ik.h"
+///custom
+#include "imgui/imgui_impl_sdl.h"
+#include "imgui/imgui_impl_opengl2.h"
+//#include "imgui/imgui_sdl.cpp"
+#include "imgui/imgui_sdl.h"
+#include "SDL.h"
+///
 
 class MainWindow : public MyWindow {
  public:
   MainWindow(int w, int h, const std::string &windowTitle);
   virtual ~MainWindow();
 
+  ///// custom
+  ///////////
   void deselectAll();
   void selectAll();
   bool copySelectedAnim();

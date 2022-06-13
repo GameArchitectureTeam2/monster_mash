@@ -57,10 +57,9 @@ class MyPainter {
   void drawDynamicImage(int x, int y, const Imguc &I);
   void paint();
   void clearToColor();
-  //Custom
-  void drawSkeletonLine(int x1, int y1, int x2, int y2);
+
   int getCurrentThickness();
-  void drawSkeletonCircle(int x1, int y1,int length);
+
  private:
   bool checkRenderingContext();
 
