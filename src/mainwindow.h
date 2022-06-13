@@ -79,9 +79,15 @@ class MainWindow : public MyWindow {
   void symmetric_line_draw();
   void make_symmetric();
 
+  //Pinocchio variables
+    //joints
   double pinocchio_joints[70];
+    //joints num
   int pinocchio_size[1];
+    //symmetric of joints
   std::vector<std::pair<int, int>> joints_sym;
+    //if pinocchio mode is on or of
+  bool Pinocchio_jointsfinding = false;  
   bool testing_bool = true;
 
  protected:

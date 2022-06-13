@@ -708,11 +708,11 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
                       << recData.armpitsStitching << endl;);
   }
   if (keyEvent.key == SDLK_w) {
-        //xportAsOBJ("/tmp", "mm_frame", true);
+        exportAsOBJ("/tmp", "mm_frame", true);
 
-        writeOBJ("mm_frame.obj", defData.VCurr, defData.Faces,
-        defData.normals,
-                 defData.Faces, MatrixXd(), defData.Faces);
+        //writeOBJ("mm_frame.obj", defData.VCurr, defData.Faces,
+        //defData.normals,
+        //         defData.Faces, MatrixXd(), defData.Faces);
         /*
         writeOBJ("mm_frame.obj", defData.VCurr, defData.Faces,
         defData.normals,
@@ -731,9 +731,11 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
     for (int i = 0 ; i < pinocchio_size[0] ; i++)
     {
       std::cout << i << " : " << pinocchio_joints[i * 3] << " " << pinocchio_joints[i * 3 + 1] << std::endl;
-      pinocchio_joints[i * 3] = (int)(pinocchio_joints[i * 3] * 300);
-      pinocchio_joints[i * 3 + 1] = (int)(800 - pinocchio_joints[i * 3 + 1] * 300);
+      pinocchio_joints[i * 3] = (int)(pinocchio_joints[i * 3] * 650);
+      pinocchio_joints[i * 3 + 1] = (int)(800 - pinocchio_joints[i * 3 + 1] * 650);
     }
+    Pinocchio_jointsfinding = true;
+    std::cout << "Complete Pinocchio" << std::endl;
   }
   if (keyEvent.key == SDLK_F2) {
 
@@ -1165,14 +1167,35 @@ void MainWindow::handleMousePressEventGeometryMode(const MyMouseEvent &event) {
       transformDiscard();
     return;
   }
-
   if (event.leftButton || event.rightButton) {
     bool reverse = true;
     if (leftMouseButtonActive) reverse = false;
-
+    
     bool added = def.addControlPointOnFace(VCurr, Faces, mouseCurrPos(0),
                                            mouseCurrPos(1), radius, reverse,
                                            reverse, selectedPoint, proj3DView);
+    
+
+    
+    //pinocchio auto rigging start point
+    //Head = 3
+    if(Pinocchio_jointsfinding)
+    {
+      Pinocchio_jointsfinding = false;
+      int field_Distance_X = mouseCurrPos(0) - pinocchio_joints[3 * 3];
+      int field_Distance_Y = mouseCurrPos(1) - pinocchio_joints[3 * 3 + 1];
+      for (int i = 0 ; i < pinocchio_size[0] ; i++)
+      {
+        int x_cor = field_Distance_X + pinocchio_joints[i * 3];
+        int y_cor = field_Distance_Y + pinocchio_joints[i * 3 + 1];
+        std::cout << x_cor << " " << y_cor << std::endl;
+        def.addControlPointOnFace(VCurr, Faces, x_cor,
+                                            y_cor, radius, reverse,
+                                            reverse, selectedPoint, proj3DView);
+      }
+    }
+
+
     temporaryPoint = false;
     if (selectedPoint != -1) {
       if (!event.shiftModifier) {
@@ -2484,7 +2507,8 @@ void MainWindow::exportAsOBJ(const std::string &outDir,
     textureCoords = (defData.VRestOrig.array().rowwise() /
                      Array3d(templateImg.w, -templateImg.h, 1).transpose());
   }
-  string objFn = outDir + "/" + outFnWithoutExtension + ".obj";
+  //string objFn = outDir + "/" + outFnWithoutExtension + ".obj";
+  string objFn = outFnWithoutExtension + ".obj";
   writeOBJ(objFn, V, defData.Faces, N, defData.Faces, textureCoords,
            defData.Faces);
   if (!templateImg.isNull() && saveTexture) {
