@@ -731,8 +731,8 @@ void MainWindow::keyPressEvent(const MyKeyEvent &keyEvent) {
     for (int i = 0 ; i < pinocchio_size[0] ; i++)
     {
       std::cout << i << " : " << pinocchio_joints[i * 3] << " " << pinocchio_joints[i * 3 + 1] << std::endl;
-      pinocchio_joints[i * 3] = (int)(pinocchio_joints[i * 3] * 300);
-      pinocchio_joints[i * 3 + 1] = (int)(800 - pinocchio_joints[i * 3 + 1] * 300);
+      pinocchio_joints[i * 3] = (int)(pinocchio_joints[i * 3] * 600);
+      pinocchio_joints[i * 3 + 1] = (int)(800 - pinocchio_joints[i * 3 + 1] * 600);
     }
     Pinocchio_jointsfinding = true;
     std::cout << "Complete Pinocchio" << std::endl;

@@ -1505,7 +1505,140 @@ CMakeFiles/monstermash.dir/def3dsdl.cpp.o: /home/ahn/monster-mash/src/def3dsdl.c
   /usr/include/GLES2/gl2platform.h \
   /usr/include/KHR/khrplatform.h \
   /usr/include/GLES2/gl2.h \
-  /usr/include/GLES2/gl2ext.h
+  /usr/include/GLES2/gl2ext.h \
+  /usr/include/glm/ext/matrix_transform.hpp \
+  /usr/include/glm/gtc/constants.hpp \
+  /usr/include/glm/ext/scalar_constants.hpp \
+  /usr/include/glm/detail/setup.hpp \
+  /usr/include/glm/simd/platform.h \
+  /usr/include/glm/ext/scalar_constants.inl \
+  /usr/include/glm/gtc/constants.inl \
+  /usr/include/glm/geometric.hpp \
+  /usr/include/glm/detail/type_vec3.hpp \
+  /usr/include/glm/detail/qualifier.hpp \
+  /usr/include/glm/detail/setup.hpp \
+  /usr/include/glm/detail/type_vec3.inl \
+  /usr/include/glm/detail/compute_vector_relational.hpp \
+  /usr/include/glm/detail/func_geometric.inl \
+  /usr/include/glm/exponential.hpp \
+  /usr/include/glm/detail/type_vec1.hpp \
+  /usr/include/glm/detail/type_vec1.inl \
+  /usr/include/glm/detail/type_vec2.hpp \
+  /usr/include/glm/detail/type_vec2.inl \
+  /usr/include/glm/detail/type_vec4.hpp \
+  /usr/include/glm/detail/type_vec4.inl \
+  /usr/include/glm/detail/func_exponential.inl \
+  /usr/include/glm/vector_relational.hpp \
+  /usr/include/glm/detail/setup.hpp \
+  /usr/include/glm/detail/func_vector_relational.inl \
+  /usr/include/glm/detail/_vectorize.hpp \
+  /usr/include/glm/common.hpp \
+  /usr/include/glm/detail/_fixes.hpp \
+  /usr/include/glm/detail/func_common.inl \
+  /usr/include/glm/detail/compute_common.hpp \
+  /usr/include/glm/trigonometric.hpp \
+  /usr/include/glm/detail/func_trigonometric.inl \
+  /usr/include/glm/matrix.hpp \
+  /usr/include/glm/vec2.hpp \
+  /usr/include/glm/ext/vector_bool2.hpp \
+  /usr/include/glm/ext/vector_bool2_precision.hpp \
+  /usr/include/glm/ext/vector_float2.hpp \
+  /usr/include/glm/ext/vector_float2_precision.hpp \
+  /usr/include/glm/ext/vector_double2.hpp \
+  /usr/include/glm/ext/vector_double2_precision.hpp \
+  /usr/include/glm/ext/vector_int2.hpp \
+  /usr/include/glm/ext/vector_int2_sized.hpp \
+  /usr/include/glm/ext/scalar_int_sized.hpp \
+  /usr/include/glm/ext/vector_uint2.hpp \
+  /usr/include/glm/ext/vector_uint2_sized.hpp \
+  /usr/include/glm/ext/scalar_uint_sized.hpp \
+  /usr/include/glm/vec3.hpp \
+  /usr/include/glm/ext/vector_bool3.hpp \
+  /usr/include/glm/ext/vector_bool3_precision.hpp \
+  /usr/include/glm/ext/vector_float3.hpp \
+  /usr/include/glm/ext/vector_float3_precision.hpp \
+  /usr/include/glm/ext/vector_double3.hpp \
+  /usr/include/glm/ext/vector_double3_precision.hpp \
+  /usr/include/glm/ext/vector_int3.hpp \
+  /usr/include/glm/ext/vector_int3_sized.hpp \
+  /usr/include/glm/ext/vector_uint3.hpp \
+  /usr/include/glm/ext/vector_uint3_sized.hpp \
+  /usr/include/glm/vec4.hpp \
+  /usr/include/glm/ext/vector_bool4.hpp \
+  /usr/include/glm/ext/vector_bool4_precision.hpp \
+  /usr/include/glm/ext/vector_float4.hpp \
+  /usr/include/glm/ext/vector_float4_precision.hpp \
+  /usr/include/glm/ext/vector_double4.hpp \
+  /usr/include/glm/ext/vector_double4_precision.hpp \
+  /usr/include/glm/ext/vector_int4.hpp \
+  /usr/include/glm/ext/vector_int4_sized.hpp \
+  /usr/include/glm/ext/vector_uint4.hpp \
+  /usr/include/glm/ext/vector_uint4_sized.hpp \
+  /usr/include/glm/mat2x2.hpp \
+  /usr/include/glm/ext/matrix_double2x2.hpp \
+  /usr/include/glm/detail/type_mat2x2.hpp \
+  /usr/include/glm/detail/type_mat2x2.inl \
+  /usr/include/glm/ext/matrix_double2x2_precision.hpp \
+  /usr/include/glm/ext/matrix_float2x2.hpp \
+  /usr/include/glm/ext/matrix_float2x2_precision.hpp \
+  /usr/include/glm/mat2x3.hpp \
+  /usr/include/glm/ext/matrix_double2x3.hpp \
+  /usr/include/glm/detail/type_mat2x3.hpp \
+  /usr/include/glm/detail/type_mat2x3.inl \
+  /usr/include/glm/ext/matrix_double2x3_precision.hpp \
+  /usr/include/glm/ext/matrix_float2x3.hpp \
+  /usr/include/glm/ext/matrix_float2x3_precision.hpp \
+  /usr/include/glm/mat2x4.hpp \
+  /usr/include/glm/ext/matrix_double2x4.hpp \
+  /usr/include/glm/detail/type_mat2x4.hpp \
+  /usr/include/glm/detail/type_mat2x4.inl \
+  /usr/include/glm/ext/matrix_double2x4_precision.hpp \
+  /usr/include/glm/ext/matrix_float2x4.hpp \
+  /usr/include/glm/ext/matrix_float2x4_precision.hpp \
+  /usr/include/glm/mat3x2.hpp \
+  /usr/include/glm/ext/matrix_double3x2.hpp \
+  /usr/include/glm/detail/type_mat3x2.hpp \
+  /usr/include/glm/detail/type_mat3x2.inl \
+  /usr/include/glm/ext/matrix_double3x2_precision.hpp \
+  /usr/include/glm/ext/matrix_float3x2.hpp \
+  /usr/include/glm/ext/matrix_float3x2_precision.hpp \
+  /usr/include/glm/mat3x3.hpp \
+  /usr/include/glm/ext/matrix_double3x3.hpp \
+  /usr/include/glm/detail/type_mat3x3.hpp \
+  /usr/include/glm/detail/type_mat3x3.inl \
+  /usr/include/glm/ext/matrix_double3x3_precision.hpp \
+  /usr/include/glm/ext/matrix_float3x3.hpp \
+  /usr/include/glm/ext/matrix_float3x3_precision.hpp \
+  /usr/include/glm/mat3x4.hpp \
+  /usr/include/glm/ext/matrix_double3x4.hpp \
+  /usr/include/glm/detail/type_mat3x4.hpp \
+  /usr/include/glm/detail/type_mat3x4.inl \
+  /usr/include/glm/ext/matrix_double3x4_precision.hpp \
+  /usr/include/glm/ext/matrix_float3x4.hpp \
+  /usr/include/glm/ext/matrix_float3x4_precision.hpp \
+  /usr/include/glm/mat4x2.hpp \
+  /usr/include/glm/ext/matrix_double4x2.hpp \
+  /usr/include/glm/detail/type_mat4x2.hpp \
+  /usr/include/glm/detail/type_mat4x2.inl \
+  /usr/include/glm/ext/matrix_double4x2_precision.hpp \
+  /usr/include/glm/ext/matrix_float4x2.hpp \
+  /usr/include/glm/ext/matrix_float4x2_precision.hpp \
+  /usr/include/glm/mat4x3.hpp \
+  /usr/include/glm/ext/matrix_double4x3.hpp \
+  /usr/include/glm/detail/type_mat4x3.hpp \
+  /usr/include/glm/detail/type_mat4x3.inl \
+  /usr/include/glm/ext/matrix_double4x3_precision.hpp \
+  /usr/include/glm/ext/matrix_float4x3.hpp \
+  /usr/include/glm/ext/matrix_float4x3_precision.hpp \
+  /usr/include/glm/mat4x4.hpp \
+  /usr/include/glm/ext/matrix_double4x4.hpp \
+  /usr/include/glm/detail/type_mat4x4.hpp \
+  /usr/include/glm/detail/type_mat4x4.inl \
+  /usr/include/glm/ext/matrix_double4x4_precision.hpp \
+  /usr/include/glm/ext/matrix_float4x4.hpp \
+  /usr/include/glm/ext/matrix_float4x4_precision.hpp \
+  /usr/include/glm/detail/func_matrix.inl \
+  /usr/include/glm/ext/matrix_transform.inl
 
 CMakeFiles/monstermash.dir/defengarapl.cpp.o: /home/ahn/monster-mash/src/defengarapl.cpp \
   /usr/include/stdc-predef.h \
@@ -15954,8 +16087,6 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/x86_64-linux-gnu/sys/time.h:
 
-/home/ahn/monster-mash/src/utils.h:
-
 /home/ahn/monster-mash/src/matrix.cpp:
 
 /home/ahn/monster-mash/src/shaderTextureVertexCoords.h:
@@ -15978,8 +16109,6 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/c++/11/bits/fs_path.h:
 
-/home/ahn/monster-mash/src/commonStructs.h:
-
 /home/ahn/monster-mash/src/loadsave.cpp:
 
 /usr/include/utime.h:
@@ -15989,8 +16118,6 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /usr/include/unistd.h:
-
-/home/ahn/monster-mash/third_party/triangle/triangle.c:
 
 /usr/include/c++/11/bits/indirect_array.h:
 
@@ -16006,17 +16133,11 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/c++/11/bits/forward_list.tcc:
 
-/usr/include/c++/11/bits/forward_list.h:
-
 /usr/include/c++/11/forward_list:
 
 /home/ahn/monster-mash/third_party/tinygltf/tinygltf.cpp:
 
 /home/ahn/monster-mash/third_party/miscutils/fsutils.cpp:
-
-/home/ahn/monster-mash/third_party/libigl/include/igl/ortho.cpp:
-
-/home/ahn/monster-mash/third_party/libigl/include/igl/frustum.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/triangle/triangulate.cpp:
 
@@ -16056,8 +16177,6 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/readOBJ.h:
 
-/home/ahn/monster-mash/third_party/ir3d-utils/MeshBuilder.cpp:
-
 /usr/include/c++/11/stack:
 
 /home/ahn/monster-mash/third_party/image/imageUtils.cpp:
@@ -16066,17 +16185,9 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/stb/stb_image_write.h:
 
-/usr/include/c++/11/bits/locale_facets_nonio.tcc:
-
-/home/ahn/monster-mash/third_party/SDL2_gfx/SDL2_gfxPrimitives_font.h:
-
 /home/ahn/monster-mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.h:
 
 /home/ahn/monster-mash/src/filter.cpp:
-
-/home/ahn/monster-mash/third_party/miscutils/camera.h:
-
-/home/ahn/monster-mash/third_party/tinygltf/tiny_gltf.h:
 
 /home/ahn/monster-mash/src/exportgltf.h:
 
@@ -16095,8 +16206,6 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/libigl/include/igl/invert_diag.cpp:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/C_STR.h:
-
-/usr/include/c++/11/cfenv:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/polar_svd.cpp:
 
@@ -16162,15 +16271,11 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/cotmatrix_entries.cpp:
 
-/home/ahn/monster-mash/third_party/libigl/include/igl/cotmatrix_entries.h:
-
 /home/ahn/monster-mash/third_party/libigl/include/igl/cat.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/repmat.cpp:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/sparse.h:
-
-/home/ahn/monster-mash/third_party/libigl/include/igl/verbose.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/find.cpp:
 
@@ -16212,12 +16317,6 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
 
-/usr/include/x86_64-linux-gnu/sys/stat.h:
-
-/home/ahn/monster-mash/third_party/eigen3/unsupported/Eigen/src/SparseExtra/MarketIO.h:
-
-/home/ahn/monster-mash/third_party/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
-
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h:
@@ -16238,15 +16337,11 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h:
 
-/home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
-
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/diag.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/SparseLU:
-
-/home/ahn/monster-mash/third_party/eigen3/Eigen/src/OrderingMethods/Ordering.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseCore/TriangularSolver.h:
 
@@ -16257,8 +16352,6 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h:
-
-/home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseCore/SparseProduct.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h:
 
@@ -16288,21 +16381,199 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h:
 
-/home/ahn/monster-mash/third_party/eigen3/Eigen/SparseCore:
-
 /home/ahn/monster-mash/third_party/eigen3/Eigen/Sparse:
 
 /home/ahn/monster-mash/src/defengarapl.h:
 
+/usr/include/glm/ext/matrix_transform.inl:
+
+/usr/include/glm/detail/func_matrix.inl:
+
+/usr/include/glm/detail/type_mat4x4.hpp:
+
+/usr/include/glm/mat4x4.hpp:
+
+/usr/include/glm/detail/type_mat4x3.hpp:
+
+/usr/include/glm/ext/matrix_double4x3.hpp:
+
+/home/ahn/monster-mash/third_party/triangle/triangle.c:
+
+/usr/include/glm/ext/matrix_float4x2_precision.hpp:
+
+/usr/include/glm/ext/matrix_float4x2.hpp:
+
+/home/ahn/monster-mash/third_party/miscutils/camera.h:
+
+/home/ahn/monster-mash/third_party/tinygltf/tiny_gltf.h:
+
+/usr/include/glm/detail/type_mat4x2.inl:
+
+/usr/include/glm/mat4x2.hpp:
+
+/usr/include/glm/ext/matrix_float3x4.hpp:
+
+/usr/include/glm/detail/type_mat3x4.hpp:
+
+/usr/include/glm/mat3x4.hpp:
+
 /home/ahn/monster-mash/third_party/libigl/include/igl/volume.cpp:
 
 /home/ahn/monster-mash/src/defengarapl.cpp:
+
+/usr/include/glm/ext/matrix_float3x3_precision.hpp:
+
+/usr/include/glm/ext/matrix_float3x3.hpp:
+
+/home/ahn/monster-mash/third_party/libigl/include/igl/verbose.h:
+
+/usr/include/glm/ext/matrix_double3x3_precision.hpp:
+
+/usr/include/glm/detail/type_mat3x2.inl:
+
+/usr/include/glm/detail/type_mat3x2.hpp:
+
+/home/ahn/monster-mash/third_party/libigl/include/igl/cotmatrix_entries.h:
+
+/usr/include/glm/ext/matrix_double3x2.hpp:
+
+/usr/include/glm/detail/type_mat2x4.inl:
+
+/home/ahn/monster-mash/third_party/eigen3/Eigen/SparseCore:
+
+/usr/include/glm/detail/type_mat2x4.hpp:
+
+/usr/include/glm/mat2x4.hpp:
+
+/usr/include/glm/ext/matrix_float2x3_precision.hpp:
+
+/usr/include/glm/detail/type_mat2x3.inl:
+
+/usr/include/glm/detail/type_mat2x3.hpp:
+
+/usr/include/glm/ext/matrix_double2x3.hpp:
+
+/home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
+
+/usr/include/glm/mat2x3.hpp:
+
+/usr/include/glm/ext/matrix_float2x2_precision.hpp:
+
+/usr/include/glm/mat2x2.hpp:
+
+/usr/include/glm/ext/vector_uint4_sized.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
+/home/ahn/monster-mash/third_party/eigen3/unsupported/Eigen/src/SparseExtra/MarketIO.h:
+
+/home/ahn/monster-mash/third_party/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
+
+/usr/include/glm/ext/vector_int4_sized.hpp:
+
+/usr/include/glm/ext/vector_int4.hpp:
+
+/usr/include/glm/ext/vector_double4_precision.hpp:
+
+/usr/include/glm/ext/vector_float4_precision.hpp:
+
+/usr/include/glm/ext/matrix_float3x2.hpp:
+
+/usr/include/glm/ext/vector_bool4.hpp:
+
+/home/ahn/monster-mash/third_party/eigen3/Eigen/src/OrderingMethods/Ordering.h:
+
+/usr/include/glm/ext/vector_uint3.hpp:
+
+/usr/include/glm/ext/vector_int3_sized.hpp:
+
+/usr/include/glm/ext/vector_double3.hpp:
+
+/usr/include/c++/11/bits/forward_list.h:
+
+/usr/include/glm/ext/vector_float3_precision.hpp:
+
+/home/ahn/monster-mash/third_party/libigl/include/igl/frustum.h:
+
+/usr/include/glm/ext/scalar_int_sized.hpp:
+
+/usr/include/glm/ext/vector_double2_precision.hpp:
+
+/usr/include/glm/ext/vector_float2_precision.hpp:
+
+/usr/include/glm/ext/vector_float2.hpp:
+
+/usr/include/glm/ext/vector_bool2_precision.hpp:
+
+/home/ahn/monster-mash/third_party/ir3d-utils/MeshBuilder.cpp:
+
+/usr/include/glm/ext/vector_bool2.hpp:
+
+/usr/include/c++/11/bits/locale_facets_nonio.tcc:
+
+/home/ahn/monster-mash/third_party/SDL2_gfx/SDL2_gfxPrimitives_font.h:
+
+/usr/include/glm/ext/matrix_float4x4.hpp:
+
+/usr/include/glm/detail/func_trigonometric.inl:
+
+/home/ahn/monster-mash/src/commonStructs.h:
+
+/usr/include/glm/detail/func_common.inl:
+
+/usr/include/glm/detail/_fixes.hpp:
+
+/usr/include/glm/detail/type_mat4x2.hpp:
+
+/usr/include/glm/detail/func_exponential.inl:
+
+/usr/include/c++/11/cfenv:
+
+/usr/include/glm/detail/type_vec2.inl:
+
+/home/ahn/monster-mash/third_party/libigl/include/igl/ortho.cpp:
+
+/usr/include/glm/detail/type_vec2.hpp:
+
+/usr/include/glm/detail/type_vec1.inl:
+
+/usr/include/glm/detail/type_vec1.hpp:
+
+/usr/include/glm/mat3x3.hpp:
+
+/usr/include/glm/exponential.hpp:
+
+/usr/include/glm/detail/func_geometric.inl:
+
+/home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseCore/SparseProduct.h:
+
+/usr/include/glm/detail/type_vec3.inl:
+
+/home/ahn/monster-mash/src/utils.h:
+
+/usr/include/glm/detail/type_vec3.hpp:
+
+/usr/include/glm/geometric.hpp:
+
+/usr/include/glm/ext/vector_uint3_sized.hpp:
+
+/usr/include/glm/ext/scalar_constants.inl:
+
+/usr/include/glm/detail/type_vec4.hpp:
+
+/usr/include/glm/simd/platform.h:
+
+/usr/include/glm/detail/setup.hpp:
+
+/usr/include/glm/ext/matrix_float3x4_precision.hpp:
 
 /usr/include/c++/11/pstl/glue_memory_defs.h:
 
 /usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/11/bits/atomic_base.h:
+
+/usr/include/glm/detail/_vectorize.hpp:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
 
@@ -16314,9 +16585,15 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/cotmatrix.cpp:
 
+/usr/include/glm/ext/matrix_double2x4.hpp:
+
 /usr/include/c++/11/memory:
 
+/usr/include/glm/ext/scalar_constants.hpp:
+
 /home/ahn/monster-mash/third_party/miscutils/mesh3d.h:
+
+/usr/include/glm/ext/matrix_float2x4.hpp:
 
 /home/ahn/monster-mash/third_party/miscutils/def3d.h:
 
@@ -16334,9 +16611,15 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/SDL2/SDL_opengles2.h:
 
+/usr/include/glm/ext/vector_float4.hpp:
+
+/usr/include/glm/ext/vector_uint2_sized.hpp:
+
 /usr/include/c++/11/bits/stl_multiset.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/min_quad_with_fixed.cpp:
+
+/usr/include/glm/detail/type_mat3x4.inl:
 
 /usr/include/c++/11/bits/stl_set.h:
 
@@ -16344,11 +16627,15 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/image/imageReadWrite.hpp:
 
+/usr/include/glm/mat3x2.hpp:
+
 /home/ahn/monster-mash/third_party/image/image.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/deprecated.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/massmatrix.h:
+
+/usr/include/glm/ext/matrix_float4x3.hpp:
 
 /usr/include/SDL2/SDL_misc.h:
 
@@ -16387,6 +16674,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/SDL2/SDL_sensor.h:
 
 /usr/include/SDL2/SDL_gamecontroller.h:
+
+/usr/include/glm/ext/vector_double3_precision.hpp:
 
 /usr/include/SDL2/SDL_scancode.h:
 
@@ -16460,6 +16749,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/SDL2_gfx-mod/SDL2_gfxPrimitives-mod.c:
 
+/usr/include/glm/ext/matrix_double3x2_precision.hpp:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512fintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avxvnniintrin.h:
@@ -16483,6 +16774,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/c++/11/array:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/get_seconds.cpp:
+
+/usr/include/glm/ext/vector_bool4_precision.hpp:
 
 /usr/include/c++/11/limits:
 
@@ -16515,6 +16808,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/triangle/triangle.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/glm/common.hpp:
 
 /usr/include/SDL2/SDL_keyboard.h:
 
@@ -16558,6 +16853,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/CommaInitializer.h:
 
+/usr/include/glm/ext/vector_double2.hpp:
+
 /usr/include/c++/11/bits/vector.tcc:
 
 /home/ahn/monster-mash/src/motion.cpp:
@@ -16574,6 +16871,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
+/usr/include/glm/detail/type_mat2x2.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/SDL2/SDL_touch.h:
@@ -16588,6 +16887,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/src/graphutils.h:
 
+/usr/include/glm/detail/type_mat2x2.inl:
+
 /usr/include/c++/11/vector:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/Singular_Value_Decomposition_Jacobi_Conjugation_Kernel.hpp:
@@ -16599,6 +16900,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/src/mesh.h:
 
 /usr/include/SDL2/SDL_cpuinfo.h:
+
+/usr/include/glm/trigonometric.hpp:
 
 /usr/include/c++/11/sstream:
 
@@ -16648,6 +16951,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/fit_rotations.cpp:
 
+/usr/include/glm/ext/vector_int2_sized.hpp:
+
 /usr/include/c++/11/bits/basic_ios.h:
 
 /usr/include/c++/11/fenv.h:
@@ -16682,9 +16987,13 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
+/usr/include/glm/detail/type_mat4x3.inl:
+
 /usr/include/c++/11/bits/node_handle.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h:
+
+/usr/include/glm/gtc/constants.hpp:
 
 /usr/include/c++/11/ext/aligned_buffer.h:
 
@@ -16706,6 +17015,10 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/sched.h:
 
+/usr/include/glm/ext/matrix_float2x4_precision.hpp:
+
+/usr/include/glm/detail/compute_vector_relational.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
 /usr/include/c++/11/cerrno:
@@ -16715,6 +17028,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/glm/detail/qualifier.hpp:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 
@@ -16730,7 +17045,11 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/c++/11/cwctype:
 
+/usr/include/glm/ext/matrix_double4x4.hpp:
+
 /usr/include/alloca.h:
+
+/usr/include/glm/ext/matrix_float3x2_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/select2.h:
 
@@ -16772,11 +17091,15 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/c++/11/bits/functional_hash.h:
 
+/usr/include/glm/vec4.hpp:
+
 /usr/include/c++/11/bits/streambuf.tcc:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/min_quad_with_fixed.h:
+
+/usr/include/glm/ext/matrix_float4x3_precision.hpp:
 
 /usr/include/endian.h:
 
@@ -16785,6 +17108,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/ctype.h:
 
 /usr/include/c++/11/initializer_list:
+
+/usr/include/glm/ext/matrix_double4x3_precision.hpp:
 
 /usr/include/c++/11/iosfwd:
 
@@ -16799,6 +17124,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/LU/arch/Inverse_SSE.h:
 
 /usr/include/c++/11/bits/hash_bytes.h:
+
+/usr/include/glm/ext/vector_uint4.hpp:
 
 /usr/include/c++/11/bits/move.h:
 
@@ -16826,6 +17153,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
 
+/usr/include/glm/vec2.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
@@ -16847,6 +17176,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/glm/mat4x3.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
@@ -16886,6 +17217,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/uintrintrin.h:
 
+/usr/include/glm/ext/matrix_double2x2.hpp:
+
 /usr/include/c++/11/debug/assertions.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
@@ -16917,6 +17250,10 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/c++/11/unordered_set:
 
 /usr/include/features.h:
+
+/usr/include/glm/ext/matrix_double4x2_precision.hpp:
+
+/usr/include/glm/detail/type_mat3x3.hpp:
 
 /usr/include/c++/11/ext/type_traits.h:
 
@@ -16976,6 +17313,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/c++/11/pstl/pstl_config.h:
 
+/usr/include/glm/ext/matrix_double2x4_precision.hpp:
+
 /usr/include/SDL2/SDL_pixels.h:
 
 /usr/include/c++/11/system_error:
@@ -17002,6 +17341,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
+/usr/include/glm/ext/vector_uint2.hpp:
+
 /usr/include/c++/11/cstdint:
 
 /usr/include/c++/11/bits/concept_check.h:
@@ -17015,6 +17356,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/eigen3/Eigen/SVD:
 
 /usr/include/c++/11/exception:
+
+/usr/include/glm/ext/scalar_uint_sized.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
@@ -17037,6 +17380,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/c++/11/iomanip:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/clwbintrin.h:
+
+/usr/include/glm/ext/matrix_float2x3.hpp:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
@@ -17072,6 +17417,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
+/usr/include/glm/ext/vector_bool3_precision.hpp:
+
 /usr/include/c++/11/bits/ostream.tcc:
 
 /home/ahn/monster-mash/src/intersector.cpp:
@@ -17092,9 +17439,13 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/miscutils/opengltools.cpp:
 
+/usr/include/glm/vec3.hpp:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx512ifmaintrin.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/Householder:
+
+/usr/include/glm/gtc/constants.inl:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
@@ -17142,6 +17493,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/src/processor.h:
 
+/usr/include/glm/vector_relational.hpp:
+
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/Reverse.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
@@ -17152,9 +17505,13 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/DenseBase.h:
 
+/usr/include/glm/detail/compute_common.hpp:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/volume.h:
+
+/usr/include/glm/matrix.hpp:
 
 /usr/include/pthread.h:
 
@@ -17189,6 +17546,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/libigl/include/igl/LinSpaced.h:
 
 /usr/include/c++/11/bits/locale_classes.h:
+
+/usr/include/glm/ext/matrix_float4x4_precision.hpp:
 
 /usr/include/math.h:
 
@@ -17294,6 +17653,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h:
 
+/usr/include/glm/ext/vector_float3.hpp:
+
 /usr/include/c++/11/queue:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/arch/CUDA/Half.h:
@@ -17350,6 +17711,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/c++/11/list:
 
+/usr/include/glm/ext/vector_double4.hpp:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
 
 /home/ahn/monster-mash/third_party/libigl/include/igl/edge_lengths.h:
@@ -17378,6 +17741,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
 
+/usr/include/glm/ext/matrix_double3x4_precision.hpp:
+
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/ReturnByValue.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
@@ -17388,6 +17753,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
+/usr/include/glm/ext/vector_bool3.hpp:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/avx2intrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
@@ -17395,6 +17762,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/util/Constants.h:
 
 /home/ahn/monster-mash/third_party/stb/stb_image.h:
+
+/usr/include/glm/detail/type_mat4x4.inl:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:
 
@@ -17409,6 +17778,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h:
+
+/usr/include/glm/ext/matrix_double4x4_precision.hpp:
 
 /usr/include/SDL2/SDL_rect.h:
 
@@ -17431,6 +17802,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/arch/SSE/Complex.h:
 
 /home/ahn/monster-mash/third_party/eigen3-mod/Eigen/src/SparseCholesky/SimplicialCholesky_impl-mod.h:
+
+/usr/include/glm/ext/matrix_transform.hpp:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/arch/CUDA/PacketMathHalf.h:
 
@@ -17490,6 +17863,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/ir3d-utils/regionToMesh.h:
 
+/usr/include/glm/detail/func_vector_relational.inl:
+
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/DiagonalMatrix.h:
 
 /usr/include/errno.h:
@@ -17522,6 +17897,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h:
 
+/usr/include/glm/detail/type_vec4.inl:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/gfniintrin.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/Array.h:
@@ -17535,6 +17912,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
+
+/usr/include/glm/ext/matrix_double2x3_precision.hpp:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
 
@@ -17590,6 +17969,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/Swap.h:
 
+/usr/include/glm/ext/matrix_float2x2.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/GeneralProduct.h:
@@ -17599,6 +17980,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/include/c++/11/numeric:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h:
+
+/usr/include/glm/ext/matrix_double4x2.hpp:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/Inverse.h:
 
@@ -17611,6 +17994,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/Transpositions.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/ProductEvaluators.h:
+
+/usr/include/glm/ext/vector_int2.hpp:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/SolveTriangular.h:
 
@@ -17630,9 +18015,13 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/BandMatrix.h:
 
+/usr/include/glm/detail/type_mat3x3.inl:
+
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/Replicate.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/CoreIterators.h:
+
+/usr/include/glm/ext/matrix_double3x3.hpp:
 
 /usr/include/SDL2/SDL_locale.h:
 
@@ -17665,6 +18054,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Eigenvalues/RealQZ.h:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/ArrayWrapper.h:
+
+/usr/include/glm/ext/matrix_double2x2_precision.hpp:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
@@ -17864,6 +18255,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mwaitintrin.h:
 
+/usr/include/glm/ext/matrix_double3x4.hpp:
+
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/popcntintrin.h:
@@ -17877,6 +18270,8 @@ CMakeFiles/monstermash.dir/skeleton.cpp.o: /home/ahn/monster-mash/src/skeleton.c
 /usr/lib/gcc/x86_64-linux-gnu/11/include/serializeintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/sgxintrin.h:
+
+/usr/include/glm/ext/vector_int3.hpp:
 
 /home/ahn/monster-mash/third_party/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
 

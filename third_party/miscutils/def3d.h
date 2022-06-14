@@ -26,7 +26,7 @@ public:
     Eigen::Vector3d Rotation;
 
     std::shared_ptr<CP> pParent;
-    std::shared_ptr<CP> pChild[10];
+    std::shared_ptr<CP> pChild[20];
     int childNum= 0;
     int getLength();
     std::shared_ptr<CP> getParent();
